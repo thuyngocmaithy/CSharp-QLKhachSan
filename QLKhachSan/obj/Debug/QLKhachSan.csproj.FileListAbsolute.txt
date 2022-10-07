@@ -1,0 +1,14 @@
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe.config
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.pdb
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.AssemblyReference.cache
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.SuggestedBindingRedirects.cache
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmMainPage.resources
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.Properties.Resources.resources
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.GenerateResource.cache
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.CopyComplete
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.exe
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.pdb
+C:\Users\thuyn\Documents\C#\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.Form1.resources
