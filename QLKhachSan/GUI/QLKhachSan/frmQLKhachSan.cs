@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using java.lang;
 
 namespace QLKhachSan.GUI.MainPageGUI
 {
@@ -52,63 +53,84 @@ namespace QLKhachSan.GUI.MainPageGUI
                 }    
             }    
         }
-
         private void btnTrangChinh_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmMainPage frmMainPage = new frmMainPage();
-            frmMainPage.MdiParent = this;
+            frmMainPage.TopLevel = false;
+            frmMainPage.AutoScroll = true;
+            pnlMain.Controls.Add(frmMainPage);
             frmMainPage.Show();
+
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmDatPhong frmDatPhong = new frmDatPhong();
-            frmDatPhong.MdiParent = this;
+            frmDatPhong.TopLevel = false;
+            frmDatPhong.AutoScroll = true;
+            pnlMain.Controls.Add(frmDatPhong);
             frmDatPhong.Show();
         }
 
         private void btnThueTraPhong_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
-            frmThueTraPhong.MdiParent = this;
+            frmThueTraPhong.TopLevel = false;
+            frmThueTraPhong.AutoScroll = true;
+            pnlMain.Controls.Add(frmThueTraPhong);
             frmThueTraPhong.Show();
-
         }
 
         private void btnQLKho_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmQLKho frmQLKho = new frmQLKho();
-            frmQLKho.MdiParent = this;
+            frmQLKho.TopLevel = false;
+            frmQLKho.AutoScroll = true;
+            pnlMain.Controls.Add(frmQLKho);
             frmQLKho.Show();
 
         }
 
         private void btnQLThuChi_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmQLThuChi frmQLThuChi = new frmQLThuChi();
-            frmQLThuChi.MdiParent = this;
+            frmQLThuChi.TopLevel = false;
+            frmQLThuChi.AutoScroll = true;
+            pnlMain.Controls.Add(frmQLThuChi);
             frmQLThuChi.Show();
 
         }
 
         private void btnQLHeThong_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmQLHeThong frmQLHeThong = new frmQLHeThong();
-            frmQLHeThong.MdiParent = this;
+            frmQLHeThong.TopLevel = false;
+            frmQLHeThong.AutoScroll = true;
+            pnlMain.Controls.Add(frmQLHeThong);
             frmQLHeThong.Show();
 
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
+            this.pnlMain.Controls.Clear();
             frmTaiKhoan frmTaiKhoan = new frmTaiKhoan();
-            frmTaiKhoan.MdiParent = this;
+            frmTaiKhoan.TopLevel = false;
+            frmTaiKhoan.AutoScroll = true;
+            pnlMain.Controls.Add(frmTaiKhoan);
             frmTaiKhoan.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            lblPage.Text = "Đăng xuất";
+            this.pnlMain.Controls.Clear();
+            pnlMain.Text = "Đăng xuất";
 
         }
 

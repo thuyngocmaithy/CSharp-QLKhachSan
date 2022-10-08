@@ -36,7 +36,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(453, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tài khoản";
             // 
@@ -44,9 +44,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 644);
+            this.ClientSize = new System.Drawing.Size(993, 678);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTaiKhoan";
             this.ResumeLayout(false);
             this.PerformLayout();

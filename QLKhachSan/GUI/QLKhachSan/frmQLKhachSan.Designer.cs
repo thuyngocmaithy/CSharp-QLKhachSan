@@ -31,7 +31,7 @@ namespace QLKhachSan.GUI.MainPageGUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLKhachSan));
             this.pnlMainMenu = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,12 +45,10 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.btnThueTraPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTrangChinh = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblPage = new System.Windows.Forms.Label();
             this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlMainMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMainMenu
@@ -419,26 +417,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.btnTrangChinh.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChinh.Click += new System.EventHandler(this.btnTrangChinh_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblPage);
-            this.bunifuTransition1.SetDecoration(this.panel1, BunifuAnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(82, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 644);
-            this.panel1.TabIndex = 0;
-            // 
-            // lblPage
-            // 
-            this.lblPage.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.lblPage, BunifuAnimatorNS.DecorationType.None);
-            this.lblPage.Location = new System.Drawing.Point(490, 26);
-            this.lblPage.Name = "lblPage";
-            this.lblPage.Size = new System.Drawing.Size(46, 20);
-            this.lblPage.TabIndex = 0;
-            this.lblPage.Text = "Page";
-            this.lblPage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // MouseDetect
             // 
             this.MouseDetect.Enabled = true;
@@ -448,39 +426,46 @@ namespace QLKhachSan.GUI.MainPageGUI
             // 
             this.bunifuTransition1.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.bunifuTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.bunifuTransition1.DefaultAnimation = animation1;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.bunifuTransition1.DefaultAnimation = animation4;
+            // 
+            // pnlMain
+            // 
+            this.bunifuTransition1.SetDecoration(this.pnlMain, BunifuAnimatorNS.DecorationType.None);
+            this.pnlMain.Location = new System.Drawing.Point(82, 0);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(996, 644);
+            this.pnlMain.TabIndex = 0;
             // 
             // frmQLKhachSan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1078, 644);
             this.Controls.Add(this.pnlMainMenu);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain);
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
+            this.IsMdiContainer = true;
             this.Name = "frmQLKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chính";
-            this.TopMost = true;
             this.pnlMainMenu.ResumeLayout(false);
             this.pnlMainMenu.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -499,9 +484,8 @@ namespace QLKhachSan.GUI.MainPageGUI
         private System.Windows.Forms.Timer MouseDetect;
         private System.Windows.Forms.Label lblLogoResize;
         private BunifuFlatButton btnLogout;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblPage;
         private System.Windows.Forms.Label label2;
         private BunifuAnimatorNS.BunifuTransition bunifuTransition1;
+        private System.Windows.Forms.Panel pnlMain;
     }
 }
