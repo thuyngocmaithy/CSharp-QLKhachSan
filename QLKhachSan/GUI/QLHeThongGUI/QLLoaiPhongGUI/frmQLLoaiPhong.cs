@@ -53,8 +53,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
         private void dgvLoaiPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 0)
             {
                 DataGridViewRow row = dgvLoaiPhong.Rows[e.RowIndex];
                 if (MessageBox.Show(string.Format("Bạn muốn xóa loại phòng này?", row.Cells["MaLoaiPhong"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -72,7 +71,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
                     }
                 }
             }
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 1)
             {
                 DataGridViewRow row = dgvLoaiPhong.Rows[e.RowIndex];
                 dialogSuaLoaiPhong dialogSuaLoaiPhong = new dialogSuaLoaiPhong(row.Cells["MaLoaiPhong"].Value.ToString());
