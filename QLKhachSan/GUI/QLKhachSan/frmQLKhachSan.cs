@@ -1,21 +1,12 @@
 ﻿using QLKhachSan.GUI.DatPhongGUI;
-using QLKhachSan.GUI.ThueTraPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI;
 using QLKhachSan.GUI.QLKhoGUI;
 using QLKhachSan.GUI.QLThuChiGUI;
 using QLKhachSan.GUI.TaiKhoanGUI;
-using QLKhachSan.GUI.MainPageGUI;
+using QLKhachSan.GUI.ThueTraPhongGUI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using java.lang;
 
 namespace QLKhachSan.GUI.MainPageGUI
 {
@@ -26,35 +17,11 @@ namespace QLKhachSan.GUI.MainPageGUI
             InitializeComponent();
         }
 
-        bool mnuExpanded = false;
-        private void MouseDetect_Tick(object sender, EventArgs e)
-        {
-            if (!bunifuTransition1.IsCompleted) return;
-            if(pnlMainMenu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
-            {
-                if(!mnuExpanded)
-                {
-                    mnuExpanded = true;
-                    pnlMainMenu.Visible = false;
-                    pnlMainMenu.Width = 324;
-                    bunifuTransition1.Show(pnlMainMenu);
-                    lblLogoResize.Visible = false;
-                }    
-            }    
-            else
-            {
-                if(mnuExpanded)
-                {
-                    mnuExpanded=false;
-                    pnlMainMenu.Visible = false;
-                    pnlMainMenu.Width = 85;
-                    bunifuTransition1.Show(pnlMainMenu);
-                    lblLogoResize.Visible = true;
-                }    
-            }    
-        }
+        bool showMenu = false;
+        bool pnlPanel = true;
         private void btnTrangChinh_Click(object sender, EventArgs e)
         {
+            pnlPanel = false;
             this.pnlMain.Controls.Clear();
             frmMainPage frmMainPage = new frmMainPage();
             frmMainPage.TopLevel = false;
@@ -66,6 +33,7 @@ namespace QLKhachSan.GUI.MainPageGUI
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
+            pnlPanel = false;
             this.pnlMain.Controls.Clear();
             frmDatPhong frmDatPhong = new frmDatPhong();
             frmDatPhong.TopLevel = false;
@@ -76,6 +44,7 @@ namespace QLKhachSan.GUI.MainPageGUI
 
         private void btnThueTraPhong_Click(object sender, EventArgs e)
         {
+            pnlPanel = false;
             this.pnlMain.Controls.Clear();
             frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
             frmThueTraPhong.TopLevel = false;
@@ -86,6 +55,7 @@ namespace QLKhachSan.GUI.MainPageGUI
 
         private void btnQLKho_Click(object sender, EventArgs e)
         {
+            pnlPanel = false;
             this.pnlMain.Controls.Clear();
             frmQLKho frmQLKho = new frmQLKho();
             frmQLKho.TopLevel = false;
@@ -103,6 +73,7 @@ namespace QLKhachSan.GUI.MainPageGUI
             frmQLThuChi.AutoScroll = true;
             pnlMain.Controls.Add(frmQLThuChi);
             frmQLThuChi.Show();
+            pnlPanel = false;
 
         }
 
@@ -113,6 +84,7 @@ namespace QLKhachSan.GUI.MainPageGUI
             frmQLHeThong.TopLevel = false;
             frmQLHeThong.AutoScroll = true;
             pnlMain.Controls.Add(frmQLHeThong);
+            pnlPanel = false;
             frmQLHeThong.Show();
 
         }
@@ -124,15 +96,80 @@ namespace QLKhachSan.GUI.MainPageGUI
             frmTaiKhoan.TopLevel = false;
             frmTaiKhoan.AutoScroll = true;
             pnlMain.Controls.Add(frmTaiKhoan);
+            pnlPanel = false;
             frmTaiKhoan.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.pnlMain.Controls.Clear();
-            pnlMain.Text = "Đăng xuất";
 
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+                Application.Exit();
+         
+        }
+        int count = 0;
+        private void lblShowMenu_Click(object sender, EventArgs e)
+        {
+
+            count++;
+            if (count % 2 == 0)
+            {
+                showMenu = false;
+            }
+            else
+            {
+                showMenu = true;
+            }
+            if (!bunifuTransition1.IsCompleted) return;
+            if (showMenu)
+            {
+                lblShowMenu.Left = 260;
+                pnlMainMenu.Visible = false;
+                pnlMainMenu.Width = 325;
+                bunifuTransition1.Show(pnlMainMenu);
+                btnDatPhong.Visible = true;
+                btnLogout.Visible = true;
+                btnQLHeThong.Visible = true;
+                btnQLKho.Visible = true;
+                btnQLThuChi.Visible = true;
+                btnTaiKhoan.Visible = true;
+                btnThueTraPhong.Visible = true;
+                btnTrangChinh.Visible = true;
+            }
+            else
+            {
+                lblShowMenu.Left = 25;
+                pnlMainMenu.Visible = false;
+                pnlMainMenu.Width = 85;
+                bunifuTransition1.Show(pnlMainMenu);
+                btnDatPhong.Visible = false;
+                btnLogout.Visible = false;
+                btnQLHeThong.Visible = false;
+                btnQLKho.Visible = false;
+                btnQLThuChi.Visible = false;
+                btnTaiKhoan.Visible = false;
+                btnThueTraPhong.Visible = false;
+                btnTrangChinh.Visible = false;
+            }
+        }
+
+        private void lblPanel_Click(object sender, EventArgs e)
+        {
+
+            if (pnlPanel == false)
+            {
+                this.pnlMain.Controls.Clear();
+                pnlMain.BackgroundImage = Image.FromFile
+                (System.Environment.GetFolderPath
+                (System.Environment.SpecialFolder.Personal)
+                + @"\github\csharp-qlkhachsan\icon\panel-design.png");
+                pnlPanel = true;
+            }
+
+        }
     }
 }

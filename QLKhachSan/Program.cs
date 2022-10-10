@@ -1,4 +1,5 @@
 ﻿using QLKhachSan.GUI.MainPageGUI;
+using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
