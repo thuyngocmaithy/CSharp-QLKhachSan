@@ -1,6 +1,7 @@
 ﻿using QLKhachSan.BUS;
 using QLKhachSan.DTO;
 using QLKhachSan.GUI.DatPhongGUI;
+using QLKhachSan.GUI.MainPageGUI;
 using QLKhachSan.GUI.QLHeThongGUI;
 using QLKhachSan.GUI.QLKhoGUI;
 using QLKhachSan.GUI.QLThuChiGUI;
@@ -30,11 +31,11 @@ namespace QLKhachSan.GUI.QLKhachSan
         {
             pnlPanel = false;
             this.pnlMain.Controls.Clear();
-            frmQLKhachSan frmQLKhachSan = new frmQLKhachSan();
-            frmQLKhachSan.TopLevel = false;
-            frmQLKhachSan.AutoScroll = true;
-            pnlMain.Controls.Add(frmQLKhachSan);
-            frmQLKhachSan.Show();
+            frmMainPage frmfrmMainPage = new frmMainPage();
+            frmfrmMainPage.TopLevel = false;
+            frmfrmMainPage.AutoScroll = true;
+            pnlMain.Controls.Add(frmfrmMainPage);
+            frmfrmMainPage.Show();
 
         }
 
@@ -173,10 +174,8 @@ namespace QLKhachSan.GUI.QLKhachSan
                 {
                     this.pnlMain.Controls.Clear();
                     pnlMain.BackgroundImage = Image.FromFile
-                    (System.Environment.GetFolderPath
-                    (System.Environment.SpecialFolder.Personal)
-                    + @"\github\csharp-qlkhachsan\icon\" + tlk["Panel"].ToString());
-                pnlPanel = true;
+                  (Path.GetFullPath(@"icon\" + tlk["Panel"].ToString()));
+                    pnlPanel = true;
                 }
             }
         }
@@ -186,13 +185,9 @@ namespace QLKhachSan.GUI.QLKhachSan
             foreach (DataRow tlk in tlkBUS.GetThietLapKhac().Rows)
             {
             lblLogo.Image = Image.FromFile
-                    (System.Environment.GetFolderPath
-                    (System.Environment.SpecialFolder.Personal)
-                    + @"\github\csharp-qlkhachsan\icon\" + tlk["Logo"].ToString());
-            pnlMain.BackgroundImage = Image.FromFile
-                  (System.Environment.GetFolderPath
-                  (System.Environment.SpecialFolder.Personal)
-                  + @"\github\csharp-qlkhachsan\icon\" + tlk["Panel"].ToString());
+                  (Path.GetFullPath(@"icon\" + tlk["Logo"].ToString()));
+                pnlMain.BackgroundImage = Image.FromFile
+                  (Path.GetFullPath(@"icon\" + tlk["Panel"].ToString()));
             }
         }
 

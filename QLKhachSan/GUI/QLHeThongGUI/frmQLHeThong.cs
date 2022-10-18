@@ -2,6 +2,7 @@
 using QLKhachSan.DTO;
 using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI;
+using QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -89,6 +90,14 @@ namespace QLKhachSan.GUI.QLHeThongGUI
                     frmQLPhong.AutoScroll = true;
                     this.Controls.Add(frmQLPhong);
                     frmQLPhong.Show();
+                    break;
+                case "Thiết lập khác":
+                    this.Controls.Clear();
+                    frmThietLapKhac frmThietLapKhac = new frmThietLapKhac();
+                    frmThietLapKhac.TopLevel = false;
+                    frmThietLapKhac.AutoScroll = true;
+                    this.Controls.Add(frmThietLapKhac);
+                    frmThietLapKhac.Show();
                     break;
 
             }    

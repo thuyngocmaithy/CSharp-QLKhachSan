@@ -40,12 +40,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -54,26 +55,31 @@
     <Compile Include="BUS\CTChucNangBUS.cs" />
     <Compile Include="BUS\KhoBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
+    <Compile Include="BUS\MenuBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\ThietLapKhacBUS.cs" />
+    <Compile Include="DAO\CachtinhtienDAO.cs" />
     <Compile Include="DAO\ChucNangDAO.cs" />
     <Compile Include="DAO\ConvertDataTableToList.cs" />
     <Compile Include="DAO\CTChucNangDAO.cs" />
     <Compile Include="DAO\KhoDAO.cs" />
     <Compile Include="DAO\LoaiPhongDAO.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\ThietLapKhacDAO.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="DTO\CachtinhtienDTO.cs" />
     <Compile Include="DTO\ChucNangDTO.cs" />
     <Compile Include="DTO\CTChucNangDTO.cs" />
     <Compile Include="DTO\CTPDP_LoaiPhongDTO.cs" />
     <Compile Include="DTO\CTPDP_PhongDTO.cs" />
     <Compile Include="DTO\KhoDTO.cs" />
     <Compile Include="DTO\LoaiPhongDTO.cs" />
+    <Compile Include="DTO\MenuDTO.cs" />
     <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\PhieuDatPhongDTO.cs" />
     <Compile Include="DTO\PhongDTO.cs" />
@@ -126,6 +132,24 @@
     <Compile Include="GUI\QLHeThongGUI\QLLoaiPhongGUI\frmQLLoaiPhong.Designer.cs">
       <DependentUpon>frmQLLoaiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\dialogThemMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\dialogThemMenu.designer.cs">
+      <DependentUpon>dialogThemMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\frmQLMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\frmQLMenu.designer.cs">
+      <DependentUpon>frmQLMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\newdialogSuamenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\QLMenuGUI\newdialogSuamenu.designer.cs">
+      <DependentUpon>newdialogSuamenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QLHeThongGUI\QLPhongGUI\dialogSuaPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +167,12 @@
     </Compile>
     <Compile Include="GUI\QLHeThongGUI\QLPhongGUI\frmQLPhong.Designer.cs">
       <DependentUpon>frmQLPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThietLapKhacGUI\frmThietLapKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThietLapKhacGUI\frmThietLapKhac.designer.cs">
+      <DependentUpon>frmThietLapKhac.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLKhachSan\frmQLKhachSan.cs">
       <SubType>Form</SubType>
@@ -218,6 +248,15 @@
     <EmbeddedResource Include="GUI\QLHeThongGUI\QLLoaiPhongGUI\frmQLLoaiPhong.resx">
       <DependentUpon>frmQLLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\QLMenuGUI\dialogThemMenu.resx">
+      <DependentUpon>dialogThemMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\QLMenuGUI\frmQLMenu.resx">
+      <DependentUpon>frmQLMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\QLMenuGUI\newdialogSuamenu.resx">
+      <DependentUpon>newdialogSuamenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLHeThongGUI\QLPhongGUI\dialogSuaPhong.resx">
       <DependentUpon>dialogSuaPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLHeThongGUI\QLPhongGUI\frmQLPhong.resx">
       <DependentUpon>frmQLPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\ThietLapKhacGUI\frmThietLapKhac.resx">
+      <DependentUpon>frmThietLapKhac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLKhachSan\frmQLKhachSan.resx">
       <DependentUpon>frmQLKhachSan.cs</DependentUpon>
@@ -276,8 +318,6 @@
   <ItemGroup>
     <Folder Include="GUI\QLHeThongGUI\LichSuGUI\" />
     <Folder Include="GUI\QLHeThongGUI\QLCachTinhTienGUI\" />
-    <Folder Include="GUI\QLHeThongGUI\QLMenuGUI\" />
-    <Folder Include="GUI\QLHeThongGUI\ThietLapKhacGUI\" />
     <Folder Include="GUI\QLHeThongGUI\ThongKeGUI\" />
   </ItemGroup>
   <ItemGroup>
