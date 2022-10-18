@@ -43,7 +43,7 @@
       <HintPath>..\packages\Bunifu.Licensing.5.0.0\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>D:\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -42,13 +42,13 @@ namespace QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI
                 pictureBoxLogo.Image = Image.FromFile
                     (System.Environment.GetFolderPath
                       (System.Environment.SpecialFolder.Personal)
-                      + @"\CSharp-QLKhachSan\icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Logo"].ToString());
+                      + @"\Github\CSharp-QLKhachSan\icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Logo"].ToString());
             }
             if (thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString() != "")
             {
                 picBoxPanel.Image = Image.FromFile(System.Environment.GetFolderPath
                    (System.Environment.SpecialFolder.Personal)
-                   + @"\CSharp-QLKhachSan\icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString());
+                   + @"\Github\CSharp-QLKhachSan\icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString());
             }
             /*            ptrHinhAnhSP.Image = Image.FromFile(dtgDanhSachSanPham.Rows[dong].Cells["HinhAnhSP"].Value);*/
         }
