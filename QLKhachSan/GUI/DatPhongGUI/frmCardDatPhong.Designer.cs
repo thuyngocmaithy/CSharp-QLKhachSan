@@ -47,8 +47,10 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(440, 50);
+            this.panel1.MinimumSize = new System.Drawing.Size(440, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 50);
+            this.panel1.Size = new System.Drawing.Size(440, 50);
             this.panel1.TabIndex = 0;
             // 
             // textBox1
@@ -68,9 +70,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(449, 0);
+            this.label1.Location = new System.Drawing.Point(388, 0);
             this.label1.MinimumSize = new System.Drawing.Size(50, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 50);
@@ -289,7 +292,7 @@
             this.lblPhone.IconVisible = true;
             this.lblPhone.IconZoom = 45D;
             this.lblPhone.IsTab = true;
-            this.lblPhone.Location = new System.Drawing.Point(277, 190);
+            this.lblPhone.Location = new System.Drawing.Point(213, 190);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(0);
             this.lblPhone.MinimumSize = new System.Drawing.Size(200, 50);
             this.lblPhone.Name = "lblPhone";
@@ -297,7 +300,7 @@
             this.lblPhone.OnHovercolor = System.Drawing.Color.Empty;
             this.lblPhone.OnHoverTextColor = System.Drawing.Color.Empty;
             this.lblPhone.selected = false;
-            this.lblPhone.Size = new System.Drawing.Size(224, 63);
+            this.lblPhone.Size = new System.Drawing.Size(219, 63);
             this.lblPhone.TabIndex = 8;
             this.lblPhone.Text = "    0900900900";
             this.lblPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -309,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(500, 300);
+            this.ClientSize = new System.Drawing.Size(440, 300);
             this.ControlBox = false;
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblPhongSo);
@@ -319,6 +322,8 @@
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(440, 300);
+            this.MinimumSize = new System.Drawing.Size(440, 300);
             this.Name = "frmCardDatPhong";
             this.Load += new System.EventHandler(this.frmCardDatPhong_Load);
             this.panel1.ResumeLayout(false);

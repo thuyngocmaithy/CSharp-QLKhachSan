@@ -41,7 +41,6 @@ C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSa
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.SuggestedBindingRedirects.cache
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.DatPhongGUI.frmDatPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmMainPage.resources
-C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmQLKhachSan.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.frmQLHeThong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.frmQLKho.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLThuChiGUI.frmQLThuChi.resources
@@ -59,3 +58,8 @@ C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSa
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.frmQLLoaiPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogThemLoaiPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogSuaLoaiPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogThemPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.frmQLPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogSuaPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhachSan.frmQLKhachSan.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.dialogSuaKho.resources

@@ -1,6 +1,6 @@
 ﻿using Bunifu.Framework.UI;
 
-namespace QLKhachSan.GUI.MainPageGUI
+namespace QLKhachSan.GUI.QLKhachSan
 {
     partial class frmQLKhachSan
     {
@@ -37,7 +37,7 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.lblShowMenu = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lblPanel = new System.Windows.Forms.Label();
+            this.lblLogo = new System.Windows.Forms.Label();
             this.btnTaiKhoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQLHeThong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQLThuChi = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -63,7 +63,7 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.pnlMainMenu.Controls.Add(this.lblShowMenu);
             this.pnlMainMenu.Controls.Add(this.label2);
             this.pnlMainMenu.Controls.Add(this.btnLogout);
-            this.pnlMainMenu.Controls.Add(this.lblPanel);
+            this.pnlMainMenu.Controls.Add(this.lblLogo);
             this.pnlMainMenu.Controls.Add(this.btnTaiKhoan);
             this.pnlMainMenu.Controls.Add(this.btnQLHeThong);
             this.pnlMainMenu.Controls.Add(this.btnQLThuChi);
@@ -81,12 +81,12 @@ namespace QLKhachSan.GUI.MainPageGUI
             // 
             // lblShowMenu
             // 
-            this.lblShowMenu.AutoSize = true;
             this.lblShowMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.lblShowMenu, BunifuAnimatorNS.DecorationType.None);
             this.lblShowMenu.Image = ((System.Drawing.Image)(resources.GetObject("lblShowMenu.Image")));
             this.lblShowMenu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.lblShowMenu.Location = new System.Drawing.Point(25, 22);
+            this.lblShowMenu.MaximumSize = new System.Drawing.Size(50, 50);
             this.lblShowMenu.MinimumSize = new System.Drawing.Size(50, 50);
             this.lblShowMenu.Name = "lblShowMenu";
             this.lblShowMenu.Size = new System.Drawing.Size(50, 50);
@@ -105,7 +105,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnLogout.AutoSize = true;
             this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 7;
@@ -142,24 +141,22 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // lblPanel
+            // lblLogo
             // 
-            this.lblPanel.AutoSize = true;
-            this.lblPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.lblPanel, BunifuAnimatorNS.DecorationType.None);
-            this.lblPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPanel.Image = ((System.Drawing.Image)(resources.GetObject("lblPanel.Image")));
-            this.lblPanel.Location = new System.Drawing.Point(60, 12);
-            this.lblPanel.MinimumSize = new System.Drawing.Size(200, 60);
-            this.lblPanel.Name = "lblPanel";
-            this.lblPanel.Size = new System.Drawing.Size(200, 60);
-            this.lblPanel.TabIndex = 9;
-            this.lblPanel.Click += new System.EventHandler(this.lblPanel_Click);
+            this.lblLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.lblLogo, BunifuAnimatorNS.DecorationType.None);
+            this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogo.Location = new System.Drawing.Point(60, 12);
+            this.lblLogo.MaximumSize = new System.Drawing.Size(200, 60);
+            this.lblLogo.MinimumSize = new System.Drawing.Size(200, 60);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(200, 60);
+            this.lblLogo.TabIndex = 9;
+            this.lblLogo.Click += new System.EventHandler(this.lblPanel_Click);
             // 
             // btnTaiKhoan
             // 
             this.btnTaiKhoan.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnTaiKhoan.AutoSize = true;
             this.btnTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnTaiKhoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTaiKhoan.BorderRadius = 7;
@@ -199,7 +196,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnQLHeThong
             // 
             this.btnQLHeThong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnQLHeThong.AutoSize = true;
             this.btnQLHeThong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLHeThong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLHeThong.BorderRadius = 7;
@@ -239,7 +235,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnQLThuChi
             // 
             this.btnQLThuChi.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnQLThuChi.AutoSize = true;
             this.btnQLThuChi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLThuChi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLThuChi.BorderRadius = 7;
@@ -279,7 +274,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnQLKho
             // 
             this.btnQLKho.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnQLKho.AutoSize = true;
             this.btnQLKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLKho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLKho.BorderRadius = 7;
@@ -319,7 +313,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnThueTraPhong
             // 
             this.btnThueTraPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnThueTraPhong.AutoSize = true;
             this.btnThueTraPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThueTraPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnThueTraPhong.BorderRadius = 7;
@@ -359,7 +352,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnDatPhong
             // 
             this.btnDatPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnDatPhong.AutoSize = true;
             this.btnDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnDatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDatPhong.BorderRadius = 7;
@@ -399,7 +391,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // btnTrangChinh
             // 
             this.btnTrangChinh.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnTrangChinh.AutoSize = true;
             this.btnTrangChinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnTrangChinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTrangChinh.BorderRadius = 7;
@@ -535,7 +526,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // 
             // pnlMain
             // 
-            this.pnlMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMain.BackgroundImage")));
             this.bunifuTransition1.SetDecoration(this.pnlMain, BunifuAnimatorNS.DecorationType.None);
             this.pnlMain.Location = new System.Drawing.Point(85, 40);
             this.pnlMain.MaximumSize = new System.Drawing.Size(1015, 660);
@@ -548,7 +538,6 @@ namespace QLKhachSan.GUI.MainPageGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1100, 700);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMainMenu);
@@ -557,9 +546,11 @@ namespace QLKhachSan.GUI.MainPageGUI
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.MaximumSize = new System.Drawing.Size(1100, 700);
             this.MinimumSize = new System.Drawing.Size(1100, 700);
             this.Name = "frmQLKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmQLKhachSan_Load);
             this.pnlMainMenu.ResumeLayout(false);
             this.pnlMainMenu.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
@@ -578,7 +569,7 @@ namespace QLKhachSan.GUI.MainPageGUI
         private BunifuFlatButton btnQLKho;
         private BunifuFlatButton btnThueTraPhong;
         private BunifuFlatButton btnDatPhong;
-        private System.Windows.Forms.Label lblPanel;
+        private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Timer MouseDetect;
         private BunifuFlatButton btnLogout;
         private System.Windows.Forms.Label label2;

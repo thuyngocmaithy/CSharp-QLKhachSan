@@ -1,17 +1,24 @@
-﻿using QLKhachSan.GUI.DatPhongGUI;
+﻿using QLKhachSan.BUS;
+using QLKhachSan.DTO;
+using QLKhachSan.GUI.DatPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI;
 using QLKhachSan.GUI.QLKhoGUI;
 using QLKhachSan.GUI.QLThuChiGUI;
 using QLKhachSan.GUI.TaiKhoanGUI;
 using QLKhachSan.GUI.ThueTraPhongGUI;
+using QLKhachSan.Properties;
 using System;
+using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
-namespace QLKhachSan.GUI.MainPageGUI
+namespace QLKhachSan.GUI.QLKhachSan
 {
     public partial class frmQLKhachSan : Form
     {
+        ThietLapKhacBUS tlkBUS = new ThietLapKhacBUS();
         public frmQLKhachSan()
         {
             InitializeComponent();
@@ -23,11 +30,11 @@ namespace QLKhachSan.GUI.MainPageGUI
         {
             pnlPanel = false;
             this.pnlMain.Controls.Clear();
-            frmMainPage frmMainPage = new frmMainPage();
-            frmMainPage.TopLevel = false;
-            frmMainPage.AutoScroll = true;
-            pnlMain.Controls.Add(frmMainPage);
-            frmMainPage.Show();
+            frmQLKhachSan frmQLKhachSan = new frmQLKhachSan();
+            frmQLKhachSan.TopLevel = false;
+            frmQLKhachSan.AutoScroll = true;
+            pnlMain.Controls.Add(frmQLKhachSan);
+            frmQLKhachSan.Show();
 
         }
 
@@ -162,14 +169,33 @@ namespace QLKhachSan.GUI.MainPageGUI
 
             if (pnlPanel == false)
             {
-                this.pnlMain.Controls.Clear();
-                pnlMain.BackgroundImage = Image.FromFile
-                (System.Environment.GetFolderPath
-                (System.Environment.SpecialFolder.Personal)
-                + @"\github\csharp-qlkhachsan\icon\panel-design.png");
+                foreach (DataRow tlk in tlkBUS.GetThietLapKhac().Rows)
+                {
+                    this.pnlMain.Controls.Clear();
+                    pnlMain.BackgroundImage = Image.FromFile
+                    (System.Environment.GetFolderPath
+                    (System.Environment.SpecialFolder.Personal)
+                    + @"\github\csharp-qlkhachsan\icon\" + tlk["Panel"].ToString());
                 pnlPanel = true;
+                }
             }
-
         }
+
+        private void frmQLKhachSan_Load(object sender, EventArgs e)
+        {
+            foreach (DataRow tlk in tlkBUS.GetThietLapKhac().Rows)
+            {
+            lblLogo.Image = Image.FromFile
+                    (System.Environment.GetFolderPath
+                    (System.Environment.SpecialFolder.Personal)
+                    + @"\github\csharp-qlkhachsan\icon\" + tlk["Logo"].ToString());
+            pnlMain.BackgroundImage = Image.FromFile
+                  (System.Environment.GetFolderPath
+                  (System.Environment.SpecialFolder.Personal)
+                  + @"\github\csharp-qlkhachsan\icon\" + tlk["Panel"].ToString());
+            }
+        }
+
+
     }
 }
