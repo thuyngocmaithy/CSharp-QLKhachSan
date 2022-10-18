@@ -20,5 +20,15 @@ namespace QLKhachSan.GUI.QLHeThongGUI
             this.Controls.Add(frmQLLoaiPhong);
             frmQLLoaiPhong.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            frmQLMenu frmMenu = new frmQLMenu();
+            frmMenu.TopLevel = false;
+            frmMenu.AutoScroll = true;
+            this.Controls.Add(frmMenu);
+            frmMenu.Show();
+        }
     }
 }
