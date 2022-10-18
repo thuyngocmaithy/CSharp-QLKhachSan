@@ -54,6 +54,7 @@
     <Compile Include="BUS\CTChucNangBUS.cs" />
     <Compile Include="BUS\KhoBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
+    <Compile Include="BUS\NhanVienBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\ThietLapKhacBUS.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="DAO\CTChucNangDAO.cs" />
     <Compile Include="DAO\KhoDAO.cs" />
     <Compile Include="DAO\LoaiPhongDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\ThietLapKhacDAO.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="DTO\CTPDP_PhongDTO.cs" />
     <Compile Include="DTO\KhoDTO.cs" />
     <Compile Include="DTO\LoaiPhongDTO.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
     <Compile Include="DTO\PhieuDatPhongDTO.cs" />
     <Compile Include="DTO\PhongDTO.cs" />
     <Compile Include="DTO\ThietLapKhacDTO.cs" />
