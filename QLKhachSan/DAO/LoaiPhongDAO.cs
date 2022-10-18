@@ -1,8 +1,6 @@
 ﻿
-using QLKhachSan.DAO;
 using QLKhachSan.DTO;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
@@ -11,7 +9,7 @@ namespace QLKhachSan
 {
     public class LoaiPhongDAO : DBConnect
     {
-        ConvertDataTableToList dataTableToList = new ConvertDataTableToList();
+
         public DataTable getLoaiPhong()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM LoaiPhong", conn);
@@ -145,13 +143,6 @@ namespace QLKhachSan
                 ma = String.Format("LP{0:000}", number+1);
             }
             return ma;
-        }
-        public List<LoaiPhongDTO> list()
-        {
-            DataTable dataLoaiPhong = getLoaiPhong();
-            List <LoaiPhongDTO> list = new List<LoaiPhongDTO>();
-            list = dataTableToList.ConvertDataTable<LoaiPhongDTO>(dataLoaiPhong);
-            return list;
         }
     }
 

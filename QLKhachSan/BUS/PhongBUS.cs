@@ -1,42 +1,39 @@
 ﻿using QLKhachSan.DAO;
 using QLKhachSan.DTO;
-using System.Collections.Generic;
 using System.Data;
-
 namespace QLKhachSan.BUS
 {
     public class PhongBUS
     {
-        PhongDAO phongDAO = new PhongDAO();
-       
+        PhongDAO PhongDAO = new PhongDAO();
+
         public DataTable GetPhong()
         {
-            return phongDAO.getPhong();
+            return PhongDAO.getPhong();
         }
         public DataTable GetPhong(string sql)
         {
-            return phongDAO.getPhong(sql);
+            return PhongDAO.getPhong(sql);
         }
 
         public bool ThemPhong(PhongDTO p)
         {
-            return phongDAO.ThemPhong(p);
+            return PhongDAO.ThemPhong(p);
         }
 
         public bool SuaPhong(PhongDTO p)
         {
-            return phongDAO.SuaPhong(p);
+            return PhongDAO.SuaPhong(p);
         }
 
         public bool XoaPhong(string maPhong)
         {
-            return phongDAO.XoaPhong(maPhong);
+            return PhongDAO.XoaPhong(maPhong);
         }
         public string TaoMaPhong()
         {
-            string maPhong = phongDAO.TaoMaPhong();
+            string maPhong = PhongDAO.TaoMaPhong();
             return maPhong;
         }
-       
     }
 }

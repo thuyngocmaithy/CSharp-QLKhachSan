@@ -16,6 +16,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
     {
         LoaiPhongBUS loaiPhongBUS = new LoaiPhongBUS();
         string maloaiphong;
+        frmQLLoaiPhong frmQLLoaiPhong = new frmQLLoaiPhong();
         public dialogSuaLoaiPhong(string maloaiphong)
         {
             InitializeComponent();
@@ -43,7 +44,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
                     uutienhienthi = int.Parse(txtSuaUuTienHienThi.Text);
                 LoaiPhongDTO lp = new LoaiPhongDTO(maloaiphong, txtSuaTenLoaiPhong.Text, uutienhienthi);
 
-                // Sua
+                // Them
                 if (loaiPhongBUS.SuaLoaiPhong(lp))
                 {
                     MessageBox.Show("Sửa thành công");

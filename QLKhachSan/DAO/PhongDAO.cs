@@ -1,8 +1,11 @@
 ﻿using QLKhachSan.DTO;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace QLKhachSan.DAO
 {
@@ -30,7 +33,7 @@ namespace QLKhachSan.DAO
                 // Ket noi
                 conn.Open();
 
-                string SQL = string.Format("INSERT INTO Phong VALUES ('{0}', '{1}', N'{2}', '{3}', '{4}', '{5}')", p.Maphong, p.Maloaiphong, p.Tinhtrang, p.Sokhachtoida, p.Macachtinhtien, p.Uutienhienthi );
+                string SQL = string.Format("INSERT INTO Phong VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", p.Maphong, p.Maloaiphong,p.Tinhtrang, p.Sokhachtoida, p.Uutienhienthi,p.Macachtinhtien);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);
@@ -63,7 +66,7 @@ namespace QLKhachSan.DAO
                 conn.Open();
 
                 // Query string
-                string SQL = string.Format("UPDATE Phong SET MaLoaiPhong = '{0}', SoKhachToiDa = '{1}', UuTienHienThi = '{2}', MaCachTinhTien = '{3}', TinhTrang = N'{4}'  WHERE MaPhong = '{5}'", p.Maloaiphong, p.Sokhachtoida, p.Uutienhienthi, p.Macachtinhtien, p.Tinhtrang, p.Maphong);
+                string SQL = string.Format("UPDATE Phong SET MaLoaiPhong = '{0}', SoKhachToiDa = '{1}', UuTienHienThi = '{2}', MaCachTinhTien = '{3}', TinhTrang = '{4}'  WHERE MaPhong = '{5}'", p.Maloaiphong, p.Sokhachtoida,p.Uutienhienthi,p.Macachtinhtien,p.Tinhtrang,p.Maphong);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);
@@ -142,8 +145,5 @@ namespace QLKhachSan.DAO
             }
             return ma;
         }
-
-        
-
     }
 }

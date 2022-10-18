@@ -8,6 +8,8 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
     public partial class dialogThemLoaiPhong : Form
     {
         LoaiPhongBUS LoaiPhongBUS = new LoaiPhongBUS();
+        private object loaiPhongBUS;
+
         public dialogThemLoaiPhong()
         {
             InitializeComponent();

@@ -1,6 +1,9 @@
-﻿
+﻿using QLKhachSan.GUI.MainPageGUI;
+using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using System;
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLKhachSan
@@ -16,7 +19,7 @@ namespace QLKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.QLKhachSan.frmQLKhachSan());
+            Application.Run(new frmQLKhachSan());
 
         }
     }

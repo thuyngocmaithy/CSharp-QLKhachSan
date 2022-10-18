@@ -1,4 +1,4 @@
-﻿using QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI;
+﻿using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 
 namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
 {
@@ -30,45 +30,76 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLPhong));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLLoaiPhong));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvPhong = new System.Windows.Forms.DataGridView();
+            this.dgvLoaiPhong = new System.Windows.Forms.DataGridView();
+            this.MaLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UuTienHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCachTim = new System.Windows.Forms.ComboBox();
             this.lblReset = new System.Windows.Forms.Label();
-            this.btnFindPhong = new Bunifu.Framework.UI.BunifuTextbox();
+            this.btnFindLoaiPhong = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddPhong = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dgvPhong);
+            this.panel3.Controls.Add(this.dgvLoaiPhong);
             this.panel3.Location = new System.Drawing.Point(50, 234);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(920, 391);
             this.panel3.TabIndex = 8;
             // 
-            // dgvPhong
+            // dgvLoaiPhong
             // 
-            this.dgvPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhong.Location = new System.Drawing.Point(0, 0);
-            this.dgvPhong.Name = "dgvPhong";
-            this.dgvPhong.RowHeadersWidth = 62;
-            this.dgvPhong.RowTemplate.Height = 28;
-            this.dgvPhong.Size = new System.Drawing.Size(920, 391);
-            this.dgvPhong.TabIndex = 0;
-            this.dgvPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellContentClick);
+            this.dgvLoaiPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLoaiPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaLoaiPhong,
+            this.TenLoaiPhong,
+            this.UuTienHienThi});
+            this.dgvLoaiPhong.Location = new System.Drawing.Point(0, 0);
+            this.dgvLoaiPhong.Name = "dgvLoaiPhong";
+            this.dgvLoaiPhong.RowHeadersWidth = 62;
+            this.dgvLoaiPhong.RowTemplate.Height = 28;
+            this.dgvLoaiPhong.Size = new System.Drawing.Size(920, 391);
+            this.dgvLoaiPhong.TabIndex = 0;
+            this.dgvLoaiPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoaiPhong_CellContentClick);
+            // 
+            // MaLoaiPhong
+            // 
+            this.MaLoaiPhong.DataPropertyName = "MaLoaiPhong";
+            this.MaLoaiPhong.HeaderText = "Mã loại phòng";
+            this.MaLoaiPhong.MinimumWidth = 8;
+            this.MaLoaiPhong.Name = "MaLoaiPhong";
+            this.MaLoaiPhong.Width = 200;
+            // 
+            // TenLoaiPhong
+            // 
+            this.TenLoaiPhong.DataPropertyName = "TenLoaiPhong";
+            this.TenLoaiPhong.HeaderText = "Tên loại phòng";
+            this.TenLoaiPhong.MinimumWidth = 8;
+            this.TenLoaiPhong.Name = "TenLoaiPhong";
+            this.TenLoaiPhong.Width = 291;
+            // 
+            // UuTienHienThi
+            // 
+            this.UuTienHienThi.DataPropertyName = "UuTienHienThi";
+            this.UuTienHienThi.HeaderText = "Ưu tiên hiển thị";
+            this.UuTienHienThi.MinimumWidth = 8;
+            this.UuTienHienThi.Name = "UuTienHienThi";
+            this.UuTienHienThi.Width = 165;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmbCachTim);
             this.panel2.Controls.Add(this.lblReset);
-            this.panel2.Controls.Add(this.btnFindPhong);
+            this.panel2.Controls.Add(this.btnFindLoaiPhong);
             this.panel2.Location = new System.Drawing.Point(50, 129);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(920, 64);
@@ -81,17 +112,13 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.cmbCachTim.FormattingEnabled = true;
             this.cmbCachTim.Items.AddRange(new object[] {
             "Cách tìm",
-            "Mã phòng",
-            "Loại phòng",
-            "Tình trạng",
-            "Số khách tối đa",
-            "Cách tính tiền",
+            "Mã loại phòng",
+            "Tên loại phòng",
             "Ưu tiên hiển thị"});
             this.cmbCachTim.Location = new System.Drawing.Point(352, 15);
             this.cmbCachTim.Name = "cmbCachTim";
             this.cmbCachTim.Size = new System.Drawing.Size(172, 36);
             this.cmbCachTim.TabIndex = 4;
-            this.cmbCachTim.SelectedIndexChanged += new System.EventHandler(this.cmbCachTim_SelectedIndexChanged);
             // 
             // lblReset
             // 
@@ -106,22 +133,22 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.lblReset.TabIndex = 3;
             this.lblReset.Click += new System.EventHandler(this.lblReset_Click);
             // 
-            // btnFindPhong
+            // btnFindLoaiPhong
             // 
-            this.btnFindPhong.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.btnFindPhong.BackColor = System.Drawing.Color.White;
-            this.btnFindPhong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFindPhong.BackgroundImage")));
-            this.btnFindPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFindPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnFindPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.btnFindPhong.Icon = ((System.Drawing.Image)(resources.GetObject("btnFindPhong.Icon")));
-            this.btnFindPhong.Location = new System.Drawing.Point(0, 0);
-            this.btnFindPhong.Margin = new System.Windows.Forms.Padding(0);
-            this.btnFindPhong.Name = "btnFindPhong";
-            this.btnFindPhong.Size = new System.Drawing.Size(328, 65);
-            this.btnFindPhong.TabIndex = 2;
-            this.btnFindPhong.text = "";
-            this.btnFindPhong.OnTextChange += new System.EventHandler(this.btnFindPhong_OnTextChange);
+            this.btnFindLoaiPhong.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.btnFindLoaiPhong.BackColor = System.Drawing.Color.White;
+            this.btnFindLoaiPhong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFindLoaiPhong.BackgroundImage")));
+            this.btnFindLoaiPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFindLoaiPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btnFindLoaiPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.btnFindLoaiPhong.Icon = ((System.Drawing.Image)(resources.GetObject("btnFindLoaiPhong.Icon")));
+            this.btnFindLoaiPhong.Location = new System.Drawing.Point(0, 0);
+            this.btnFindLoaiPhong.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindLoaiPhong.Name = "btnFindLoaiPhong";
+            this.btnFindLoaiPhong.Size = new System.Drawing.Size(328, 65);
+            this.btnFindLoaiPhong.TabIndex = 2;
+            this.btnFindLoaiPhong.text = "";
+            this.btnFindLoaiPhong.OnTextChange += new System.EventHandler(this.btnFindLoaiPhong_OnTextChange);
             // 
             // panel1
             // 
@@ -130,43 +157,43 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.panel1.Size = new System.Drawing.Size(920, 496);
             this.panel1.TabIndex = 10;
             // 
-            // btnAddPhong
+            // btnAddDatPhong
             // 
-            this.btnAddPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnAddPhong.AutoSize = true;
-            this.btnAddPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
-            this.btnAddPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddPhong.BorderRadius = 7;
-            this.btnAddPhong.ButtonText = " Thêm mới";
-            this.btnAddPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPhong.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPhong.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddPhong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddPhong.Iconimage")));
-            this.btnAddPhong.Iconimage_right = null;
-            this.btnAddPhong.Iconimage_right_Selected = null;
-            this.btnAddPhong.Iconimage_Selected = null;
-            this.btnAddPhong.IconMarginLeft = 0;
-            this.btnAddPhong.IconMarginRight = 0;
-            this.btnAddPhong.IconRightVisible = true;
-            this.btnAddPhong.IconRightZoom = 0D;
-            this.btnAddPhong.IconVisible = true;
-            this.btnAddPhong.IconZoom = 40D;
-            this.btnAddPhong.IsTab = true;
-            this.btnAddPhong.Location = new System.Drawing.Point(225, 35);
-            this.btnAddPhong.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddPhong.Name = "btnAddPhong";
-            this.btnAddPhong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
-            this.btnAddPhong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnAddPhong.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddPhong.selected = false;
-            this.btnAddPhong.Size = new System.Drawing.Size(153, 63);
-            this.btnAddPhong.TabIndex = 9;
-            this.btnAddPhong.Text = " Thêm mới";
-            this.btnAddPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPhong.Textcolor = System.Drawing.Color.White;
-            this.btnAddPhong.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAddPhong.Click += new System.EventHandler(this.btnAddDatPhong_Click);
+            this.btnAddDatPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnAddDatPhong.AutoSize = true;
+            this.btnAddDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnAddDatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddDatPhong.BorderRadius = 7;
+            this.btnAddDatPhong.ButtonText = " Thêm mới";
+            this.btnAddDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddDatPhong.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddDatPhong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddDatPhong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddDatPhong.Iconimage")));
+            this.btnAddDatPhong.Iconimage_right = null;
+            this.btnAddDatPhong.Iconimage_right_Selected = null;
+            this.btnAddDatPhong.Iconimage_Selected = null;
+            this.btnAddDatPhong.IconMarginLeft = 0;
+            this.btnAddDatPhong.IconMarginRight = 0;
+            this.btnAddDatPhong.IconRightVisible = true;
+            this.btnAddDatPhong.IconRightZoom = 0D;
+            this.btnAddDatPhong.IconVisible = true;
+            this.btnAddDatPhong.IconZoom = 40D;
+            this.btnAddDatPhong.IsTab = true;
+            this.btnAddDatPhong.Location = new System.Drawing.Point(225, 35);
+            this.btnAddDatPhong.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAddDatPhong.Name = "btnAddDatPhong";
+            this.btnAddDatPhong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnAddDatPhong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnAddDatPhong.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddDatPhong.selected = false;
+            this.btnAddDatPhong.Size = new System.Drawing.Size(153, 63);
+            this.btnAddDatPhong.TabIndex = 9;
+            this.btnAddDatPhong.Text = " Thêm mới";
+            this.btnAddDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddDatPhong.Textcolor = System.Drawing.Color.White;
+            this.btnAddDatPhong.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddDatPhong.Click += new System.EventHandler(this.btnAddDatPhong_Click);
             // 
             // label3
             // 
@@ -178,7 +205,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.label3.TabIndex = 12;
             this.label3.Text = "LOẠI PHÒNG";
             // 
-            // frmQLPhong
+            // frmQLLoaiPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -188,14 +215,14 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAddPhong);
+            this.Controls.Add(this.btnAddDatPhong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1015, 660);
-            this.Name = "frmQLPhong";
+            this.Name = "frmQLLoaiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmQLPhong_Load);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiPhong)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -207,11 +234,14 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddPhong;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddDatPhong;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.DataGridView dgvPhong;
-        private Bunifu.Framework.UI.BunifuTextbox btnFindPhong;
+        public System.Windows.Forms.DataGridView dgvLoaiPhong;
+        private Bunifu.Framework.UI.BunifuTextbox btnFindLoaiPhong;
         private System.Windows.Forms.Label lblReset;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UuTienHienThi;
         private System.Windows.Forms.ComboBox cmbCachTim;
     }
 }

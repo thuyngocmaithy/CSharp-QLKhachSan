@@ -14,7 +14,7 @@ namespace QLKhachSan.DTO
         {
 
         }
-        public PhongDTO(string maphong, string maloaiphong, string tinhtrang, int sokhachtoida, string macachtinhtien, int uutienhienthi)
+        public PhongDTO(string maphong, string maloaiphong, string tinhtrang, int sokhachtoida, int uutienhienthi, string macachtinhtien)
         {
             this.maphong = maphong;
             this.maloaiphong = maloaiphong;
