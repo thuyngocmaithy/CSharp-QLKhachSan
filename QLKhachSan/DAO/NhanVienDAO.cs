@@ -1,3 +1,4 @@
+﻿
 ﻿using QLKhachSan.DTO;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,6 @@ namespace QLKhachSan.DAO
             da.Fill(dataLoaiPhong);
             return dataLoaiPhong;
         }
-     
+
     }
 }

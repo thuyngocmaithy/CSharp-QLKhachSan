@@ -1,3 +1,4 @@
+﻿
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace QLKhachSan.DTO
             this.email = email;
             this.gioitinh = gioitinh;
             this.mataikhoan = mataikhoan;
-            
-       
+
+
         }
         public string MaNhanVien
         {
@@ -39,7 +40,7 @@ namespace QLKhachSan.DTO
             get { return sodienthoai; }
             set { sodienthoai = value; }
         }
-       
+
 
 
         public string Email

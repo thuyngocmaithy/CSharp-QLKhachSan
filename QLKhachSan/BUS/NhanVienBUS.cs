@@ -1,3 +1,4 @@
+﻿
 ﻿using QLKhachSan.DTO;
 using QLKhachSan.DAO;
 using System;
@@ -10,12 +11,12 @@ namespace QLKhachSan.BUS
 {
     public class NhanVienBUS
     {
-       NhanVienDAO nhanVienDAO = new NhanVienDAO();
+        NhanVienDAO nhanVienDAO = new NhanVienDAO();
 
         public DataTable GetNhanVien()
         {
             return nhanVienDAO.getNhanVien();
         }
- 
+
     }
 }
