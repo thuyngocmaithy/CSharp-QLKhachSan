@@ -8,7 +8,6 @@ namespace QLKhachSan.GUI.QLKhoGUI
     public partial class dialogThemKho : Form
     {
         KhoBUS KhoBUS = new KhoBUS();
-        NhanVienBUS nhanVienBUS = new NhanVienBUS();    
         public dialogThemKho()
         {
             InitializeComponent();
@@ -23,7 +22,7 @@ namespace QLKhachSan.GUI.QLKhoGUI
         private void btnThemKho_Click(object sender, EventArgs e)
         {
 
-            if (cmbMaNhanVien.Text != "" && txtThemGhiChu.Text != "" && dtThemThoiGianNhap.ToString() !="")
+            if (txtMaNhanVien.Text != "" && txtThemGhiChu.Text != "" && dtThemThoiGianNhap.ToString() !="")
             {
                 int uutienhienthi = 1;
                 string ma = KhoBUS.TaoMaPhieuNhapKho();
@@ -34,7 +33,7 @@ namespace QLKhachSan.GUI.QLKhoGUI
                 }
                 else
                     uutienhienthi = int.Parse(txtThemUuTienHienThi.Text);
-                KhoDTO k = new KhoDTO(ma, txtThemGhiChu.Text, cmbMaNhanVien.SelectedValue.ToString(), dtThemThoiGianNhap.Value.ToString("yyyy-MM-dd HH:MI:SS"), uutienhienthi);
+                KhoDTO k = new KhoDTO(ma, txtThemGhiChu.Text, txtMaNhanVien.Text, dtThemThoiGianNhap.Value.ToString("yyyy-MM-dd HH:MI:SS"), uutienhienthi);
                 //Thời gian là kiểu datetime
                 //M truyền vào kiểu object rồi sao thêm and sửa
                 //TẠI SAO KHÔNG CÓ NÚT RELOAD???
@@ -44,7 +43,7 @@ namespace QLKhachSan.GUI.QLKhoGUI
                 if (KhoBUS.ThemKho(k))
                 {
                     MessageBox.Show("Thêm thành công");
-                    cmbMaNhanVien.Text = "";
+                    txtMaNhanVien.Text = "";
                     txtThemUuTienHienThi.Text = "";
                 }
                 else
@@ -54,18 +53,12 @@ namespace QLKhachSan.GUI.QLKhoGUI
             }
             else
             {
-                MessageBox.Show("Hãy chọn tên nhân viên");
+                MessageBox.Show("Hãy nhập đầy đủ thông tin");
 
             }
 
         }
 
-        private void dialogThemKho_Load(object sender, EventArgs e)
-        {
-            cmbMaNhanVien.DataSource = nhanVienBUS.GetNhanVien();
-            cmbMaNhanVien.DisplayMember = "TenNhanVien";
-            cmbMaNhanVien.ValueMember = "MaNhanVien";
 
-        }
     }
 }

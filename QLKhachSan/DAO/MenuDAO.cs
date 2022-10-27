@@ -12,7 +12,10 @@ namespace QLKhachSanDAO
     {
         public DataTable GetMenu()
         {
-            conn.Open();
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }            
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Menu", conn);
             DataTable dataMenu = new DataTable();
             da.Fill(dataMenu);
@@ -20,7 +23,10 @@ namespace QLKhachSanDAO
         }
         public DataTable GetMenu(string sql)
         {
-            conn.Open();
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Open();
+            }
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dataMenu = new DataTable();
             da.Fill(dataMenu);
@@ -34,7 +40,10 @@ namespace QLKhachSanDAO
 
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 string SQL = string.Format("Insert into Menu values ('{0}','{1}','{2}','{3}','{4}','{5}')", mn.MaMenu, mn.TenMenu, mn.LoaiMenu, mn.Gianhap, mn.Giaban, mn.Uutienhienthi);
                 /*string sql = "insert into Menu  values (@MaMenu, @tenMenu, @loaiMenu, @gianhap , @giaban, @uutienhienthi) "; 
                 
@@ -72,7 +81,10 @@ namespace QLKhachSanDAO
         {
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 string SQL = string.Format("Seclect Menu.maMenu from Menu where EXISTS (SELECT Menu.maMenu from Menu where Menu.maMenu = '{0}' ", mn.MaMenu);
                 SqlCommand mycmd = new SqlCommand(SQL, conn);
                 if (mycmd.ExecuteReader().HasRows)
@@ -97,7 +109,10 @@ namespace QLKhachSanDAO
         {
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 string sql = string.Format("update Menu set tenMenu = '{0}', loaiMenu = '{1}' , gianhap = '{2}' , giaban = '{3}' , uutienhienthi = '{4}' where MaMenu = '{5}'", mn.TenMenu, mn.LoaiMenu, mn.Gianhap, mn.Giaban, mn.Uutienhienthi, mn.MaMenu);
                 SqlCommand mycmd = new SqlCommand(sql, conn);
                 mycmd.ExecuteNonQuery();
@@ -120,7 +135,10 @@ namespace QLKhachSanDAO
         {
             try
             {
-                conn.Open();
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
                 string sql = "DELETE FROM Menu WHERE maMenu = ' " + mn + "'";
                 SqlCommand mycmd = new SqlCommand(sql, conn);
                 mycmd.ExecuteNonQuery();

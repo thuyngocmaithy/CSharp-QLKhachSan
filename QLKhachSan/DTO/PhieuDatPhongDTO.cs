@@ -8,14 +8,13 @@ namespace QLKhachSan.DTO
 {
     public class PhieuDatPhongDTO
     {
-        string maphieudatphong, hotenkhachhang, sodienthoai, thoigiandat, ngaynhanphong,
+        string maphieudatphong, hotenkhachhang, sodienthoai, ngaynhanphong,
             ngaytraphong, tientratruoc, ghichu, trangthai;
-        public PhieuDatPhongDTO(string maphieudatphong, string hotenkhachhang, string sodienthoai, string thoigiandat, string ngaynhanphong, string ngaytraphong, string tientratruoc, string ghichu, string trangthai)
+        public PhieuDatPhongDTO(string maphieudatphong, string hotenkhachhang, string sodienthoai, string ngaynhanphong, string ngaytraphong, string tientratruoc, string ghichu, string trangthai)
         {
             this.maphieudatphong = maphieudatphong;
             this.hotenkhachhang = hotenkhachhang;
             this.sodienthoai = sodienthoai;
-            this.thoigiandat = thoigiandat;
             this.ngaynhanphong = ngaynhanphong;
             this.ngaytraphong = ngaytraphong;
             this.tientratruoc = tientratruoc;
@@ -41,11 +40,7 @@ namespace QLKhachSan.DTO
             get { return this.sodienthoai; }
             set { sodienthoai = value; }
         }
-        public string Thoigiandat
-        {
-            get { return this.thoigiandat; }
-            set { thoigiandat = value; }
-        }
+
         public string Ngaynhanphong
         {
             get { return this.ngaynhanphong; }

@@ -1,4 +1,4 @@
-﻿using QLKhachSan.DAO;
+﻿
 using QLKhachSan.DTO;
 using System.Collections.Generic;
 using System.Data;

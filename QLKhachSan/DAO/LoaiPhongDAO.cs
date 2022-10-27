@@ -34,7 +34,7 @@ namespace QLKhachSan
                 // Ket noi
                 conn.Open();
 
-                string SQL = string.Format("INSERT INTO LoaiPhong VALUES ('{0}', '{1}', '{2}')", lp.Maloaiphong, lp.Tenloaiphong, lp.Uutienhienthi);
+                string SQL = string.Format("INSERT INTO LoaiPhong VALUES ('{0}', N'{1}', '{2}')", lp.Maloaiphong, lp.Tenloaiphong, lp.Uutienhienthi);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);
@@ -67,7 +67,7 @@ namespace QLKhachSan
                 conn.Open();
 
                 // Query string
-                string SQL = string.Format("UPDATE LoaiPhong SET TenLoaiPhong = '{0}' WHERE MaLoaiPhong = '{1}'", lp.Tenloaiphong, lp.Maloaiphong);
+                string SQL = string.Format("UPDATE LoaiPhong SET TenLoaiPhong = N'{0}' WHERE MaLoaiPhong = '{1}'", lp.Tenloaiphong, lp.Maloaiphong);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);

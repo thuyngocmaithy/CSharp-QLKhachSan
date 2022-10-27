@@ -32,11 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.datePickerTuNgay = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlDatPhong = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnXemTheoNgay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,124 +86,110 @@
             this.btnAddDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddDatPhong.Textcolor = System.Drawing.Color.White;
             this.btnAddDatPhong.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnAddDatPhong.Click += new System.EventHandler(this.btnAddDatPhong_Click);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pnlDatPhong);
-            this.panel1.Controls.Add(this.datePickerTuNgay);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(45, 97);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(920, 513);
             this.panel1.TabIndex = 5;
             // 
-            // datePickerTuNgay
+            // pnlDatPhong
             // 
-            this.datePickerTuNgay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.datePickerTuNgay.BorderRadius = 10;
-            this.datePickerTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datePickerTuNgay.ForeColor = System.Drawing.Color.Black;
-            this.datePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerTuNgay.FormatCustom = null;
-            this.datePickerTuNgay.Location = new System.Drawing.Point(0, 69);
-            this.datePickerTuNgay.Margin = new System.Windows.Forms.Padding(4, 19, 4, 5);
-            this.datePickerTuNgay.Name = "datePickerTuNgay";
-            this.datePickerTuNgay.Size = new System.Drawing.Size(255, 45);
-            this.datePickerTuNgay.TabIndex = 1;
-            this.datePickerTuNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
+            this.pnlDatPhong.Location = new System.Drawing.Point(0, 71);
+            this.pnlDatPhong.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlDatPhong.MinimumSize = new System.Drawing.Size(920, 450);
+            this.pnlDatPhong.Name = "pnlDatPhong";
+            this.pnlDatPhong.Size = new System.Drawing.Size(920, 450);
+            this.pnlDatPhong.TabIndex = 7;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bunifuFlatButton3);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
+            this.panel2.Controls.Add(this.btnTimKiem);
+            this.panel2.Controls.Add(this.btnXemTheoNgay);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(920, 50);
             this.panel2.TabIndex = 6;
             // 
-            // bunifuFlatButton3
+            // btnTimKiem
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 7;
-            this.bunifuFlatButton3.ButtonText = "Tìm kiếm";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuFlatButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = null;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 40D;
-            this.bunifuFlatButton3.IsTab = true;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(470, 0);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(450, 50);
-            this.bunifuFlatButton3.TabIndex = 9;
-            this.bunifuFlatButton3.Text = "Tìm kiếm";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
+            this.btnTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimKiem.BorderRadius = 7;
+            this.btnTimKiem.ButtonText = "Tìm kiếm";
+            this.btnTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimKiem.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTimKiem.Iconimage = null;
+            this.btnTimKiem.Iconimage_right = null;
+            this.btnTimKiem.Iconimage_right_Selected = null;
+            this.btnTimKiem.Iconimage_Selected = null;
+            this.btnTimKiem.IconMarginLeft = 0;
+            this.btnTimKiem.IconMarginRight = 0;
+            this.btnTimKiem.IconRightVisible = true;
+            this.btnTimKiem.IconRightZoom = 0D;
+            this.btnTimKiem.IconVisible = true;
+            this.btnTimKiem.IconZoom = 40D;
+            this.btnTimKiem.IsTab = true;
+            this.btnTimKiem.Location = new System.Drawing.Point(470, 0);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
+            this.btnTimKiem.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
+            this.btnTimKiem.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnTimKiem.selected = false;
+            this.btnTimKiem.Size = new System.Drawing.Size(450, 50);
+            this.btnTimKiem.TabIndex = 9;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTimKiem.Textcolor = System.Drawing.Color.White;
+            this.btnTimKiem.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // bunifuFlatButton1
+            // btnXemTheoNgay
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 7;
-            this.bunifuFlatButton1.ButtonText = "Xem theo ngày";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 40D;
-            this.bunifuFlatButton1.IsTab = true;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(450, 50);
-            this.bunifuFlatButton1.TabIndex = 7;
-            this.bunifuFlatButton1.Text = "Xem theo ngày";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            // 
-            // pnlDatPhong
-            // 
-            this.pnlDatPhong.AutoScroll = true;
-            this.pnlDatPhong.Location = new System.Drawing.Point(0, 135);
-            this.pnlDatPhong.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlDatPhong.MinimumSize = new System.Drawing.Size(920, 378);
-            this.pnlDatPhong.Name = "pnlDatPhong";
-            this.pnlDatPhong.Size = new System.Drawing.Size(920, 378);
-            this.pnlDatPhong.TabIndex = 7;
+            this.btnXemTheoNgay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
+            this.btnXemTheoNgay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
+            this.btnXemTheoNgay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnXemTheoNgay.BorderRadius = 7;
+            this.btnXemTheoNgay.ButtonText = "Xem theo ngày";
+            this.btnXemTheoNgay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemTheoNgay.DisabledColor = System.Drawing.Color.Gray;
+            this.btnXemTheoNgay.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnXemTheoNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemTheoNgay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnXemTheoNgay.Iconimage = null;
+            this.btnXemTheoNgay.Iconimage_right = null;
+            this.btnXemTheoNgay.Iconimage_right_Selected = null;
+            this.btnXemTheoNgay.Iconimage_Selected = null;
+            this.btnXemTheoNgay.IconMarginLeft = 0;
+            this.btnXemTheoNgay.IconMarginRight = 0;
+            this.btnXemTheoNgay.IconRightVisible = true;
+            this.btnXemTheoNgay.IconRightZoom = 0D;
+            this.btnXemTheoNgay.IconVisible = true;
+            this.btnXemTheoNgay.IconZoom = 40D;
+            this.btnXemTheoNgay.IsTab = true;
+            this.btnXemTheoNgay.Location = new System.Drawing.Point(0, 0);
+            this.btnXemTheoNgay.Margin = new System.Windows.Forms.Padding(0);
+            this.btnXemTheoNgay.Name = "btnXemTheoNgay";
+            this.btnXemTheoNgay.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
+            this.btnXemTheoNgay.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(112)))), ((int)(((byte)(166)))));
+            this.btnXemTheoNgay.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnXemTheoNgay.selected = false;
+            this.btnXemTheoNgay.Size = new System.Drawing.Size(450, 50);
+            this.btnXemTheoNgay.TabIndex = 7;
+            this.btnXemTheoNgay.Text = "Xem theo ngày";
+            this.btnXemTheoNgay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXemTheoNgay.Textcolor = System.Drawing.Color.White;
+            this.btnXemTheoNgay.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXemTheoNgay.Click += new System.EventHandler(this.btnXemTheoNgay_Click);
             // 
             // frmDatPhong
             // 
@@ -232,10 +217,9 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddDatPhong;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuDatepicker datePickerTuNgay;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnXemTheoNgay;
+        private Bunifu.Framework.UI.BunifuFlatButton btnTimKiem;
         private System.Windows.Forms.FlowLayoutPanel pnlDatPhong;
     }
 }

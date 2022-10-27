@@ -17,7 +17,6 @@ namespace QLKhachSan.GUI.QLKhoGUI
         KhoBUS KhoBUS = new KhoBUS();
         string maphieunhapkho;
         frmQLKho frmQLKho = new frmQLKho();
-        NhanVienBUS nhanVienBUS = new NhanVienBUS();
         public dialogSuaKho(string maphieunhapkho)
         {
             InitializeComponent();
@@ -58,12 +57,7 @@ namespace QLKhachSan.GUI.QLKhoGUI
              
         }
 
-        private void dialogSuaKho_Load(object sender, EventArgs e)
-        {
-            cmbMaNhanVien.DataSource = nhanVienBUS.GetNhanVien();
-            cmbMaNhanVien.DisplayMember = "TenNhanVien";
-            cmbMaNhanVien.ValueMember = "MaNhanVien";
-        }
+
 
     }
     

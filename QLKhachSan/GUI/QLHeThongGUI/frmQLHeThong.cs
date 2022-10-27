@@ -3,6 +3,7 @@ using QLKhachSan.DTO;
 using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI;
+using QLKhachSan.GUI.QLHeThongGUI.ThongKeGUI;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -99,8 +100,17 @@ namespace QLKhachSan.GUI.QLHeThongGUI
                     this.Controls.Add(frmThietLapKhac);
                     frmThietLapKhac.Show();
                     break;
+                case "Thống kê":
+                    this.Controls.Clear();
+                    frmThongKe frmThongKe = new frmThongKe();
+                    frmThongKe.TopLevel = false;
+                    frmThongKe.AutoScroll = true;
+                    this.Controls.Add(frmThongKe);
+                    frmThongKe.Show();
+                    break;
 
-            }    
+
+            }
         }
 
 

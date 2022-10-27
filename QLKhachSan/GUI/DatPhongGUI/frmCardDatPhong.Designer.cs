@@ -28,56 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCardDatPhong));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStt = new System.Windows.Forms.TextBox();
+            this.lblOption = new System.Windows.Forms.Label();
             this.lblHoTen = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblTrangThai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblTime = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblSoLuongPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblPhongSo = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblPhone = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.chỉnhSửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhậnPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblStt);
+            this.panel1.Controls.Add(this.lblOption);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(440, 50);
-            this.panel1.MinimumSize = new System.Drawing.Size(440, 50);
+            this.panel1.MaximumSize = new System.Drawing.Size(430, 50);
+            this.panel1.MinimumSize = new System.Drawing.Size(430, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 50);
+            this.panel1.Size = new System.Drawing.Size(430, 50);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // lblStt
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 5);
-            this.textBox1.MinimumSize = new System.Drawing.Size(70, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(70, 37);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "#1";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblStt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblStt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblStt.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblStt.Location = new System.Drawing.Point(3, 5);
+            this.lblStt.MinimumSize = new System.Drawing.Size(70, 40);
+            this.lblStt.Name = "lblStt";
+            this.lblStt.Size = new System.Drawing.Size(70, 37);
+            this.lblStt.TabIndex = 3;
+            this.lblStt.Text = "#1";
+            this.lblStt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // lblOption
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(388, 0);
-            this.label1.MinimumSize = new System.Drawing.Size(50, 50);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 50);
-            this.label1.TabIndex = 2;
+            this.lblOption.AutoSize = true;
+            this.lblOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblOption.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lblOption.Image = ((System.Drawing.Image)(resources.GetObject("lblOption.Image")));
+            this.lblOption.Location = new System.Drawing.Point(378, 0);
+            this.lblOption.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblOption.Name = "lblOption";
+            this.lblOption.Size = new System.Drawing.Size(50, 50);
+            this.lblOption.TabIndex = 2;
+            this.lblOption.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblHoTen
             // 
@@ -186,7 +193,7 @@
             this.lblTime.OnHovercolor = System.Drawing.Color.Empty;
             this.lblTime.OnHoverTextColor = System.Drawing.Color.Empty;
             this.lblTime.selected = false;
-            this.lblTime.Size = new System.Drawing.Size(400, 63);
+            this.lblTime.Size = new System.Drawing.Size(441, 63);
             this.lblTime.TabIndex = 5;
             this.lblTime.Text = "    1/10/2022";
             this.lblTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,12 +314,43 @@
             this.lblPhone.Textcolor = System.Drawing.Color.Black;
             this.lblPhone.TextFont = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chỉnhSửaToolStripMenuItem,
+            this.nhậnPhòngToolStripMenuItem,
+            this.xóaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 100);
+            // 
+            // chỉnhSửaToolStripMenuItem
+            // 
+            this.chỉnhSửaToolStripMenuItem.Name = "chỉnhSửaToolStripMenuItem";
+            this.chỉnhSửaToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
+            this.chỉnhSửaToolStripMenuItem.Text = "Chỉnh sửa";
+            this.chỉnhSửaToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaToolStripMenuItem_Click);
+            // 
+            // nhậnPhòngToolStripMenuItem
+            // 
+            this.nhậnPhòngToolStripMenuItem.Name = "nhậnPhòngToolStripMenuItem";
+            this.nhậnPhòngToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
+            this.nhậnPhòngToolStripMenuItem.Text = "Nhận phòng";
+            this.nhậnPhòngToolStripMenuItem.Click += new System.EventHandler(this.nhậnPhòngToolStripMenuItem_Click);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(184, 32);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
             // frmCardDatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(440, 300);
+            this.ClientSize = new System.Drawing.Size(430, 300);
             this.ControlBox = false;
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblPhongSo);
@@ -322,12 +360,13 @@
             this.Controls.Add(this.lblHoTen);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(440, 300);
-            this.MinimumSize = new System.Drawing.Size(440, 300);
+            this.MaximumSize = new System.Drawing.Size(430, 300);
+            this.MinimumSize = new System.Drawing.Size(430, 300);
             this.Name = "frmCardDatPhong";
             this.Load += new System.EventHandler(this.frmCardDatPhong_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,13 +375,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox lblStt;
+        private System.Windows.Forms.Label lblOption;
         private Bunifu.Framework.UI.BunifuFlatButton lblHoTen;
         private Bunifu.Framework.UI.BunifuFlatButton lblTrangThai;
         private Bunifu.Framework.UI.BunifuFlatButton lblTime;
         private Bunifu.Framework.UI.BunifuFlatButton lblSoLuongPhong;
         private Bunifu.Framework.UI.BunifuFlatButton lblPhongSo;
         private Bunifu.Framework.UI.BunifuFlatButton lblPhone;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhậnPhòngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
     }
 }

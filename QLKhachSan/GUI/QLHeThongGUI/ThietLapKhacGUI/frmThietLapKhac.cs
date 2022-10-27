@@ -47,7 +47,6 @@ namespace QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI
                 picBoxPanel.Image = Image.FromFile
                     (Path.GetFullPath(@"icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString()));
             }
-            /*            ptrHinhAnhSP.Image = Image.FromFile(dtgDanhSachSanPham.Rows[dong].Cells["HinhAnhSP"].Value);*/
         }
 
         private void btnSave_Click(object sender, EventArgs e)

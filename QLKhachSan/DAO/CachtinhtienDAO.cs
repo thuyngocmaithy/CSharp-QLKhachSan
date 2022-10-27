@@ -1,39 +1,29 @@
-﻿using System;
+﻿using QLKhachSan.DAO;
+using QLKhachSan.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-namespace QLKhachSan.DAO
+namespace QLKhachSan
 {
-    public class Cachtinhtien : DBConnect
+    public class CachtinhtienDAO : DBConnect
     {
-        public DataTable Gettinhtien()
+        public DataTable getCachtinhtien()
         {
-            SqlDataAdapter da = new SqlDataAdapter("select * from Cachtinhtien", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CachTinhTien", conn);
+            DataTable dataCachtinhtien = new DataTable();
+            da.Fill(dataCachtinhtien);
+            return dataCachtinhtien;
+        }
+        public DataTable getCachtinhtien(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dataCachtinhtien = new DataTable();
             da.Fill(dataCachtinhtien);
             return dataCachtinhtien;
         }
 
-        public DataTable Gettinhtien(string sql)
-        {
-            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable resultCachtinhtien = new DataTable();
-            da.Fill(resultCachtinhtien);
-            return resultCachtinhtien;
-        }
-
-        /*blic bool Themtinhtien(CachtinhtienDTO ct)
-         {
-             try
-             {
-                 conn.Open();
-                 string SQL = String.Format("insert into Cachtinhtien values (")
-             }
-         }*/
     }
 }
-
