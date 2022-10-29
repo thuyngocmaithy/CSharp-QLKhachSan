@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBoxUutien = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxGiaban = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxGianhap = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxLoaiMenu = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxTenMenu = new System.Windows.Forms.RichTextBox();
-            this.richTextBoxMaMenu = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.richTextBoxUutien = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.richTextBoxLoaiMenu = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.richTextBoxTenMenu = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.richTextBoxMaMenu = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,17 +42,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBoxGianhap = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBoxGiaban = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.richTextBoxUutien);
             this.panel1.Controls.Add(this.richTextBoxGiaban);
             this.panel1.Controls.Add(this.richTextBoxGianhap);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.richTextBoxUutien);
             this.panel1.Controls.Add(this.richTextBoxLoaiMenu);
             this.panel1.Controls.Add(this.richTextBoxTenMenu);
             this.panel1.Controls.Add(this.richTextBoxMaMenu);
@@ -63,172 +65,266 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(3, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(559, 519);
+            this.panel1.Size = new System.Drawing.Size(500, 615);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(249, 529);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(137, 63);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "ĐÓNG";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.BorderRadius = 7;
+            this.button1.ButtonText = "THÊM";
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.DisabledColor = System.Drawing.Color.Gray;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Iconcolor = System.Drawing.Color.Transparent;
+            this.button1.Iconimage = null;
+            this.button1.Iconimage_right = null;
+            this.button1.Iconimage_right_Selected = null;
+            this.button1.Iconimage_Selected = null;
+            this.button1.IconMarginLeft = 0;
+            this.button1.IconMarginRight = 0;
+            this.button1.IconRightVisible = true;
+            this.button1.IconRightZoom = 0D;
+            this.button1.IconVisible = true;
+            this.button1.IconZoom = 50D;
+            this.button1.IsTab = true;
+            this.button1.Location = new System.Drawing.Point(87, 529);
+            this.button1.Margin = new System.Windows.Forms.Padding(8);
+            this.button1.Name = "button1";
+            this.button1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.button1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.button1.OnHoverTextColor = System.Drawing.Color.White;
+            this.button1.selected = false;
+            this.button1.Size = new System.Drawing.Size(128, 63);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "THÊM";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button1.Textcolor = System.Drawing.Color.White;
+            this.button1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // richTextBoxUutien
             // 
-            this.richTextBoxUutien.Location = new System.Drawing.Point(257, 370);
-            this.richTextBoxUutien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxUutien.BorderColorFocused = System.Drawing.Color.Blue;
+            this.richTextBoxUutien.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxUutien.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.richTextBoxUutien.BorderThickness = 3;
+            this.richTextBoxUutien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxUutien.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxUutien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxUutien.isPassword = false;
+            this.richTextBoxUutien.Location = new System.Drawing.Point(181, 453);
+            this.richTextBoxUutien.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxUutien.Name = "richTextBoxUutien";
-            this.richTextBoxUutien.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxUutien.TabIndex = 20;
-            this.richTextBoxUutien.Text = "";
-            // 
-            // richTextBoxGiaban
-            // 
-            this.richTextBoxGiaban.Location = new System.Drawing.Point(257, 313);
-            this.richTextBoxGiaban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBoxGiaban.Name = "richTextBoxGiaban";
-            this.richTextBoxGiaban.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxGiaban.TabIndex = 19;
-            this.richTextBoxGiaban.Text = "";
-            // 
-            // richTextBoxGianhap
-            // 
-            this.richTextBoxGianhap.Location = new System.Drawing.Point(257, 255);
-            this.richTextBoxGianhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBoxGianhap.Name = "richTextBoxGianhap";
-            this.richTextBoxGianhap.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxGianhap.TabIndex = 18;
-            this.richTextBoxGianhap.Text = "";
+            this.richTextBoxUutien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBoxUutien.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxUutien.TabIndex = 26;
+            this.richTextBoxUutien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // richTextBoxLoaiMenu
             // 
-            this.richTextBoxLoaiMenu.Location = new System.Drawing.Point(257, 187);
-            this.richTextBoxLoaiMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxLoaiMenu.BorderColorFocused = System.Drawing.Color.Blue;
+            this.richTextBoxLoaiMenu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxLoaiMenu.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.richTextBoxLoaiMenu.BorderThickness = 3;
+            this.richTextBoxLoaiMenu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxLoaiMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxLoaiMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxLoaiMenu.isPassword = false;
+            this.richTextBoxLoaiMenu.Location = new System.Drawing.Point(181, 234);
+            this.richTextBoxLoaiMenu.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxLoaiMenu.Name = "richTextBoxLoaiMenu";
-            this.richTextBoxLoaiMenu.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxLoaiMenu.TabIndex = 17;
-            this.richTextBoxLoaiMenu.Text = "";
+            this.richTextBoxLoaiMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBoxLoaiMenu.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxLoaiMenu.TabIndex = 23;
+            this.richTextBoxLoaiMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // richTextBoxTenMenu
             // 
-            this.richTextBoxTenMenu.Location = new System.Drawing.Point(257, 128);
-            this.richTextBoxTenMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxTenMenu.BorderColorFocused = System.Drawing.Color.Blue;
+            this.richTextBoxTenMenu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxTenMenu.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.richTextBoxTenMenu.BorderThickness = 3;
+            this.richTextBoxTenMenu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxTenMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxTenMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxTenMenu.isPassword = false;
+            this.richTextBoxTenMenu.Location = new System.Drawing.Point(181, 161);
+            this.richTextBoxTenMenu.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxTenMenu.Name = "richTextBoxTenMenu";
-            this.richTextBoxTenMenu.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxTenMenu.TabIndex = 16;
-            this.richTextBoxTenMenu.Text = "";
+            this.richTextBoxTenMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBoxTenMenu.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxTenMenu.TabIndex = 22;
+            this.richTextBoxTenMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // richTextBoxMaMenu
             // 
-            this.richTextBoxMaMenu.Location = new System.Drawing.Point(257, 71);
-            this.richTextBoxMaMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBoxMaMenu.BorderColorFocused = System.Drawing.Color.Blue;
+            this.richTextBoxMaMenu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxMaMenu.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.richTextBoxMaMenu.BorderThickness = 3;
+            this.richTextBoxMaMenu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxMaMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxMaMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxMaMenu.isPassword = false;
+            this.richTextBoxMaMenu.Location = new System.Drawing.Point(181, 89);
+            this.richTextBoxMaMenu.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxMaMenu.Name = "richTextBoxMaMenu";
-            this.richTextBoxMaMenu.Size = new System.Drawing.Size(253, 36);
-            this.richTextBoxMaMenu.TabIndex = 15;
-            this.richTextBoxMaMenu.Text = "";
+            this.richTextBoxMaMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.richTextBoxMaMenu.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxMaMenu.TabIndex = 21;
+            this.richTextBoxMaMenu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Consolas", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(161, 25);
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(149, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 43);
+            this.label7.Size = new System.Drawing.Size(169, 38);
             this.label7.TabIndex = 14;
             this.label7.Text = "Thêm Menu";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 255);
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(33, 325);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 36);
+            this.label6.Size = new System.Drawing.Size(93, 28);
             this.label6.TabIndex = 7;
             this.label6.Text = "Giá nhập";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 187);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(34, 250);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 36);
+            this.label5.Size = new System.Drawing.Size(108, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "Loại Menu";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 370);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(34, 469);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 36);
+            this.label4.Size = new System.Drawing.Size(109, 28);
             this.label4.TabIndex = 5;
             this.label4.Text = "Độ ưu tiên";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 313);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(34, 398);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 36);
+            this.label3.Size = new System.Drawing.Size(81, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Giá bán";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 118);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(33, 177);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 36);
+            this.label2.Size = new System.Drawing.Size(103, 28);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên Menu";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 71);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(34, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 36);
+            this.label1.Size = new System.Drawing.Size(99, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mã Menu";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button2
+            // richTextBoxGianhap
             // 
-            this.button2.Location = new System.Drawing.Point(303, 434);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 71);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Đóng";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.richTextBoxGianhap.BackColor = System.Drawing.Color.Transparent;
+            this.richTextBoxGianhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxGianhap.BorderThickness = 3;
+            this.richTextBoxGianhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxGianhap.DefaultText = "";
+            this.richTextBoxGianhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBoxGianhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBoxGianhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGianhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGianhap.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.richTextBoxGianhap.FocusedState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGianhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.richTextBoxGianhap.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxGianhap.HoverState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGianhap.Location = new System.Drawing.Point(181, 309);
+            this.richTextBoxGianhap.MaxLength = 11;
+            this.richTextBoxGianhap.Name = "richTextBoxGianhap";
+            this.richTextBoxGianhap.PasswordChar = '\0';
+            this.richTextBoxGianhap.PlaceholderText = "";
+            this.richTextBoxGianhap.SelectedText = "";
+            this.richTextBoxGianhap.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxGianhap.TabIndex = 29;
             // 
-            // button1
+            // richTextBoxGiaban
             // 
-            this.button1.Location = new System.Drawing.Point(35, 434);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.richTextBoxGiaban.BackColor = System.Drawing.Color.Transparent;
+            this.richTextBoxGiaban.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxGiaban.BorderThickness = 3;
+            this.richTextBoxGiaban.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxGiaban.DefaultText = "";
+            this.richTextBoxGiaban.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBoxGiaban.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBoxGiaban.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGiaban.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGiaban.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.richTextBoxGiaban.FocusedState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGiaban.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.richTextBoxGiaban.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxGiaban.HoverState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGiaban.Location = new System.Drawing.Point(181, 382);
+            this.richTextBoxGiaban.MaxLength = 11;
+            this.richTextBoxGiaban.Name = "richTextBoxGiaban";
+            this.richTextBoxGiaban.PasswordChar = '\0';
+            this.richTextBoxGiaban.PlaceholderText = "";
+            this.richTextBoxGiaban.SelectedText = "";
+            this.richTextBoxGiaban.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxGiaban.TabIndex = 30;
             // 
             // dialogThemMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 537);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(494, 609);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "dialogThemMenu";
-            this.Text = "Thêm Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -245,13 +341,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxUutien;
+        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxLoaiMenu;
+        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxTenMenu;
+        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxMaMenu;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBoxMaMenu;
-        private System.Windows.Forms.RichTextBox richTextBoxUutien;
-        private System.Windows.Forms.RichTextBox richTextBoxGiaban;
-        private System.Windows.Forms.RichTextBox richTextBoxGianhap;
-        private System.Windows.Forms.RichTextBox richTextBoxLoaiMenu;
-        private System.Windows.Forms.RichTextBox richTextBoxTenMenu;
+        private Bunifu.Framework.UI.BunifuFlatButton button1;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBoxGiaban;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBoxGianhap;
     }
 }

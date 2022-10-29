@@ -1,44 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using QLKhachSan.BUS;
-using QLKhachSanDAO;
-using QLKhachSan;
+﻿using QLKhachSan.BUS;
 using QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI;
-using System.Reflection;
+using System;
+using System.ComponentModel;
+using System.Windows.Forms;
+
 
 
 namespace QLKhachSan.GUI.QLHeThongGUI
 {
     public partial class frmQLMenu : Form
     {
+        MenuBUS mnBUS = new MenuBUS();
         public frmQLMenu()
         {
             InitializeComponent();
+
         }
 
         private void frmQLMenu_Load(object sender, EventArgs e)
         {
-            MenuBUS mnBUS = new MenuBUS();
-            dataGridMenu.DataSource = mnBUS.GetMenu();
+            dgvMenu.AllowUserToAddRows = false;
+            dgvMenu.DataSource = mnBUS.GetMenu();
+            //Add btnDelete
+            DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
+            dgvMenu.Columns.Insert(6, btnDelete);
+            btnDelete.HeaderText = "Delete";
+            btnDelete.Width = 85;
+            btnDelete.Text = "Delete";
+            btnDelete.UseColumnTextForButtonValue = true;
+
+            //Add btnEdit
+            DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
+            dgvMenu.Columns.Insert(7, btnEdit);
+            btnEdit.HeaderText = "Edit";
+            btnEdit.Width = 85;
+            btnEdit.Text = "Edit";
+            btnEdit.UseColumnTextForButtonValue = true;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
@@ -46,100 +46,88 @@ namespace QLKhachSan.GUI.QLHeThongGUI
             dialogThem.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aaa1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblReset_Click(object sender, EventArgs e)
         {
-                Reset();
+            Reset();
         }
-        public static DataGridViewRow selectedrow;
-        public static DataGridViewCell selectedcell;
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           /*if(e.RowIndex > 1)
-            {   
-                selectedrow = dataGridMenu.Rows[e.RowIndex];
-                newdialogSuamenu.GetNewdialogSuamenu.ShowDialog();
-            }*/
-           
-        }
+
 
 
         public void Reset()
         {
-            MenuBUS mnBUS = new MenuBUS();
-            dataGridMenu.DataSource = mnBUS.GetMenu();
-
-            this.dataGridMenu.Sort(this.dataGridMenu.Columns["uutien"], ListSortDirection.Ascending);
-            ///this.dataGridMenu.Columns["uutien"].SortMode = DataGridViewColumnSortMode.Automatic;
+            dgvMenu.DataSource = mnBUS.GetMenu();
+            this.dgvMenu.Sort(this.dgvMenu.Columns["UuTienHienThi"], ListSortDirection.Ascending);
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e )
+
+
+
+        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            /*Int32 selectedRowCount = dataGridMenu.Rows.GetRowCount(DataGridViewElementStates.Selected);
-             if( selectedRowCount >= 0)
-             {
-
-                 newdialogSuamenu newdialog = new newdialogSuamenu();
-                 newdialog.ShowDialog();
-             }*/
-            if (dataGridMenu.CurrentRow.Index != -1)
+            if (e.ColumnIndex == 0)
             {
-                selectedrow = dataGridMenu.CurrentRow;
-                newdialogSuamenu newdialog = new newdialogSuamenu();
-                newdialog.ShowDialog();
+                DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
+                if (MessageBox.Show(string.Format("Bạn muốn xóa menu này?", row.Cells["MaMenu"].Value), "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+                    if (mnBUS.XoaMenu(row.Cells["MaMenu"].Value.ToString()))
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        Reset();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+            }
+            if (e.ColumnIndex == 1)
+            {
+                DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
+                string mamenu_Sua = row.Cells["MaMenu"].Value.ToString();
+                string tenmenu_Sua = row.Cells["TenMenu"].Value.ToString();
+                string loaimenu_Sua = row.Cells["LoaiMenu"].Value.ToString();
+                string gianhap_Sua = row.Cells["GiaNhap"].Value.ToString();
+                string giaban_Sua = row.Cells["GiaBan"].Value.ToString();
+                string uutienhienthi_Sua = row.Cells["UuTienHienThi"].Value.ToString();
+                dialogSuaMenu dialogSuaMenu = new dialogSuaMenu(mamenu_Sua, tenmenu_Sua, loaimenu_Sua, gianhap_Sua, giaban_Sua, uutienhienthi_Sua);
+                dialogSuaMenu.Show();
             }
         }
 
-        private void BunifuFlatButton3_Click(object sender, EventArgs e)
+        private void btnFindMenu_OnTextChange(object sender, EventArgs e)
         {
-            
-            
-            string mn = dataGridMenu.CurrentRow.Cells[0].Value.ToString();
-            
-            int r = this.dataGridMenu.CurrentCell.RowIndex;
-            int c = this.dataGridMenu.CurrentCell.ColumnIndex;
-            string m = dataGridMenu.Rows[r].Cells[c].ToString();
-            int selectedCount = dataGridMenu.SelectedRows.Count;
-            dataGridMenu.Rows.RemoveAt(selectedCount);
-
-            MenuBUS menu = new MenuBUS();
-            if (menu.XoaMenu(mn))
-                {  
-                    MessageBox.Show("xóa dữ liệu thành công" + mn);
-                menu.GetMenu("Select * from Menu");
-                }
-                else
-                {
-                    MessageBox.Show("Xóa dữ liệu thất bại " + mn);
-                }
-               
-                
-            
-        }
-
-        private void dataGridMenu_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*if (dataGridMenu.CurrentRow.Index != -1)
+            if (cmbCachTim.Text == "Mã menu")
             {
-                selectedrow = dataGridMenu.CurrentRow;
-                newdialogSuamenu newdialog = new newdialogSuamenu();
-                newdialog.ShowDialog() ;
-            }*/
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE MaMenu LIKE '%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Tên menu")
+            {
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE TenMenu LIKE N'%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Loại menu")
+            {
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE LoaiMenu LIKE N'%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Giá nhập")
+            {
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE GiaNhap LIKE '%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Giá bán")
+            {
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE GiaBan LIKE '%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Ưu tiên hiển thị")
+            {
+                dgvMenu.DataSource = mnBUS.GetMenu("SELECT * FROM Menu WHERE UuTienHienThi LIKE '%" + btnFindMenu.text.Trim() + "%' ");
+            }
+            if (cmbCachTim.Text == "Cách tìm")
+            {
+                MessageBox.Show("Bạn chưa chọn cách tìm kiếm");
+            }
+
         }
     }
 }

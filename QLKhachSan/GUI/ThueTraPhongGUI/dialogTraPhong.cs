@@ -136,8 +136,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             int phutQD = 0;
             foreach (DataRow dtGioQD in cachThueBUS.GetCachThue(
                 "SELECT GioNhanPhong " +
-                "FROM CachThue " +
-                "WHERE MaCachThue = '" + macachthue + "'").Rows)
+                "FROM CachTinhTien_CachThue " +
+                "WHERE MaCachThue = '" + macachthue + "' " +
+                "AND MaCachTinhTien = '"+macachtinhtien+"'").Rows)
             {
                 gioQD = Int32.Parse(dtGioQD["GioNhanPhong"].ToString().Split(':')[0]);
                 phutQD = Int32.Parse(dtGioQD["GioNhanPhong"].ToString().Split(':')[1]);
@@ -170,9 +171,10 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             int gioQD = 0;
             int phutQD = 0;
             foreach (DataRow dtGioQD in cachThueBUS.GetCachThue(
-                "SELECT GioTraPhong " +
-                "FROM CachThue " +
-                "WHERE MaCachThue = '" + macachthue + "'").Rows)
+               "SELECT GioTraPhong " +
+               "FROM CachTinhTien_CachThue " +
+               "WHERE MaCachThue = '" + macachthue + "' " +
+               "AND MaCachTinhTien = '" + macachtinhtien + "'").Rows)
             {
                 gioQD = Int32.Parse(dtGioQD["GioTraPhong"].ToString().Split(':')[0]);
                 phutQD = Int32.Parse(dtGioQD["GioTraPhong"].ToString().Split(':')[1]);
@@ -208,7 +210,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 "WHERE MaPhong = '" + maphong + "'").Rows)
             {
                 macachtinhtien = dt["MaCachTinhTien"].ToString();
-                foreach (DataRow dtCachTinhTien in cachtinhtienBUS.GetCachtinhtien(
+                foreach (DataRow dtCachTinhTien in cachtinhtienBUS.GetCachTinhTien(
                     "SELECT * " +
                     "FROM CachTinhTien " +
                     "WHERE MaCachTinhTien = '" + macachtinhtien + "'").Rows)
@@ -224,8 +226,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             int giatheocachthue = 0;
             foreach (DataRow dt in cachThueBUS.GetCachThue(
                 "SELECT GiaTheoCachThue " +
-                "FROM CachThue " +
-                "WHERE MaCachThue = '" + macachthue + "'").Rows)
+                "FROM CachTinhTien_CachThue " +
+                "WHERE MaCachThue = '" + macachthue + "' " +
+                "AND MaCachTinhTien = '" + macachtinhtien + "'").Rows)
             {
                 giatheocachthue = int.Parse(dt["GiaTheoCachThue"].ToString(), NumberStyles.AllowThousands, new CultureInfo("en-au"));
             }
@@ -394,6 +397,8 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             AddCommaToTextBox(txtTongTien);
         }
 
+
+
         private void txtTienTraTruoc_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtTienTraTruoc);
@@ -547,7 +552,12 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         }
         private void loadCmbCachThue()
         {
-            cmbCachThue.DataSource = cachThueBUS.GetCachThue();
+            cmbCachThue.DataSource = cachThueBUS.GetCachThue(
+                "SELECT TenCachThue " +
+                "FROM Phong, CachTinhTien_CachThue, CachThue " +
+                "WHERE Phong.MaCachTinhTien = CachTinhTien_CachThue.MaCachTinhTien " +
+                "AND CachThue.MaCachThue = CachTinhTien_CachThue.MaCachThue " +
+                "AND Phong.MaPhong = '"+maphong+"'");
             cmbCachThue.DisplayMember = "TenCachThue";
             cmbCachThue.ValueMember = "MaCachThue";
 
@@ -566,7 +576,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 tongthoigianthue = (daysThue * 24) + hoursThue;
                 lblThoiGianTinhTien.Text = "Tiền phòng " + tongthoigianthue + " giờ";
                 thuetheogio = true;
+                macachthue = "CT001";
                 setTextChange();
+                
             }
             else
             {
@@ -582,6 +594,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 else
                     tongthoigianthue = daysThue;
                 lblThoiGianTinhTien.Text = "Tiền phòng " + tongthoigianthue + " ngày";
+                macachthue = "CT002";
                 setTextChange();
             }
         }

@@ -253,7 +253,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 "FROM Phong " +
                 "WHERE MaPhong = '" + maphong + "'").Rows)
             {
-                foreach (DataRow dtCachThue in cachtinhtienBUS.GetCachtinhtien(
+                foreach (DataRow dtCachThue in cachtinhtienBUS.GetCachTinhTien(
                "SELECT MaCachThue " +
                "FROM CachTinhTien " +
                "WHERE MaCachTinhTien = '" + dt["MaCachTinhTien"].ToString() + "'").Rows)

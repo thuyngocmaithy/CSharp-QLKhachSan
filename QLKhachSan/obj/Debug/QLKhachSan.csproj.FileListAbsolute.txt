@@ -81,7 +81,6 @@ C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.Q
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.frmQLLoaiPhong.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI.dialogThemMenu.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.frmQLMenu.resources
-C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI.newdialogSuamenu.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogSuaPhong.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogThemPhong.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.frmQLPhong.resources
@@ -120,3 +119,6 @@ C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.T
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI.dialogSuaQuyen.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI.dialogThemQuyen.resources
 C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI.frmQuyen.resources
+C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI.dialogSuaTinhTien.resources
+C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI.frmCachtinhtien.resources
+C:\Users\thuyn\Documents\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI.dialogSuaMenu.resources

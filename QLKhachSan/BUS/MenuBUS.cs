@@ -29,7 +29,7 @@ namespace QLKhachSan.BUS
         public bool SuaMenu(MenuDTO mn)
         {
             return mnDAO.SuaMenu(mn);
-        }
+        } 
         public bool XoaMenu(string mn)
         {
             return mnDAO.XoaMenu(mn);

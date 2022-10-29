@@ -11,13 +11,13 @@ namespace QLKhachSanDTO
     {
         string maMenu;
         string tenMenu, loaiMenu;
-        double gianhap, giaban;
+        string gianhap, giaban;
         int uutienhienthi;
         public MenuDTO()
         {
 
         }
-        public MenuDTO(string maMenu, string tenMenu, string loaiMenu, double gianhap, double giaban, int uutienhienthi)
+        public MenuDTO(string maMenu, string tenMenu, string loaiMenu, string gianhap, string giaban, int uutienhienthi)
         {
             this.MaMenu = maMenu;
             this.TenMenu = tenMenu;
@@ -30,8 +30,8 @@ namespace QLKhachSanDTO
 
         public global::System.String TenMenu { get => tenMenu; set => tenMenu = value; }
         public global::System.String LoaiMenu { get => loaiMenu; set => loaiMenu = value; }
-        public global::System.Double Gianhap { get => gianhap; set => gianhap = value; }
-        public global::System.Double Giaban { get => giaban; set => giaban = value; }
+        public global::System.String Gianhap { get => gianhap; set => gianhap = value; }
+        public global::System.String Giaban { get => giaban; set => giaban = value; }
         public global::System.Int32 Uutienhienthi { get => uutienhienthi; set => uutienhienthi = value; }
         public global::System.String MaMenu { get => maMenu; set => maMenu = value; }
     }

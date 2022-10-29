@@ -1,26 +1,35 @@
-﻿namespace QLKhachSan.DTO
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace QLKhachSan.DTO
 {
-    internal class CachThueDTO
+    public class CachThueDTO
     {
-        string macachthue, tencachthue, giatheocachthue, gionhanphong, giotraphong;
+        string MaCachThue;
+        string TenCachThue;
+
 
         public CachThueDTO()
         {
+
         }
 
-        public CachThueDTO(string macachthue, string tencachthue, string giatheocachthue, string gionhanphong, string giotraphong)
+
+
+        public CachThueDTO(string MaCachThue, string TenCachThue)
         {
-            this.Macachthue = macachthue;
-            this.Tencachthue = tencachthue;
-            this.Giatheocachthue = giatheocachthue;
-            this.Gionhanphong = gionhanphong;
-            this.Giotraphong = giotraphong;
+            this.MaCachThue1 = MaCachThue;
+            this.TenCachThue1 = TenCachThue;
         }
 
-        public string Macachthue { get => macachthue; set => macachthue = value; }
-        public string Tencachthue { get => tencachthue; set => tencachthue = value; }
-        public string Giatheocachthue { get => giatheocachthue; set => giatheocachthue = value; }
-        public string Gionhanphong { get => gionhanphong; set => gionhanphong = value; }
-        public string Giotraphong { get => giotraphong; set => giotraphong = value; }
+        public string MaCachThue1 { get => MaCachThue; set => MaCachThue = value; }
+        public string TenCachThue1 { get => TenCachThue; set => TenCachThue = value; }
+
+
+
     }
 }

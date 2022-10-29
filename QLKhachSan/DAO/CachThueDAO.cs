@@ -1,29 +1,34 @@
-﻿
-using QLKhachSan.DAO;
-using QLKhachSan.DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using QLKhachSanDTO;
+using QLKhachSan.DTO;
 
-namespace QLKhachSan
+namespace QLKhachSan.DAO
 {
     public class CachThueDAO : DBConnect
     {
-        public DataTable getCachThue()
+        public DataTable GetCachthue()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM CachThue", conn);
-            DataTable dataCachThue = new DataTable();
-            da.Fill(dataCachThue);
-            return dataCachThue;
+            DataTable dataCachthue = new DataTable();
+            da.Fill(dataCachthue);
+            return dataCachthue;
         }
-        public DataTable getCachThue(string sql)
+
+        public DataTable GetCachthue(string sql)
         {
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-            DataTable dataCachThue = new DataTable();
-            da.Fill(dataCachThue);
-            return dataCachThue;
+            DataTable resultCachthue = new DataTable();
+            da.Fill(resultCachthue);
+            return resultCachthue;
         }
+
+
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿
+using QLKhachSan.DAO;
 using QLKhachSan.DTO;
 using System.Collections.Generic;
 using System.Data;
@@ -10,11 +11,11 @@ namespace QLKhachSan.BUS
         CachThueDAO CachThueDAO = new CachThueDAO();
         public DataTable GetCachThue()
         {
-            return CachThueDAO.getCachThue();
+            return CachThueDAO.GetCachthue();
         }
         public DataTable GetCachThue(string sql)
         {
-            return CachThueDAO.getCachThue(sql);
+            return CachThueDAO.GetCachthue(sql);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using QLKhachSan.BUS;
 using QLKhachSan.DTO;
+using QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI;
@@ -107,6 +108,22 @@ namespace QLKhachSan.GUI.QLHeThongGUI
                     frmThongKe.AutoScroll = true;
                     this.Controls.Add(frmThongKe);
                     frmThongKe.Show();
+                    break;
+                case "Cách Tính Tiền":
+                    this.Controls.Clear();
+                    frmCachtinhtien frmCachtinhtien = new frmCachtinhtien();
+                    frmCachtinhtien.TopLevel = false;
+                    frmCachtinhtien.AutoScroll = true;
+                    this.Controls.Add(frmCachtinhtien);
+                    frmCachtinhtien.Show();
+                    break;
+                case "Menu":
+                    this.Controls.Clear();
+                    frmQLMenu frmQLMenu = new frmQLMenu();
+                    frmQLMenu.TopLevel = false;
+                    frmQLMenu.AutoScroll = true;
+                    this.Controls.Add(frmQLMenu);
+                    frmQLMenu.Show();
                     break;
 
 
