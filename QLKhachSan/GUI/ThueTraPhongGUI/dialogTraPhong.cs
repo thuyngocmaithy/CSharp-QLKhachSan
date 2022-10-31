@@ -1,10 +1,12 @@
-﻿using Guna.UI2.WinForms;
+﻿using AmLich;
+using Guna.UI2.WinForms;
 using QLKhachSan.BUS;
 using QLKhachSan.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 
 namespace QLKhachSan.GUI.ThueTraPhongGUI
@@ -25,6 +27,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         int tienphuthu;
         int sophutlamtron1gio, daysThue = 0, hoursThue = 0, minutesThue = 0, tongthoigianthue = 0;
         int sogionhanphongsom = 0, sogiotraphongtre = 0;
+        int songayT6 = 0, songayT7 = 0, songayCN = 0, songayle = 0;
         Boolean thuetheogio = true;
         Boolean menuChange = false;
         string trangthai;
@@ -35,7 +38,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.mahoadon = mahoadon;
             this.trangthai = trangthai;
         }
-      
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -138,7 +141,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 "SELECT GioNhanPhong " +
                 "FROM CachTinhTien_CachThue " +
                 "WHERE MaCachThue = '" + macachthue + "' " +
-                "AND MaCachTinhTien = '"+macachtinhtien+"'").Rows)
+                "AND MaCachTinhTien = '" + macachtinhtien + "'").Rows)
             {
                 gioQD = Int32.Parse(dtGioQD["GioNhanPhong"].ToString().Split(':')[0]);
                 phutQD = Int32.Parse(dtGioQD["GioNhanPhong"].ToString().Split(':')[1]);
@@ -204,6 +207,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         private void getElementTienPhong()
         {
+            
             foreach (DataRow dt in phongBUS.GetPhong(
                 "SELECT MaCachTinhTien " +
                 "FROM Phong " +
@@ -220,9 +224,65 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 }
             }
         }
+        private void testWeekendAndHoliday()
+        {
+            songayT6 = 0;
+            songayT7 = 0;
+            songayCN = 0;
+            songayle = 0;
+            DateTime datengaynhan = dateNhanPhong.Value;
+            DateTime datengaytra = dateTraPhong.Value;
+
+            for (DateTime i = datengaynhan; i <= datengaytra; i += TimeSpan.FromDays(1))
+            {
+                if (i.DayOfWeek == DayOfWeek.Friday)
+                {
+                    songayT6++;
+                }
+                if (i.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    songayT7++;
+                }
+                if (i.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    songayCN++;
+                }
+            }
+
+            //KIỂM TRA NGÀY LỄ DƯƠNG LỊCH
+            string[] leDuongLich = File.ReadAllLines(@"DanhSachNgayLeDuongLich.txt");
+            for (DateTime i = datengaynhan; i <= datengaytra; i += TimeSpan.FromDays(1))
+            {
+                string date = i.ToString("dd/MM");
+                
+                foreach (string s in leDuongLich)
+                {
+                    if (date.Equals(s))
+                    {
+                        songayle++;
+                    }
+                }
+            }
+            //KIỂM TRA NGÀY LỄ ÂM LỊCH
+            string[] leAmLich = File.ReadAllLines(@"DanhSachNgayLeAmLich.txt");
+            for (DateTime i = datengaynhan; i <= datengaytra; i += TimeSpan.FromDays(1))
+            {
+                LunarDate ld = LunarYearTools.SolarToLunar(i);
+                string date = ld.Day + "/" + ld.Month;
+
+                foreach (string s in leAmLich)
+                {
+                    if (date.Equals(s))
+                    {
+                        songayle++;
+                    }
+                }
+            }
+        }
         private int tinhTienPhong()
         {
-            int tienphong;
+           
+            int tienphong=0;
             int giatheocachthue = 0;
             foreach (DataRow dt in cachThueBUS.GetCachThue(
                 "SELECT GiaTheoCachThue " +
@@ -232,8 +292,28 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             {
                 giatheocachthue = int.Parse(dt["GiaTheoCachThue"].ToString(), NumberStyles.AllowThousands, new CultureInfo("en-au"));
             }
-            tienphong = (giatheocachthue * tongthoigianthue);
-
+            if(thuetheogio)
+            {
+                tienphong = (giatheocachthue * tongthoigianthue);
+            }
+            else
+            {
+                testWeekendAndHoliday();
+                MessageBox.Show("T6:" + songayT6 + "-T7:" + songayT7 + "-CN:" + songayCN);
+                tongthoigianthue = tongthoigianthue - songayT6 - songayT7 - songayCN - songayle;
+                foreach (DataRow dt in cachtinhtienBUS.GetCachTinhTien(
+               "SELECT GiaThueCuoiTuanVaNgayLe " +
+               "FROM CachTinhTien " +
+               "WHERE MaCachTinhTien = '" + macachtinhtien + "'").Rows)
+                {                    
+                    string[] giathuecuoituanvangayle = dt["GiaThueCuoiTuanVaNgayLe"].ToString().Split('-');
+                    int giaT6 = int.Parse(giathuecuoituanvangayle[0], NumberStyles.AllowThousands, new CultureInfo("en-au"));
+                    int giaT7 = int.Parse(giathuecuoituanvangayle[1], NumberStyles.AllowThousands, new CultureInfo("en-au"));
+                    int giaCN = int.Parse(giathuecuoituanvangayle[2], NumberStyles.AllowThousands, new CultureInfo("en-au"));
+                    int giangayle = int.Parse(giathuecuoituanvangayle[3], NumberStyles.AllowThousands, new CultureInfo("en-au"));
+                    tienphong = (giatheocachthue * tongthoigianthue) + (giaT6 * songayT6) + (giaT7 * songayT7) + (giaCN * songayCN) + (giangayle * songayle);
+                }
+            }    
             return tienphong;
 
         }
@@ -258,40 +338,6 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 }
             }
             return dt;
-        }
-        private void themHoaDon_Menu()
-        {
-            DataTable dtMenu_HoaDon = GetDataTableFromDGV(dgvMenuTraPhong);
-
-            if (hoaDon_MenuBUS.XoaHoaDon_Menu())
-            {
-                foreach (DataRow data in menuBUS.GetMenu().Rows)
-                {
-                    foreach (DataRow dt in dtMenu_HoaDon.Rows)
-                    {
-                        if (dt["TenMenu"].ToString() == data["TenMenu"].ToString())
-                        {
-                            int sl = 0;
-                            if (dt["SL"].ToString() != "")
-                            {
-                                sl = Int32.Parse(dt["SL"].ToString());
-                            }
-                            string mamenu = data["MaMenu"].ToString();
-
-                            HoaDon_MenuDTO hoadon_menu = new HoaDon_MenuDTO(mamenu, mahoadon, sl);
-
-                            if (!hoaDon_MenuBUS.ThemHoaDon_Menu(hoadon_menu))
-                            {
-                                suathanhcong = false;
-                            }
-                        }
-
-
-                    }
-
-                }
-
-            }
         }
 
 
@@ -332,43 +378,95 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         private void dateNhanPhong_onValueChanged(object sender, EventArgs e)
         {
+
             if (changeDate)
             {
-                tinhTongTien();
-                txtTongTien.Text = tinhTongTien().ToString();
-                AddCommaToTextBox(txtTongTien);
+                if (dateNhanPhong.Value > dateTraPhong.Value)
+                {
+                    MessageBox.Show("Ngày nhận phòng không thể lớn hơn ngày trả phòng");
+                    dateNhanPhong.Value = dateTraPhong.Value;                  
+                }
+                if(dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+               && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+               && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+                {
+                    if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                     || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                     timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                    {
+                        MessageBox.Show("Thời gian nhận phòng không thể lớn hơn thời gian trả phòng");
+                        timeNhanPhong.Value = timeTraPhong.Value;
+                    }
+                }    
+                setTextChange();
             }
 
         }
 
         private void dateTraPhong_onValueChanged(object sender, EventArgs e)
         {
+
             if (changeDate)
             {
-                tinhTongTien();
-                txtTongTien.Text = tinhTongTien().ToString();
-                AddCommaToTextBox(txtTongTien);
+                if (dateTraPhong.Value < dateTraPhong.Value)
+                {
+                    MessageBox.Show("Ngày trả phòng không thể nhỏ hơn ngày nhận phòng");
+                    dateTraPhong.Value = dateNhanPhong.Value;
+                }
+                if (dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+               && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+               && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+                {
+                    if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                        || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                        timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                    {
+                        MessageBox.Show("Thời gian trả phòng không thể nhỏ hơn thời gian nhận phòng");
+                        timeTraPhong.Value = timeNhanPhong.Value;
+                    }
+                }
+                setTextChange();
             }
         }
 
         private void timeTraPhong_ValueChanged(object sender, EventArgs e)
         {
             timeTraPhong.CustomFormat = "HH:mm";
-            if(changeDate)
+            if (changeDate)
             {
-                tinhTongTien();
-                txtTongTien.Text = tinhTongTien().ToString();
-                AddCommaToTextBox(txtTongTien);
-            }    
+                  if (dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+                && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+                && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+            {
+                if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                    || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                    timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                {
+                    MessageBox.Show("Thời gian trả phòng không thể nhỏ hơn thời gian nhận phòng");
+                    timeTraPhong.Value = timeNhanPhong.Value;
+                }
+            }
+                setTextChange();
+            }
         }
         private void timeNhanPhong_ValueChanged(object sender, EventArgs e)
         {
             timeNhanPhong.CustomFormat = "HH:mm";
             if (changeDate)
             {
-                tinhTongTien();
-                txtTongTien.Text = tinhTongTien().ToString();
-                AddCommaToTextBox(txtTongTien);
+                 if (dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+                && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+                && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+                {
+                    if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                        || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                        timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                    {
+                        MessageBox.Show("Thời gian nhận phòng không thể lớn hơn thời gian trả phòng");
+                        timeNhanPhong.Value = timeTraPhong.Value;
+                    }
+                }
+                setTextChange();
             }
 
 
@@ -378,6 +476,18 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         {
 
             timeNhanPhong.CustomFormat = "HH:mm";
+            if (dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+                && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+                && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+            {
+                if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                    || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                    timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                {
+                    MessageBox.Show("Thời gian nhận phòng không thể lớn hơn thời gian trả phòng");
+                    timeNhanPhong.Value = timeTraPhong.Value;
+                }
+            }
             setTextChange();
 
         }
@@ -428,11 +538,26 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         {
             timeTraPhong.CustomFormat = "HH:mm";
 
+            if (dateNhanPhong.Value.Day == dateTraPhong.Value.Day
+                && dateNhanPhong.Value.Month == dateTraPhong.Value.Month
+                && dateNhanPhong.Value.Year == dateTraPhong.Value.Year)
+            {
+                if ((timeTraPhong.Value.Hour < timeNhanPhong.Value.Hour)
+                    || (timeTraPhong.Value.Hour == timeNhanPhong.Value.Hour &&
+                    timeTraPhong.Value.Minute < timeNhanPhong.Value.Minute))
+                {
+                    MessageBox.Show("Thời gian trả phòng không thể nhỏ hơn thời gian nhận phòng");
+                    timeTraPhong.Value = timeNhanPhong.Value;
+                }
+            }
+
+            setTextChange();
+
         }
 
         private void setTextChange()
         {
-            
+
             setLabelThoiGianThue();
             setLabelTrangThaiNhanPhong();
             setLabelTrangThaiTraPhong();
@@ -445,7 +570,18 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 tongthoigianthue = (daysThue * 24) + hoursThue;
                 lblThoiGianTinhTien.Text = "Tiền phòng " + tongthoigianthue + " giờ";
             }
-
+            else
+            {
+                lblTrangThaiNhanPhong.Visible = true;
+                lblTrangThaiTraPhong.Visible = true;
+                if (hoursThue > 12)
+                {
+                    tongthoigianthue = daysThue + 1;
+                }
+                else
+                    tongthoigianthue = daysThue;
+                lblThoiGianTinhTien.Text = "Tiền phòng " + tongthoigianthue + " ngày";
+            }
             if (trangthai == "Thêm")
             {
                 //setTienPhong
@@ -485,7 +621,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             int tienphong = 0;
             if (txtTienPhong.Text != "")
             {
-                   tienphong = int.Parse(txtTienPhong.Text, NumberStyles.AllowThousands, new CultureInfo("en-au"));
+                tienphong = int.Parse(txtTienPhong.Text, NumberStyles.AllowThousands, new CultureInfo("en-au"));
             }
             int tienmenu = 0;
             if (txtTienMenu.Text != "")
@@ -557,7 +693,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 "FROM Phong, CachTinhTien_CachThue, CachThue " +
                 "WHERE Phong.MaCachTinhTien = CachTinhTien_CachThue.MaCachTinhTien " +
                 "AND CachThue.MaCachThue = CachTinhTien_CachThue.MaCachThue " +
-                "AND Phong.MaPhong = '"+maphong+"'");
+                "AND Phong.MaPhong = '" + maphong + "'");
             cmbCachThue.DisplayMember = "TenCachThue";
             cmbCachThue.ValueMember = "MaCachThue";
 
@@ -578,7 +714,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 thuetheogio = true;
                 macachthue = "CT001";
                 setTextChange();
-                
+
             }
             else
             {

@@ -33,6 +33,8 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLPhong));
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
+            this.dgvPhong.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_DataError);
+
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCachTim = new System.Windows.Forms.ComboBox();
             this.lblReset = new System.Windows.Forms.Label();

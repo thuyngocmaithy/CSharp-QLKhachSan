@@ -1,4 +1,6 @@
-﻿namespace QLKhachSan.GUI.QLHeThongGUI.ThongKeGUI
+﻿using System;
+
+namespace QLKhachSan.GUI.QLHeThongGUI.ThongKeGUI
 {
     partial class frmThongKe
     {
@@ -28,16 +30,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongKe));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.LineChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.PieChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,16 +46,15 @@
             this.gunatxtDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pn = new System.Windows.Forms.Panel();
-            this.lblDV = new System.Windows.Forms.Label();
+            this.lblDV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.PnThuePhong = new System.Windows.Forms.Panel();
             this.lblPhong = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbNam = new System.Windows.Forms.ComboBox();
-            this.cmbThang = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnReset = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnThongKe = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnThongKeAll = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dateThongKe = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.LineChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PieChart)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -66,58 +66,58 @@
             // 
             // LineChart
             // 
-            chartArea7.Name = "ChartArea";
-            this.LineChart.ChartAreas.Add(chartArea7);
+            chartArea3.Name = "ChartArea";
+            this.LineChart.ChartAreas.Add(chartArea3);
             this.LineChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.Name = "Legend1";
-            this.LineChart.Legends.Add(legend7);
+            legend3.Name = "Legend1";
+            this.LineChart.Legends.Add(legend3);
             this.LineChart.Location = new System.Drawing.Point(3, 4);
             this.LineChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LineChart.Name = "LineChart";
-            series10.ChartArea = "ChartArea";
-            series10.Legend = "Legend1";
-            series10.LegendText = "Doanh thu";
-            series10.MarkerSize = 1;
-            series10.Name = "ChartDT";
-            series11.ChartArea = "ChartArea";
-            series11.Legend = "Legend1";
-            series11.LegendText = "Dịch vụ";
-            series11.Name = "ChartDV";
-            this.LineChart.Series.Add(series10);
-            this.LineChart.Series.Add(series11);
+            series4.ChartArea = "ChartArea";
+            series4.Legend = "Legend1";
+            series4.LegendText = "Doanh thu";
+            series4.MarkerSize = 1;
+            series4.Name = "ChartDT";
+            series5.ChartArea = "ChartArea";
+            series5.Legend = "Legend1";
+            series5.LegendText = "Dịch vụ";
+            series5.Name = "ChartDV";
+            this.LineChart.Series.Add(series4);
+            this.LineChart.Series.Add(series5);
             this.LineChart.Size = new System.Drawing.Size(501, 380);
             this.LineChart.TabIndex = 0;
             this.LineChart.Text = "ChartBDD";
-            title7.BackColor = System.Drawing.Color.White;
-            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            title7.Name = "titleLineChart";
-            title7.Text = "Biểu Đồ Doanh Thu và Dịch Vụ";
-            this.LineChart.Titles.Add(title7);
+            title3.BackColor = System.Drawing.Color.White;
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title3.Name = "titleLineChart";
+            title3.Text = "Biểu Đồ Doanh Thu và Dịch Vụ";
+            this.LineChart.Titles.Add(title3);
             // 
             // PieChart
             // 
-            chartArea8.Name = "ChartArea1";
-            this.PieChart.ChartAreas.Add(chartArea8);
+            chartArea4.Name = "ChartArea1";
+            this.PieChart.ChartAreas.Add(chartArea4);
             this.PieChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend8.Name = "Legend1";
-            legend8.Title = "Tháng";
-            this.PieChart.Legends.Add(legend8);
+            legend4.Name = "Legend1";
+            legend4.Title = "Tháng";
+            this.PieChart.Legends.Add(legend4);
             this.PieChart.Location = new System.Drawing.Point(510, 4);
             this.PieChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PieChart.Name = "PieChart";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series12.IsValueShownAsLabel = true;
-            series12.Legend = "Legend1";
-            series12.Name = "ChartDT";
-            this.PieChart.Series.Add(series12);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.IsValueShownAsLabel = true;
+            series6.Legend = "Legend1";
+            series6.Name = "ChartDT";
+            this.PieChart.Series.Add(series6);
             this.PieChart.Size = new System.Drawing.Size(502, 380);
             this.PieChart.TabIndex = 1;
             this.PieChart.Text = "ChartBDT";
-            title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            title8.Name = "TitlePieChart";
-            title8.Text = "Biểu Đồ Doanh Thu";
-            this.PieChart.Titles.Add(title8);
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title4.Name = "TitlePieChart";
+            title4.Text = "Biểu Đồ Doanh Thu";
+            this.PieChart.Titles.Add(title4);
             // 
             // tableLayoutPanel2
             // 
@@ -128,8 +128,7 @@
             this.tableLayoutPanel2.Controls.Add(this.pnDoanThu, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.pn, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.PnThuePhong, 2, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 107);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -201,13 +200,30 @@
             // 
             // lblDV
             // 
-            this.lblDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDV.BackColor = System.Drawing.Color.DarkSalmon;
+            this.lblDV.BorderColor = System.Drawing.Color.DarkSalmon;
+            this.lblDV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblDV.DefaultText = "";
+            this.lblDV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lblDV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.lblDV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblDV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lblDV.FillColor = System.Drawing.Color.DarkSalmon;
+            this.lblDV.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.lblDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblDV.ForeColor = System.Drawing.Color.Black;
+            this.lblDV.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.lblDV.Location = new System.Drawing.Point(0, 75);
+            this.lblDV.Margin = new System.Windows.Forms.Padding(4);
             this.lblDV.Name = "lblDV";
+            this.lblDV.PasswordChar = '\0';
+            this.lblDV.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.lblDV.PlaceholderText = "";
+            this.lblDV.ReadOnly = true;
+            this.lblDV.SelectedText = "";
             this.lblDV.Size = new System.Drawing.Size(331, 36);
-            this.lblDV.TabIndex = 1;
-            this.lblDV.Text = "0 VND";
-            this.lblDV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDV.TabIndex = 3;
+            this.lblDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -255,46 +271,6 @@
             this.label3.Text = "Lượt Thuê Phòng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmbNam
-            // 
-            this.cmbNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNam.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbNam.FormattingEnabled = true;
-            this.cmbNam.Items.AddRange(new object[] {
-            "Cách tìm",
-            "Tháng",
-            "Năm"});
-            this.cmbNam.Location = new System.Drawing.Point(340, 194);
-            this.cmbNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbNam.Name = "cmbNam";
-            this.cmbNam.Size = new System.Drawing.Size(172, 36);
-            this.cmbNam.TabIndex = 34;
-            // 
-            // cmbThang
-            // 
-            this.cmbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbThang.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbThang.FormattingEnabled = true;
-            this.cmbThang.Items.AddRange(new object[] {
-            "Chọn tháng",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.cmbThang.Location = new System.Drawing.Point(162, 192);
-            this.cmbThang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbThang.Name = "cmbThang";
-            this.cmbThang.Size = new System.Drawing.Size(172, 36);
-            this.cmbThang.TabIndex = 33;
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -312,38 +288,105 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1015, 388);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
-            // btnReset
+            // btnThongKe
             // 
-            this.btnReset.AutoSize = true;
-            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnReset.Location = new System.Drawing.Point(950, 183);
-            this.btnReset.MinimumSize = new System.Drawing.Size(60, 60);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(60, 60);
-            this.btnReset.TabIndex = 39;
+            this.btnThongKe.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThongKe.AutoSize = true;
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThongKe.BorderRadius = 7;
+            this.btnThongKe.ButtonText = "Thống kê";
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThongKe.Iconimage = null;
+            this.btnThongKe.Iconimage_right = null;
+            this.btnThongKe.Iconimage_right_Selected = null;
+            this.btnThongKe.Iconimage_Selected = null;
+            this.btnThongKe.IconMarginLeft = 0;
+            this.btnThongKe.IconMarginRight = 0;
+            this.btnThongKe.IconRightVisible = true;
+            this.btnThongKe.IconRightZoom = 0D;
+            this.btnThongKe.IconVisible = true;
+            this.btnThongKe.IconZoom = 50D;
+            this.btnThongKe.IsTab = true;
+            this.btnThongKe.Location = new System.Drawing.Point(258, 17);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(8);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnThongKe.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThongKe.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThongKe.selected = false;
+            this.btnThongKe.Size = new System.Drawing.Size(153, 63);
+            this.btnThongKe.TabIndex = 40;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThongKe.Textcolor = System.Drawing.Color.White;
+            this.btnThongKe.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
-            // label4
+            // btnThongKeAll
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(62, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 38);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Tháng";
+            this.btnThongKeAll.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThongKeAll.AutoSize = true;
+            this.btnThongKeAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnThongKeAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThongKeAll.BorderRadius = 7;
+            this.btnThongKeAll.ButtonText = "Thống kê tất cả";
+            this.btnThongKeAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeAll.DisabledColor = System.Drawing.Color.Gray;
+            this.btnThongKeAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeAll.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThongKeAll.Iconimage = null;
+            this.btnThongKeAll.Iconimage_right = null;
+            this.btnThongKeAll.Iconimage_right_Selected = null;
+            this.btnThongKeAll.Iconimage_Selected = null;
+            this.btnThongKeAll.IconMarginLeft = 0;
+            this.btnThongKeAll.IconMarginRight = 0;
+            this.btnThongKeAll.IconRightVisible = true;
+            this.btnThongKeAll.IconRightZoom = 0D;
+            this.btnThongKeAll.IconVisible = true;
+            this.btnThongKeAll.IconZoom = 50D;
+            this.btnThongKeAll.IsTab = true;
+            this.btnThongKeAll.Location = new System.Drawing.Point(427, 17);
+            this.btnThongKeAll.Margin = new System.Windows.Forms.Padding(8);
+            this.btnThongKeAll.Name = "btnThongKeAll";
+            this.btnThongKeAll.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnThongKeAll.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThongKeAll.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnThongKeAll.selected = false;
+            this.btnThongKeAll.Size = new System.Drawing.Size(222, 63);
+            this.btnThongKeAll.TabIndex = 41;
+            this.btnThongKeAll.Text = "Thống kê tất cả";
+            this.btnThongKeAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThongKeAll.Textcolor = System.Drawing.Color.White;
+            this.btnThongKeAll.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeAll.Click += new System.EventHandler(this.btnThongKeAll_Click);
+            // 
+            // dateThongKe
+            // 
+            this.dateThongKe.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateThongKe.CustomFormat = "MM/yyyy";
+            this.dateThongKe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.dateThongKe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateThongKe.Location = new System.Drawing.Point(31, 29);
+            this.dateThongKe.MinimumSize = new System.Drawing.Size(200, 50);
+            this.dateThongKe.Name = "dateThongKe";
+            this.dateThongKe.ShowUpDown = true;
+            this.dateThongKe.Size = new System.Drawing.Size(200, 50);
+            this.dateThongKe.TabIndex = 42;
+            this.dateThongKe.Value = new System.DateTime(2022, 10, 1, 0, 0, 0, 0);
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 660);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.dateThongKe);
+            this.Controls.Add(this.btnThongKeAll);
+            this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.cmbNam);
-            this.Controls.Add(this.cmbThang);
             this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -371,15 +414,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel PnThuePhong;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbNam;
-        private System.Windows.Forms.ComboBox cmbThang;
-        private System.Windows.Forms.Label lblDV;
         private System.Windows.Forms.Label lblPhong;
         private System.Windows.Forms.DataVisualization.Charting.Chart LineChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart PieChart;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2TextBox lblDV;
         private Guna.UI2.WinForms.Guna2TextBox gunatxtDT;
-        private System.Windows.Forms.Label btnReset;
-        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThongKe;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThongKeAll;
+        private System.Windows.Forms.DateTimePicker dateThongKe;
     }
 }

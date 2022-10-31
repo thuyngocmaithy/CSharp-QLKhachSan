@@ -409,6 +409,7 @@
             this.timeTraPhong.TabIndex = 22;
             this.timeTraPhong.Value = new System.DateTime(2022, 10, 23, 1, 0, 1, 0);
             this.timeTraPhong.ValueChanged += new System.EventHandler(this.timeTraPhong_ValueChanged);
+            this.timeTraPhong.MouseDown += new System.Windows.Forms.MouseEventHandler(this.timeTraPhong_MouseDown);
             // 
             // flowLayoutPanel7
             // 

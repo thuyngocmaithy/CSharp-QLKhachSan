@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmLich.cs" />
     <Compile Include="BUS\CachThueBUS.cs" />
     <Compile Include="BUS\CachTinhTienBUS.cs" />
     <Compile Include="BUS\CachTinhTien_CachThueBUS.cs" />
