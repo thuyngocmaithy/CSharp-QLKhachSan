@@ -41,7 +41,6 @@ C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSa
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.SuggestedBindingRedirects.cache
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.DatPhongGUI.frmDatPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmMainPage.resources
-C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmQLKhachSan.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.frmQLHeThong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.frmQLKho.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLThuChiGUI.frmQLThuChi.resources
@@ -59,3 +58,45 @@ C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSa
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.frmQLLoaiPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogThemLoaiPhong.resources
 C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogSuaLoaiPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogThemPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.frmQLPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogSuaPhong.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhachSan.frmQLKhachSan.resources
+C:\Users\thuyn\Documents\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.dialogSuaKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.AssemblyReference.cache
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.SuggestedBindingRedirects.cache
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.exe
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.pdb
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.DatPhongGUI.frmCardDatPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.DatPhongGUI.frmDatPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.DatPhongGUI.frmTimKiem.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.frmHeader.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.MainPageGUI.frmMainPage.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogSuaLoaiPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.dialogThemLoaiPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI.frmQLLoaiPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogSuaPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.dialogThemPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI.frmQLPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhachSan.frmQLKhachSan.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLHeThongGUI.frmQLHeThong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.frmQLKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.PNKho.dialogSuaKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.PNKho.dialogThemKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.PNKho.frmPNKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLThuChiGUI.dialogSuaThuChi.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLThuChiGUI.dialogThemThuChi.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLThuChiGUI.frmQLThuChi.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.TaiKhoanGUI.frmTaiKhoan.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.ThueTraPhongGUI.frmThueTraPhong.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.Properties.Resources.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.GenerateResource.cache
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe.config
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.pdb
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.Fody.CopyLocal.cache
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.TinhTrangKho.frmTinhTrangKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.DieuChinhKho.frmDieuChinhKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.DieuChinhKho.dialogThemDieuChinhKho.resources
+C:\Users\funty\OneDrive\Tài liệu\GitHub\CSharp-QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.GUI.QLKhoGUI.PhieuKiemKho.frmPhieuKiemKho.resources
