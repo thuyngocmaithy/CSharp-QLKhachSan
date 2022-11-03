@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuyen));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvQuyen = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbCachTim = new System.Windows.Forms.ComboBox();
             this.lblReset = new System.Windows.Forms.Label();
             this.btnFindQuyen = new Bunifu.Framework.UI.BunifuTextbox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvQuyen = new System.Windows.Forms.DataGridView();
             this.btnAddQuyen = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnChonchucnang = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,45 +42,43 @@
             this.MaQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuyen)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dgvQuyen);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(13, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(8, 64);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 475);
+            this.panel1.Size = new System.Drawing.Size(651, 336);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvQuyen
+            // 
+            this.dgvQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaQuyen,
+            this.TenQuyen});
+            this.dgvQuyen.Location = new System.Drawing.Point(5, 78);
+            this.dgvQuyen.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvQuyen.Name = "dgvQuyen";
+            this.dgvQuyen.RowHeadersWidth = 62;
+            this.dgvQuyen.Size = new System.Drawing.Size(638, 249);
+            this.dgvQuyen.TabIndex = 2;
+            this.dgvQuyen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuyen_CellContentClick);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.cmbCachTim);
             this.panel3.Controls.Add(this.lblReset);
             this.panel3.Controls.Add(this.btnFindQuyen);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(5, 10);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(750, 68);
+            this.panel3.Size = new System.Drawing.Size(638, 59);
             this.panel3.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(675, 0);
-            this.label1.MinimumSize = new System.Drawing.Size(75, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 77);
-            this.label1.TabIndex = 5;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmbCachTim
             // 
@@ -93,9 +89,10 @@
             "Cách tìm",
             "Mã Quyền",
             "Tên Quyền"});
-            this.cmbCachTim.Location = new System.Drawing.Point(347, 17);
+            this.cmbCachTim.Location = new System.Drawing.Point(247, 28);
+            this.cmbCachTim.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCachTim.Name = "cmbCachTim";
-            this.cmbCachTim.Size = new System.Drawing.Size(172, 36);
+            this.cmbCachTim.Size = new System.Drawing.Size(116, 25);
             this.cmbCachTim.TabIndex = 4;
             // 
             // lblReset
@@ -104,10 +101,11 @@
             this.lblReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReset.Image = ((System.Drawing.Image)(resources.GetObject("lblReset.Image")));
             this.lblReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblReset.Location = new System.Drawing.Point(856, 5);
-            this.lblReset.MinimumSize = new System.Drawing.Size(60, 60);
+            this.lblReset.Location = new System.Drawing.Point(586, 0);
+            this.lblReset.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReset.MinimumSize = new System.Drawing.Size(50, 55);
             this.lblReset.Name = "lblReset";
-            this.lblReset.Size = new System.Drawing.Size(60, 60);
+            this.lblReset.Size = new System.Drawing.Size(50, 55);
             this.lblReset.TabIndex = 3;
             // 
             // btnFindQuyen
@@ -119,36 +117,13 @@
             this.btnFindQuyen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btnFindQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
             this.btnFindQuyen.Icon = ((System.Drawing.Image)(resources.GetObject("btnFindQuyen.Icon")));
-            this.btnFindQuyen.Location = new System.Drawing.Point(0, 0);
+            this.btnFindQuyen.Location = new System.Drawing.Point(0, 11);
             this.btnFindQuyen.Margin = new System.Windows.Forms.Padding(0);
             this.btnFindQuyen.Name = "btnFindQuyen";
-            this.btnFindQuyen.Size = new System.Drawing.Size(328, 65);
+            this.btnFindQuyen.Size = new System.Drawing.Size(219, 42);
             this.btnFindQuyen.TabIndex = 2;
             this.btnFindQuyen.text = "";
             this.btnFindQuyen.OnTextChange += new System.EventHandler(this.btnFindQuyen_OnTextChange);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvQuyen);
-            this.panel2.Location = new System.Drawing.Point(0, 92);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(750, 383);
-            this.panel2.TabIndex = 0;
-            // 
-            // dgvQuyen
-            // 
-            this.dgvQuyen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvQuyen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaQuyen,
-            this.TenQuyen});
-            this.dgvQuyen.Location = new System.Drawing.Point(0, 0);
-            this.dgvQuyen.Margin = new System.Windows.Forms.Padding(0);
-            this.dgvQuyen.Name = "dgvQuyen";
-            this.dgvQuyen.RowHeadersWidth = 62;
-            this.dgvQuyen.Size = new System.Drawing.Size(750, 383);
-            this.dgvQuyen.TabIndex = 2;
-            this.dgvQuyen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuyen_CellContentClick);
             // 
             // btnAddQuyen
             // 
@@ -173,14 +148,14 @@
             this.btnAddQuyen.IconVisible = true;
             this.btnAddQuyen.IconZoom = 40D;
             this.btnAddQuyen.IsTab = true;
-            this.btnAddQuyen.Location = new System.Drawing.Point(260, 9);
+            this.btnAddQuyen.Location = new System.Drawing.Point(173, 6);
             this.btnAddQuyen.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddQuyen.Name = "btnAddQuyen";
             this.btnAddQuyen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnAddQuyen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnAddQuyen.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddQuyen.selected = false;
-            this.btnAddQuyen.Size = new System.Drawing.Size(150, 63);
+            this.btnAddQuyen.Size = new System.Drawing.Size(100, 43);
             this.btnAddQuyen.TabIndex = 16;
             this.btnAddQuyen.Text = " Thêm mới";
             this.btnAddQuyen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,14 +186,14 @@
             this.btnChonchucnang.IconVisible = true;
             this.btnChonchucnang.IconZoom = 40D;
             this.btnChonchucnang.IsTab = true;
-            this.btnChonchucnang.Location = new System.Drawing.Point(423, 8);
+            this.btnChonchucnang.Location = new System.Drawing.Point(282, 5);
             this.btnChonchucnang.Margin = new System.Windows.Forms.Padding(0);
             this.btnChonchucnang.Name = "btnChonchucnang";
             this.btnChonchucnang.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnChonchucnang.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnChonchucnang.OnHoverTextColor = System.Drawing.Color.White;
             this.btnChonchucnang.selected = false;
-            this.btnChonchucnang.Size = new System.Drawing.Size(197, 63);
+            this.btnChonchucnang.Size = new System.Drawing.Size(131, 43);
             this.btnChonchucnang.TabIndex = 17;
             this.btnChonchucnang.Text = "Chọn Chức Năng";
             this.btnChonchucnang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,18 +205,20 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 26);
+            this.label3.Location = new System.Drawing.Point(9, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 29);
+            this.label3.Size = new System.Drawing.Size(153, 20);
             this.label3.TabIndex = 18;
             this.label3.Text = "QUẢN LÝ QUYỀN";
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(637, 8);
+            this.btnClose.Location = new System.Drawing.Point(425, 5);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 64);
+            this.btnClose.Size = new System.Drawing.Size(83, 42);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "ĐÓNG";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -253,7 +230,7 @@
             this.MaQuyen.HeaderText = "Mã Quyền";
             this.MaQuyen.MinimumWidth = 8;
             this.MaQuyen.Name = "MaQuyen";
-            this.MaQuyen.Width = 230;
+            this.MaQuyen.Width = 174;
             // 
             // TenQuyen
             // 
@@ -261,14 +238,14 @@
             this.TenQuyen.HeaderText = "Tên Quyền";
             this.TenQuyen.MinimumWidth = 8;
             this.TenQuyen.Name = "TenQuyen";
-            this.TenQuyen.Width = 250;
+            this.TenQuyen.Width = 200;
             // 
             // frmQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(774, 582);
+            this.ClientSize = new System.Drawing.Size(671, 423);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label3);
@@ -276,15 +253,13 @@
             this.Controls.Add(this.btnAddQuyen);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmQuyen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmQuyen_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuyen)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvQuyen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,12 +268,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cmbCachTim;
         private System.Windows.Forms.Label lblReset;
         private Bunifu.Framework.UI.BunifuTextbox btnFindQuyen;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddQuyen;
         private Bunifu.Framework.UI.BunifuFlatButton btnChonchucnang;
         private System.Windows.Forms.DataGridView dgvQuyen;

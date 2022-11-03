@@ -72,11 +72,12 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.pnlMainMenu.Controls.Add(this.btnDatPhong);
             this.pnlMainMenu.Controls.Add(this.btnTrangChinh);
             this.bunifuTransition1.SetDecoration(this.pnlMainMenu, BunifuAnimatorNS.DecorationType.None);
-            this.pnlMainMenu.Location = new System.Drawing.Point(0, 40);
-            this.pnlMainMenu.MaximumSize = new System.Drawing.Size(325, 660);
-            this.pnlMainMenu.MinimumSize = new System.Drawing.Size(85, 660);
+            this.pnlMainMenu.Location = new System.Drawing.Point(0, 26);
+            this.pnlMainMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMainMenu.MaximumSize = new System.Drawing.Size(217, 429);
+            this.pnlMainMenu.MinimumSize = new System.Drawing.Size(57, 429);
             this.pnlMainMenu.Name = "pnlMainMenu";
-            this.pnlMainMenu.Size = new System.Drawing.Size(85, 660);
+            this.pnlMainMenu.Size = new System.Drawing.Size(57, 429);
             this.pnlMainMenu.TabIndex = 0;
             // 
             // lblShowMenu
@@ -85,11 +86,12 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.bunifuTransition1.SetDecoration(this.lblShowMenu, BunifuAnimatorNS.DecorationType.None);
             this.lblShowMenu.Image = ((System.Drawing.Image)(resources.GetObject("lblShowMenu.Image")));
             this.lblShowMenu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblShowMenu.Location = new System.Drawing.Point(25, 22);
-            this.lblShowMenu.MaximumSize = new System.Drawing.Size(50, 50);
-            this.lblShowMenu.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblShowMenu.Location = new System.Drawing.Point(17, 14);
+            this.lblShowMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShowMenu.MaximumSize = new System.Drawing.Size(33, 32);
+            this.lblShowMenu.MinimumSize = new System.Drawing.Size(33, 32);
             this.lblShowMenu.Name = "lblShowMenu";
-            this.lblShowMenu.Size = new System.Drawing.Size(50, 50);
+            this.lblShowMenu.Size = new System.Drawing.Size(33, 32);
             this.lblShowMenu.TabIndex = 15;
             this.lblShowMenu.Click += new System.EventHandler(this.lblShowMenu_Click);
             // 
@@ -97,9 +99,10 @@ namespace QLKhachSan.GUI.QLKhachSan
             // 
             this.label2.AutoSize = true;
             this.bunifuTransition1.SetDecoration(this.label2, BunifuAnimatorNS.DecorationType.None);
-            this.label2.Location = new System.Drawing.Point(38, 25);
+            this.label2.Location = new System.Drawing.Point(25, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 14;
             // 
             // btnLogout
@@ -126,14 +129,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnLogout.IconVisible = true;
             this.btnLogout.IconZoom = 50D;
             this.btnLogout.IsTab = true;
-            this.btnLogout.Location = new System.Drawing.Point(13, 570);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(8);
+            this.btnLogout.Location = new System.Drawing.Point(9, 370);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
-            this.btnLogout.Size = new System.Drawing.Size(289, 63);
+            this.btnLogout.Size = new System.Drawing.Size(193, 43);
             this.btnLogout.TabIndex = 11;
             this.btnLogout.Text = "   Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,11 +151,12 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.lblLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuTransition1.SetDecoration(this.lblLogo, BunifuAnimatorNS.DecorationType.None);
             this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(60, 12);
-            this.lblLogo.MaximumSize = new System.Drawing.Size(200, 60);
-            this.lblLogo.MinimumSize = new System.Drawing.Size(200, 60);
+            this.lblLogo.Location = new System.Drawing.Point(40, 8);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogo.MaximumSize = new System.Drawing.Size(133, 39);
+            this.lblLogo.MinimumSize = new System.Drawing.Size(133, 39);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(200, 60);
+            this.lblLogo.Size = new System.Drawing.Size(133, 39);
             this.lblLogo.TabIndex = 9;
             this.lblLogo.Click += new System.EventHandler(this.lblPanel_Click);
             // 
@@ -180,14 +184,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnTaiKhoan.IconVisible = true;
             this.btnTaiKhoan.IconZoom = 50D;
             this.btnTaiKhoan.IsTab = true;
-            this.btnTaiKhoan.Location = new System.Drawing.Point(13, 502);
-            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(8);
+            this.btnTaiKhoan.Location = new System.Drawing.Point(9, 326);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnTaiKhoan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnTaiKhoan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnTaiKhoan.selected = false;
-            this.btnTaiKhoan.Size = new System.Drawing.Size(289, 63);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(193, 43);
             this.btnTaiKhoan.TabIndex = 7;
             this.btnTaiKhoan.Text = "   Tài khoản";
             this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,14 +224,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnQLHeThong.IconVisible = true;
             this.btnQLHeThong.IconZoom = 50D;
             this.btnQLHeThong.IsTab = true;
-            this.btnQLHeThong.Location = new System.Drawing.Point(13, 431);
-            this.btnQLHeThong.Margin = new System.Windows.Forms.Padding(8);
+            this.btnQLHeThong.Location = new System.Drawing.Point(9, 280);
+            this.btnQLHeThong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnQLHeThong.Name = "btnQLHeThong";
             this.btnQLHeThong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLHeThong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnQLHeThong.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLHeThong.selected = false;
-            this.btnQLHeThong.Size = new System.Drawing.Size(289, 63);
+            this.btnQLHeThong.Size = new System.Drawing.Size(193, 43);
             this.btnQLHeThong.TabIndex = 6;
             this.btnQLHeThong.Text = "   Quản lý hệ thống";
             this.btnQLHeThong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -260,14 +264,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnQLThuChi.IconVisible = true;
             this.btnQLThuChi.IconZoom = 50D;
             this.btnQLThuChi.IsTab = true;
-            this.btnQLThuChi.Location = new System.Drawing.Point(13, 360);
-            this.btnQLThuChi.Margin = new System.Windows.Forms.Padding(8);
+            this.btnQLThuChi.Location = new System.Drawing.Point(9, 234);
+            this.btnQLThuChi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnQLThuChi.Name = "btnQLThuChi";
             this.btnQLThuChi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLThuChi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnQLThuChi.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLThuChi.selected = false;
-            this.btnQLThuChi.Size = new System.Drawing.Size(289, 63);
+            this.btnQLThuChi.Size = new System.Drawing.Size(193, 43);
             this.btnQLThuChi.TabIndex = 5;
             this.btnQLThuChi.Text = "   Quản lý thu - chi";
             this.btnQLThuChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -300,14 +304,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnQLKho.IconVisible = true;
             this.btnQLKho.IconZoom = 50D;
             this.btnQLKho.IsTab = true;
-            this.btnQLKho.Location = new System.Drawing.Point(13, 289);
-            this.btnQLKho.Margin = new System.Windows.Forms.Padding(8);
+            this.btnQLKho.Location = new System.Drawing.Point(9, 188);
+            this.btnQLKho.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnQLKho.Name = "btnQLKho";
             this.btnQLKho.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnQLKho.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnQLKho.OnHoverTextColor = System.Drawing.Color.White;
             this.btnQLKho.selected = false;
-            this.btnQLKho.Size = new System.Drawing.Size(289, 63);
+            this.btnQLKho.Size = new System.Drawing.Size(193, 43);
             this.btnQLKho.TabIndex = 4;
             this.btnQLKho.Text = "   Quản lý kho";
             this.btnQLKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,14 +344,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnThueTraPhong.IconVisible = true;
             this.btnThueTraPhong.IconZoom = 50D;
             this.btnThueTraPhong.IsTab = true;
-            this.btnThueTraPhong.Location = new System.Drawing.Point(13, 218);
-            this.btnThueTraPhong.Margin = new System.Windows.Forms.Padding(8);
+            this.btnThueTraPhong.Location = new System.Drawing.Point(9, 142);
+            this.btnThueTraPhong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnThueTraPhong.Name = "btnThueTraPhong";
             this.btnThueTraPhong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThueTraPhong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnThueTraPhong.OnHoverTextColor = System.Drawing.Color.White;
             this.btnThueTraPhong.selected = false;
-            this.btnThueTraPhong.Size = new System.Drawing.Size(289, 63);
+            this.btnThueTraPhong.Size = new System.Drawing.Size(193, 43);
             this.btnThueTraPhong.TabIndex = 3;
             this.btnThueTraPhong.Text = "   Thuê - trả phòng";
             this.btnThueTraPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -380,14 +384,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnDatPhong.IconVisible = true;
             this.btnDatPhong.IconZoom = 50D;
             this.btnDatPhong.IsTab = true;
-            this.btnDatPhong.Location = new System.Drawing.Point(13, 151);
-            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(8);
+            this.btnDatPhong.Location = new System.Drawing.Point(9, 98);
+            this.btnDatPhong.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnDatPhong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnDatPhong.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDatPhong.selected = false;
-            this.btnDatPhong.Size = new System.Drawing.Size(289, 63);
+            this.btnDatPhong.Size = new System.Drawing.Size(193, 43);
             this.btnDatPhong.TabIndex = 2;
             this.btnDatPhong.Text = "   Đặt phòng";
             this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -420,14 +424,14 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnTrangChinh.IconVisible = true;
             this.btnTrangChinh.IconZoom = 50D;
             this.btnTrangChinh.IsTab = true;
-            this.btnTrangChinh.Location = new System.Drawing.Point(13, 80);
-            this.btnTrangChinh.Margin = new System.Windows.Forms.Padding(8);
+            this.btnTrangChinh.Location = new System.Drawing.Point(9, 52);
+            this.btnTrangChinh.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnTrangChinh.Name = "btnTrangChinh";
             this.btnTrangChinh.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnTrangChinh.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnTrangChinh.OnHoverTextColor = System.Drawing.Color.White;
             this.btnTrangChinh.selected = false;
-            this.btnTrangChinh.Size = new System.Drawing.Size(289, 63);
+            this.btnTrangChinh.Size = new System.Drawing.Size(193, 43);
             this.btnTrangChinh.TabIndex = 1;
             this.btnTrangChinh.Text = "   Trang chính";
             this.btnTrangChinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,9 +476,10 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.pnlHeader.Controls.Add(this.label3);
             this.bunifuTransition1.SetDecoration(this.pnlHeader, BunifuAnimatorNS.DecorationType.None);
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.MinimumSize = new System.Drawing.Size(1100, 40);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.MinimumSize = new System.Drawing.Size(733, 26);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1100, 40);
+            this.pnlHeader.Size = new System.Drawing.Size(733, 26);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnMinimize
@@ -484,10 +489,11 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.ForeColor = System.Drawing.Color.Black;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1020, 0);
-            this.btnMinimize.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnMinimize.Location = new System.Drawing.Point(679, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.MinimumSize = new System.Drawing.Size(27, 26);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
+            this.btnMinimize.Size = new System.Drawing.Size(27, 26);
             this.btnMinimize.TabIndex = 5;
             this.btnMinimize.UseVisualStyleBackColor = false;
             // 
@@ -498,10 +504,11 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(1060, 0);
-            this.btnClose.MinimumSize = new System.Drawing.Size(40, 40);
+            this.btnClose.Location = new System.Drawing.Point(706, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.MinimumSize = new System.Drawing.Size(27, 26);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.Size = new System.Drawing.Size(27, 26);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -512,9 +519,10 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.bunifuTransition1.SetDecoration(this.label4, BunifuAnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(53, 9);
+            this.label4.Location = new System.Drawing.Point(35, 6);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 25);
+            this.label4.Size = new System.Drawing.Size(169, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "QUẢN LÝ KHÁCH SẠN";
             // 
@@ -527,27 +535,28 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.MinimumSize = new System.Drawing.Size(50, 50);
+            this.label3.MinimumSize = new System.Drawing.Size(33, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 50);
+            this.label3.Size = new System.Drawing.Size(33, 32);
             this.label3.TabIndex = 1;
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pnlMain
             // 
             this.bunifuTransition1.SetDecoration(this.pnlMain, BunifuAnimatorNS.DecorationType.None);
-            this.pnlMain.Location = new System.Drawing.Point(85, 40);
-            this.pnlMain.MaximumSize = new System.Drawing.Size(1015, 660);
-            this.pnlMain.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.pnlMain.Location = new System.Drawing.Point(57, 26);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMain.MaximumSize = new System.Drawing.Size(677, 429);
+            this.pnlMain.MinimumSize = new System.Drawing.Size(677, 429);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1015, 660);
+            this.pnlMain.Size = new System.Drawing.Size(677, 429);
             this.pnlMain.TabIndex = 0;
             // 
             // frmQLKhachSan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.ClientSize = new System.Drawing.Size(733, 455);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMainMenu);
             this.Controls.Add(this.pnlHeader);
@@ -555,8 +564,8 @@ namespace QLKhachSan.GUI.QLKhachSan
             this.bunifuTransition1.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.MaximumSize = new System.Drawing.Size(1100, 700);
-            this.MinimumSize = new System.Drawing.Size(1100, 700);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(733, 455);
             this.Name = "frmQLKhachSan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmQLKhachSan_Load);

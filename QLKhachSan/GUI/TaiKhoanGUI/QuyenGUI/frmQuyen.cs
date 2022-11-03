@@ -102,7 +102,6 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
                 DataGridViewRow row = dgvQuyen.Rows[e.RowIndex];
                 dialogSuaQuyen dialogSuaQuyen = new dialogSuaQuyen(row.Cells["MaQuyen"].Value.ToString());
                 dialogSuaQuyen.Show();
-
             }
             
         }
@@ -120,7 +119,8 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
 
         private void btnChonchucnang_Click(object sender, EventArgs e)
         {
-            dialogChonChucNang dialogChonChucNang = new dialogChonChucNang();
+            int index = dgvQuyen.CurrentCell.RowIndex;
+            dialogChonChucNang dialogChonChucNang = new dialogChonChucNang(dgvQuyen.Rows[index].Cells[0].Value.ToString());
             dialogChonChucNang.Show();
         }
     }

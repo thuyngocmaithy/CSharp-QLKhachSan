@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKhachSan.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.LichSuGUI
 {
     public partial class frmLichSu : Form
     {
+        HoaDonBUS hoaDonBUS = new HoaDonBUS();
         public frmLichSu()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.LichSuGUI
         private void frmLichSu_Load(object sender, EventArgs e)
         {
             dgvLichSu.AllowUserToAddRows = false;
+            dgvLichSu.DataSource = hoaDonBUS.GetHoaDon();
             //Add btnDelete
             DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
             dgvLichSu.Columns.Insert(5, btnDelete);
@@ -40,7 +43,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.LichSuGUI
             btnEdit.Width = 100;
             btnEdit.Text = "Edit";
             btnEdit.UseColumnTextForButtonValue = true;
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -30,13 +30,15 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.btnXuatExcel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.DateBatDau = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.DateKetThuc = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLichSu = new System.Windows.Forms.DataGridView();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTuNgay = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateDenNgay = new Bunifu.Framework.UI.BunifuDatepicker();
             this.Phong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,15 +46,18 @@
             this.TraPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 32);
+            this.label3.Location = new System.Drawing.Point(21, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 29);
+            this.label3.Size = new System.Drawing.Size(201, 20);
             this.label3.TabIndex = 13;
             this.label3.Text = "LỊCH SỬ THUÊ PHÒNG";
             // 
@@ -79,40 +84,20 @@
             this.btnXuatExcel.IconVisible = true;
             this.btnXuatExcel.IconZoom = 40D;
             this.btnXuatExcel.IsTab = true;
-            this.btnXuatExcel.Location = new System.Drawing.Point(354, 14);
+            this.btnXuatExcel.Location = new System.Drawing.Point(236, 9);
             this.btnXuatExcel.Margin = new System.Windows.Forms.Padding(0);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnXuatExcel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnXuatExcel.OnHoverTextColor = System.Drawing.Color.White;
             this.btnXuatExcel.selected = false;
-            this.btnXuatExcel.Size = new System.Drawing.Size(153, 66);
+            this.btnXuatExcel.Size = new System.Drawing.Size(102, 43);
             this.btnXuatExcel.TabIndex = 14;
             this.btnXuatExcel.Text = "Xuất Exel";
             this.btnXuatExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXuatExcel.Textcolor = System.Drawing.Color.White;
             this.btnXuatExcel.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXuatExcel.Click += new System.EventHandler(this.btnXuatExcel_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 36);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Từ Ngày";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(514, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 36);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Đến Ngày";
             // 
             // btnTimKiem
             // 
@@ -137,55 +122,26 @@
             this.btnTimKiem.IconVisible = true;
             this.btnTimKiem.IconZoom = 40D;
             this.btnTimKiem.IsTab = true;
-            this.btnTimKiem.Location = new System.Drawing.Point(1014, 89);
+            this.btnTimKiem.Location = new System.Drawing.Point(432, 76);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(0);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnTimKiem.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnTimKiem.OnHoverTextColor = System.Drawing.Color.White;
             this.btnTimKiem.selected = false;
-            this.btnTimKiem.Size = new System.Drawing.Size(160, 66);
+            this.btnTimKiem.Size = new System.Drawing.Size(107, 43);
             this.btnTimKiem.TabIndex = 17;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTimKiem.Textcolor = System.Drawing.Color.White;
             this.btnTimKiem.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             // 
-            // DateBatDau
-            // 
-            this.DateBatDau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.DateBatDau.BorderRadius = 0;
-            this.DateBatDau.ForeColor = System.Drawing.Color.White;
-            this.DateBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateBatDau.FormatCustom = null;
-            this.DateBatDau.Location = new System.Drawing.Point(159, 89);
-            this.DateBatDau.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.DateBatDau.Name = "DateBatDau";
-            this.DateBatDau.Size = new System.Drawing.Size(348, 66);
-            this.DateBatDau.TabIndex = 18;
-            this.DateBatDau.Value = new System.DateTime(2022, 10, 27, 13, 54, 28, 340);
-            // 
-            // DateKetThuc
-            // 
-            this.DateKetThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.DateKetThuc.BorderRadius = 0;
-            this.DateKetThuc.ForeColor = System.Drawing.Color.White;
-            this.DateKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateKetThuc.FormatCustom = null;
-            this.DateKetThuc.Location = new System.Drawing.Point(663, 89);
-            this.DateKetThuc.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.DateKetThuc.Name = "DateKetThuc";
-            this.DateKetThuc.Size = new System.Drawing.Size(328, 66);
-            this.DateKetThuc.TabIndex = 19;
-            this.DateKetThuc.Value = new System.DateTime(2022, 10, 27, 13, 54, 28, 340);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvLichSu);
-            this.panel1.Location = new System.Drawing.Point(38, 211);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(12, 137);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1137, 463);
+            this.panel1.Size = new System.Drawing.Size(637, 264);
             this.panel1.TabIndex = 20;
             // 
             // dgvLichSu
@@ -197,13 +153,82 @@
             this.ThoiGianKetThuc,
             this.NhanPhong,
             this.TraPhong});
-            this.dgvLichSu.Location = new System.Drawing.Point(4, 5);
-            this.dgvLichSu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvLichSu.Location = new System.Drawing.Point(3, 3);
             this.dgvLichSu.Name = "dgvLichSu";
             this.dgvLichSu.RowHeadersWidth = 62;
-            this.dgvLichSu.Size = new System.Drawing.Size(1128, 454);
+            this.dgvLichSu.Size = new System.Drawing.Size(631, 261);
             this.dgvLichSu.TabIndex = 0;
             this.dgvLichSu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.label2);
+            this.flowLayoutPanel2.Controls.Add(this.dateTuNgay);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(25, 67);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(173, 52);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 19);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Từ ngày";
+            // 
+            // dateTuNgay
+            // 
+            this.dateTuNgay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dateTuNgay.BorderRadius = 10;
+            this.dateTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTuNgay.ForeColor = System.Drawing.Color.Black;
+            this.dateTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTuNgay.FormatCustom = "dd/MM/yyyy";
+            this.dateTuNgay.Location = new System.Drawing.Point(3, 22);
+            this.dateTuNgay.Name = "dateTuNgay";
+            this.dateTuNgay.Size = new System.Drawing.Size(170, 29);
+            this.dateTuNgay.TabIndex = 1;
+            this.dateTuNgay.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label1);
+            this.flowLayoutPanel3.Controls.Add(this.dateDenNgay);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(236, 66);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(173, 52);
+            this.flowLayoutPanel3.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đến ngày";
+            // 
+            // dateDenNgay
+            // 
+            this.dateDenNgay.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dateDenNgay.BorderRadius = 10;
+            this.dateDenNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDenNgay.ForeColor = System.Drawing.Color.Black;
+            this.dateDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDenNgay.FormatCustom = "dd/MM/yyyy";
+            this.dateDenNgay.Location = new System.Drawing.Point(3, 22);
+            this.dateDenNgay.Name = "dateDenNgay";
+            this.dateDenNgay.Size = new System.Drawing.Size(170, 29);
+            this.dateDenNgay.TabIndex = 1;
+            this.dateDenNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
             // 
             // Phong
             // 
@@ -231,7 +256,7 @@
             // 
             // NhanPhong
             // 
-            this.NhanPhong.DataPropertyName = "NhanPhong";
+            this.NhanPhong.DataPropertyName = "TenTaiKhoan";
             this.NhanPhong.HeaderText = "Nhận Phòng";
             this.NhanPhong.MinimumWidth = 8;
             this.NhanPhong.Name = "NhanPhong";
@@ -239,7 +264,7 @@
             // 
             // TraPhong
             // 
-            this.TraPhong.DataPropertyName = "TraPhong";
+            this.TraPhong.DataPropertyName = "TenTaiKhoan";
             this.TraPhong.HeaderText = "Trả Phòng";
             this.TraPhong.MinimumWidth = 8;
             this.TraPhong.Name = "TraPhong";
@@ -247,24 +272,25 @@
             // 
             // frmLichSu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 692);
+            this.ClientSize = new System.Drawing.Size(661, 413);
             this.ControlBox = false;
+            this.Controls.Add(this.flowLayoutPanel3);
+            this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.DateKetThuc);
-            this.Controls.Add(this.DateBatDau);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnXuatExcel);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmLichSu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLichSu_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,13 +300,15 @@
 
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuFlatButton btnXuatExcel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btnTimKiem;
-        private Bunifu.Framework.UI.BunifuDatepicker DateBatDau;
-        private Bunifu.Framework.UI.BunifuDatepicker DateKetThuc;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgvLichSu;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuDatepicker dateTuNgay;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuDatepicker dateDenNgay;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDau;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThuc;

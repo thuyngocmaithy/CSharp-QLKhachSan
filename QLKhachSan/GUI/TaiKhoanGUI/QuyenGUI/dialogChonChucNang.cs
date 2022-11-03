@@ -16,18 +16,19 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
 {
     public partial class dialogChonChucNang : Form
     {
+        string maquyen;
         ChucNangBUS chucNangBUS = new ChucNangBUS();
         QuyenBUS quyenBUS = new QuyenBUS();
-        public dialogChonChucNang()
+        public dialogChonChucNang(string maquyen)
         {
             InitializeComponent();
-            loadcmbChonQuyen();
-           
+            this.maquyen = maquyen;
         }
 
         private void dialogChonChucNang_Load(object sender, EventArgs e)
         {
             dgvChonChucNang.DataSource = chucNangBUS.GetChucNang();
+            loadChucNangThuocQuyen(maquyen);
             
         }
         public void loadChucNangThuocQuyen(String maquyen)
@@ -45,39 +46,22 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
                             dgvChonChucNang.Rows[i].Cells["Chon"].Value = true;                                               
 
         }
-        
-        public void loadcmbChonQuyen()
-        {
-            cmbMaQuyen.Items.Clear();
-            cmbMaQuyen.DataSource = quyenBUS.GetCmb();
-            cmbMaQuyen.DisplayMember = "TenQuyen";
-            cmbMaQuyen.ValueMember = "MaQuyen";
-          
-        }
-      
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cmbMaQuyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            loadChucNangThuocQuyen(cmbMaQuyen.SelectedValue.ToString());
-           // MessageBox.Show("Bạn đã chọn mã quyền " + cmbMaQuyen.SelectedValue.ToString());
-        }
 
         private void btnChonChucNang_Click(object sender, EventArgs e) 
         {
-            string maquyen = cmbMaQuyen.SelectedValue.ToString();
             List<String> chucnang = new List<string>();
-
-
             foreach (DataGridViewRow row in dgvChonChucNang.Rows)
             {
                 if ((bool)row.Cells["Chon"].FormattedValue == true)
                 {
                     chucnang.Add(row.Cells["MaChucNang"].Value.ToString());
-                    // MessageBox.Show(" Chuc nang duoc chon " + row.Cells["MaChucNang"].Value.ToString() +" mã quyền "+ maquyen);
+                    MessageBox.Show(" Chuc nang duoc chon " + row.Cells["MaChucNang"].Value.ToString() +" mã quyền "+ maquyen);
                 }
             }
             quyenBUS.XoaQuyenChucNang(maquyen);

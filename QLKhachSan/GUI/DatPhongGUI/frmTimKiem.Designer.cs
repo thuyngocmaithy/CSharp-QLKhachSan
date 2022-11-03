@@ -62,26 +62,29 @@
             this.flowLayoutPanel1.Controls.Add(this.lblFind);
             this.flowLayoutPanel1.Controls.Add(this.txtFind);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 140);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(613, 91);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label2);
             this.flowLayoutPanel2.Controls.Add(this.dateTuNgay);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 2);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(259, 80);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(173, 52);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 28);
+            this.label2.Size = new System.Drawing.Size(60, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Từ ngày";
             // 
@@ -93,10 +96,9 @@
             this.dateTuNgay.ForeColor = System.Drawing.Color.Black;
             this.dateTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTuNgay.FormatCustom = "dd/MM/yyyy";
-            this.dateTuNgay.Location = new System.Drawing.Point(4, 33);
-            this.dateTuNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTuNgay.Location = new System.Drawing.Point(3, 22);
             this.dateTuNgay.Name = "dateTuNgay";
-            this.dateTuNgay.Size = new System.Drawing.Size(255, 45);
+            this.dateTuNgay.Size = new System.Drawing.Size(170, 29);
             this.dateTuNgay.TabIndex = 1;
             this.dateTuNgay.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
             // 
@@ -104,27 +106,30 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(268, 0);
+            this.label4.Location = new System.Drawing.Point(179, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
+            this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 4;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label1);
             this.flowLayoutPanel3.Controls.Add(this.dateDenNgay);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(274, 3);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(183, 2);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(259, 80);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(173, 52);
             this.flowLayoutPanel3.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.Size = new System.Drawing.Size(68, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đến ngày";
             // 
@@ -136,10 +141,9 @@
             this.dateDenNgay.ForeColor = System.Drawing.Color.Black;
             this.dateDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateDenNgay.FormatCustom = "dd/MM/yyyy";
-            this.dateDenNgay.Location = new System.Drawing.Point(4, 33);
-            this.dateDenNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateDenNgay.Location = new System.Drawing.Point(3, 22);
             this.dateDenNgay.Name = "dateDenNgay";
-            this.dateDenNgay.Size = new System.Drawing.Size(255, 45);
+            this.dateDenNgay.Size = new System.Drawing.Size(170, 29);
             this.dateDenNgay.TabIndex = 1;
             this.dateDenNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
             // 
@@ -148,11 +152,11 @@
             this.lblFind.AutoSize = true;
             this.lblFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblFind.Image = ((System.Drawing.Image)(resources.GetObject("lblFind.Image")));
-            this.lblFind.Location = new System.Drawing.Point(539, 35);
-            this.lblFind.Margin = new System.Windows.Forms.Padding(3, 35, 3, 0);
-            this.lblFind.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblFind.Location = new System.Drawing.Point(360, 23);
+            this.lblFind.Margin = new System.Windows.Forms.Padding(2, 23, 2, 0);
+            this.lblFind.MinimumSize = new System.Drawing.Size(33, 32);
             this.lblFind.Name = "lblFind";
-            this.lblFind.Size = new System.Drawing.Size(50, 50);
+            this.lblFind.Size = new System.Drawing.Size(33, 32);
             this.lblFind.TabIndex = 5;
             this.lblFind.Click += new System.EventHandler(this.lblFind_Click);
             // 
@@ -160,10 +164,11 @@
             // 
             this.txtFind.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtFind.Location = new System.Drawing.Point(3, 89);
-            this.txtFind.MinimumSize = new System.Drawing.Size(920, 50);
+            this.txtFind.Location = new System.Drawing.Point(2, 58);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFind.MinimumSize = new System.Drawing.Size(615, 50);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(920, 39);
+            this.txtFind.Size = new System.Drawing.Size(615, 29);
             this.txtFind.TabIndex = 6;
             this.txtFind.Text = "Tìm kiếm";
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
@@ -180,11 +185,12 @@
             this.TienTraTruoc,
             this.GhiChu,
             this.TrangThai});
-            this.dgvFindDonDatPhong.Location = new System.Drawing.Point(0, 145);
+            this.dgvFindDonDatPhong.Location = new System.Drawing.Point(0, 94);
+            this.dgvFindDonDatPhong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvFindDonDatPhong.Name = "dgvFindDonDatPhong";
             this.dgvFindDonDatPhong.RowHeadersWidth = 62;
             this.dgvFindDonDatPhong.RowTemplate.Height = 28;
-            this.dgvFindDonDatPhong.Size = new System.Drawing.Size(920, 305);
+            this.dgvFindDonDatPhong.Size = new System.Drawing.Size(613, 198);
             this.dgvFindDonDatPhong.TabIndex = 10;
             // 
             // MaPhieuDatPhong
@@ -253,16 +259,17 @@
             // 
             // frmTimKiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(613, 292);
             this.ControlBox = false;
             this.Controls.Add(this.dgvFindDonDatPhong);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(920, 450);
-            this.MinimumSize = new System.Drawing.Size(920, 450);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(613, 292);
+            this.MinimumSize = new System.Drawing.Size(613, 292);
             this.Name = "frmTimKiem";
             this.Load += new System.EventHandler(this.frmTimKiem_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
