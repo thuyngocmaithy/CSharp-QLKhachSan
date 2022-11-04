@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenQuyen = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtMaQuyen = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemQuyen = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new System.Windows.Forms.Button();
@@ -58,45 +56,18 @@
             this.txtTenQuyen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTenQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenQuyen.isPassword = false;
-            this.txtTenQuyen.Location = new System.Drawing.Point(127, 207);
-            this.txtTenQuyen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTenQuyen.Location = new System.Drawing.Point(135, 119);
+            this.txtTenQuyen.Margin = new System.Windows.Forms.Padding(6);
             this.txtTenQuyen.Name = "txtTenQuyen";
-            this.txtTenQuyen.Size = new System.Drawing.Size(261, 47);
+            this.txtTenQuyen.Size = new System.Drawing.Size(248, 47);
             this.txtTenQuyen.TabIndex = 9;
             this.txtTenQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtMaQuyen
-            // 
-            this.txtMaQuyen.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtMaQuyen.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.txtMaQuyen.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtMaQuyen.BorderThickness = 3;
-            this.txtMaQuyen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaQuyen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtMaQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaQuyen.isPassword = false;
-            this.txtMaQuyen.Location = new System.Drawing.Point(127, 118);
-            this.txtMaQuyen.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtMaQuyen.Name = "txtMaQuyen";
-            this.txtMaQuyen.Size = new System.Drawing.Size(261, 47);
-            this.txtMaQuyen.TabIndex = 10;
-            this.txtMaQuyen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 28);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Mã Quyền";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 216);
+            this.label2.Location = new System.Drawing.Point(20, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 28);
             this.label2.TabIndex = 12;
@@ -104,7 +75,7 @@
             // 
             // btnThemQuyen
             // 
-            this.btnThemQuyen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThemQuyen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemQuyen.AutoSize = true;
             this.btnThemQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemQuyen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -125,14 +96,14 @@
             this.btnThemQuyen.IconVisible = true;
             this.btnThemQuyen.IconZoom = 50D;
             this.btnThemQuyen.IsTab = true;
-            this.btnThemQuyen.Location = new System.Drawing.Point(71, 307);
-            this.btnThemQuyen.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnThemQuyen.Location = new System.Drawing.Point(203, 239);
+            this.btnThemQuyen.Margin = new System.Windows.Forms.Padding(8);
             this.btnThemQuyen.Name = "btnThemQuyen";
             this.btnThemQuyen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemQuyen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnThemQuyen.OnHoverTextColor = System.Drawing.Color.White;
             this.btnThemQuyen.selected = false;
-            this.btnThemQuyen.Size = new System.Drawing.Size(128, 66);
+            this.btnThemQuyen.Size = new System.Drawing.Size(113, 63);
             this.btnThemQuyen.TabIndex = 13;
             this.btnThemQuyen.Text = "THÊM";
             this.btnThemQuyen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,9 +114,9 @@
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(210, 307);
+            this.btnClose.Location = new System.Drawing.Point(79, 239);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(128, 66);
+            this.btnClose.Size = new System.Drawing.Size(113, 63);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "ĐÓNG";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -156,13 +127,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(399, 426);
+            this.ClientSize = new System.Drawing.Size(398, 335);
             this.ControlBox = false;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnThemQuyen);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtMaQuyen);
             this.Controls.Add(this.txtTenQuyen);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -178,8 +147,6 @@
 
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtTenQuyen;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtMaQuyen;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnThemQuyen;
         private System.Windows.Forms.Button btnClose;

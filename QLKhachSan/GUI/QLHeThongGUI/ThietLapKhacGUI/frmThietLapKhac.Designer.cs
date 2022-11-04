@@ -60,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(410, 36);
+            this.label1.Location = new System.Drawing.Point(502, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(230, 38);
             this.label1.TabIndex = 12;
@@ -78,11 +78,11 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(510, 94);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(634, 94);
             this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(474, 465);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(550, 465);
             this.bunifuGradientPanel2.TabIndex = 15;
             // 
             // lblLogo
@@ -113,7 +113,7 @@
             this.pictureBoxLogo.Location = new System.Drawing.Point(25, 324);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(425, 114);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(502, 114);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
@@ -125,7 +125,7 @@
             this.picBoxPanel.Location = new System.Drawing.Point(25, 60);
             this.picBoxPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxPanel.Name = "picBoxPanel";
-            this.picBoxPanel.Size = new System.Drawing.Size(425, 185);
+            this.picBoxPanel.Size = new System.Drawing.Size(502, 185);
             this.picBoxPanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPanel.TabIndex = 0;
             this.picBoxPanel.TabStop = false;
@@ -154,7 +154,7 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(468, 465);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(550, 465);
             this.bunifuGradientPanel1.TabIndex = 14;
             // 
             // txtSDT
@@ -168,11 +168,12 @@
             this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.isPassword = false;
             this.txtSDT.Location = new System.Drawing.Point(178, 270);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(271, 45);
+            this.txtSDT.Size = new System.Drawing.Size(335, 45);
             this.txtSDT.TabIndex = 30;
             this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // txtDiaChi
             // 
@@ -185,9 +186,9 @@
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.isPassword = false;
             this.txtDiaChi.Location = new System.Drawing.Point(178, 159);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 45);
+            this.txtDiaChi.Size = new System.Drawing.Size(335, 45);
             this.txtDiaChi.TabIndex = 29;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -202,9 +203,9 @@
             this.txtTenKhachSan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenKhachSan.isPassword = false;
             this.txtTenKhachSan.Location = new System.Drawing.Point(178, 46);
-            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
-            this.txtTenKhachSan.Size = new System.Drawing.Size(271, 45);
+            this.txtTenKhachSan.Size = new System.Drawing.Size(335, 45);
             this.txtTenKhachSan.TabIndex = 28;
             this.txtTenKhachSan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -230,7 +231,7 @@
             this.bunifuDatepicker.Location = new System.Drawing.Point(174, 371);
             this.bunifuDatepicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuDatepicker.Name = "bunifuDatepicker";
-            this.bunifuDatepicker.Size = new System.Drawing.Size(271, 45);
+            this.bunifuDatepicker.Size = new System.Drawing.Size(339, 45);
             this.bunifuDatepicker.TabIndex = 26;
             this.bunifuDatepicker.Value = new System.DateTime(2022, 10, 17, 0, 0, 0, 0);
             // 
@@ -245,7 +246,7 @@
             this.txtSuaSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaSDT.isPassword = false;
             this.txtSuaSDT.Location = new System.Drawing.Point(178, 270);
-            this.txtSuaSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuaSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaSDT.Name = "txtSuaSDT";
             this.txtSuaSDT.Size = new System.Drawing.Size(268, 45);
             this.txtSuaSDT.TabIndex = 25;
@@ -273,7 +274,7 @@
             this.txtSuaDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaDiaChi.isPassword = false;
             this.txtSuaDiaChi.Location = new System.Drawing.Point(178, 159);
-            this.txtSuaDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuaDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaDiaChi.Name = "txtSuaDiaChi";
             this.txtSuaDiaChi.Size = new System.Drawing.Size(268, 45);
             this.txtSuaDiaChi.TabIndex = 23;
@@ -301,7 +302,7 @@
             this.txtSuaTenKhachSan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaTenKhachSan.isPassword = false;
             this.txtSuaTenKhachSan.Location = new System.Drawing.Point(178, 46);
-            this.txtSuaTenKhachSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuaTenKhachSan.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaTenKhachSan.Name = "txtSuaTenKhachSan";
             this.txtSuaTenKhachSan.Size = new System.Drawing.Size(268, 45);
             this.txtSuaTenKhachSan.TabIndex = 21;
@@ -341,7 +342,7 @@
             this.btnSave.IconVisible = true;
             this.btnSave.IconZoom = 40D;
             this.btnSave.IsTab = true;
-            this.btnSave.Location = new System.Drawing.Point(447, 580);
+            this.btnSave.Location = new System.Drawing.Point(557, 581);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
@@ -360,14 +361,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmThietLapKhac";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmThietLapKhac_Load);

@@ -2,6 +2,7 @@
 using Guna.UI2.WinForms;
 using QLKhachSan.BUS;
 using QLKhachSan.DTO;
+using QLKhachSan.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +14,7 @@ namespace QLKhachSan.GUI.DatPhongGUI
 {
     public partial class dialogThemPhieuDatPhong : Form
     {
+        CheckError checkError = new CheckError();
         Boolean themthanhcong = true;
         Boolean suathanhcong = true;
         BunifuFlatButton btnPhongChon;
@@ -21,7 +23,6 @@ namespace QLKhachSan.GUI.DatPhongGUI
         CTPDP_LoaiPhongBUS CTPDP_LoaiPhongBUS = new CTPDP_LoaiPhongBUS();
         CTPDP_PhongBUS CTPDP_PhongBUS = new CTPDP_PhongBUS();
         List<string> lsPhongChon;
-
         string maphieudatphong, maphieudatphongsua;
         string trangthai;
         public dialogThemPhieuDatPhong(string trangthai)
@@ -149,7 +150,7 @@ namespace QLKhachSan.GUI.DatPhongGUI
             if (trangthai == "Thêm")
             {
                 lblThemSua.Text = "THÊM MỚI";
-                // loadLoaiPhong();
+                txtTrangThai.Text = "Chưa nhận phòng";
                 dgvLoaiPhong.DataSource = loaiPhongBUS.GetLoaiPhong("SELECT TenLoaiPhong FROM LoaiPhong");
                 dgvLoaiPhong.AllowUserToAddRows = false;
             }
@@ -230,28 +231,49 @@ namespace QLKhachSan.GUI.DatPhongGUI
         }
         private void themPhieuDatPhong()
         {
-            maphieudatphong = phieuDatPhongBUS.TaoMaPhieuDatPhong();
-            string hoten = txtHoTen.Text;
-            string sdt = txtSoDienThoai.Text;
-            string ngaynhanphong = dateNgayNhan.Value.ToString("yyyy-MM-dd");
-            string ngaytraphong = dateNgayTra.Value.ToString("yyyy-MM-dd");
-            string tientratruoc = txtTienTraTruoc.Text;
-            string trangthai = "Chưa nhận phòng";
-            string ghichu = txtGhiChu.Text;
-
-            // Them
-            if (trangthai == "Thêm")
+            if (txtHoTen.Text == "")
             {
-                PhieuDatPhongDTO pdp = new PhieuDatPhongDTO(maphieudatphong, hoten, sdt, ngaynhanphong, ngaytraphong, tientratruoc, ghichu, trangthai);
+                MessageBox.Show("Hãy nhập tên khách hàng");
+            }
+            else if (txtSoDienThoai.Text == "")
+            {
+                MessageBox.Show("Hãy nhập số điện thoại");
+            }
+            else if (!checkError.check_Phone(txtSoDienThoai.Text))
+            {
+                MessageBox.Show("Số điện thoại không đúng định dạng");
+            }
+            else
+            {
 
-                if (phieuDatPhongBUS.ThemPhieuDatPhong(pdp))
+
+                maphieudatphong = phieuDatPhongBUS.TaoMaPhieuDatPhong();
+                string hoten = txtHoTen.Text;
+                string sdt = txtSoDienThoai.Text;
+                string ngaynhanphong = dateNgayNhan.Value.ToString("yyyy-MM-dd");
+                string ngaytraphong = dateNgayTra.Value.ToString("yyyy-MM-dd");
+                string tientratruoc = txtTienTraTruoc.Text;
+                string trangthainhanphong = "Chưa nhận phòng";
+                string ghichu = txtGhiChu.Text;
+
+                // Them
+                if (trangthai=="Thêm")
                 {
+                    PhieuDatPhongDTO pdp = new PhieuDatPhongDTO(maphieudatphong, hoten, sdt, ngaynhanphong, ngaytraphong, tientratruoc, ghichu, trangthainhanphong);
 
-                    themPhieuDatPhong_LoaiPhong();
-                    themPhieuDatPhong_Phong();
-                    if (themthanhcong)
+                    if (phieuDatPhongBUS.ThemPhieuDatPhong(pdp))
                     {
-                        MessageBox.Show("Thêm thành công");
+
+                        themPhieuDatPhong_LoaiPhong();
+                        themPhieuDatPhong_Phong();
+                        if (themthanhcong)
+                        {
+                            MessageBox.Show("Thêm thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm thất bại");
+                        }
                     }
                     else
                     {
@@ -260,29 +282,25 @@ namespace QLKhachSan.GUI.DatPhongGUI
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
-                }
-            }
-            else
-            {
-                PhieuDatPhongDTO pdp = new PhieuDatPhongDTO(maphieudatphongsua, hoten, sdt, ngaynhanphong, ngaytraphong, tientratruoc, ghichu, trangthai);
-                if (phieuDatPhongBUS.SuaPhieuDatPhong(pdp))
-                {
-
-                    themPhieuDatPhong_LoaiPhong();
-                    themPhieuDatPhong_Phong();
-                    if (suathanhcong)
+                    PhieuDatPhongDTO pdp = new PhieuDatPhongDTO(maphieudatphongsua, hoten, sdt, ngaynhanphong, ngaytraphong, tientratruoc, ghichu, trangthainhanphong);
+                    if (phieuDatPhongBUS.SuaPhieuDatPhong(pdp))
                     {
-                        MessageBox.Show("Sửa thành công");
+
+                        themPhieuDatPhong_LoaiPhong();
+                        themPhieuDatPhong_Phong();
+                        if (suathanhcong)
+                        {
+                            MessageBox.Show("Sửa thành công");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thất bại");
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Sửa thất bại");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thất bại");
                 }
             }
 
@@ -316,9 +334,34 @@ namespace QLKhachSan.GUI.DatPhongGUI
             this.Close();
         }
 
+        private void txtSoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTienTraTruoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dgvLoaiPhong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void txtTienTraTruoc_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtTienTraTruoc);
+
         }
 
     }

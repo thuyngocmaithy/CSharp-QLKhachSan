@@ -62,7 +62,7 @@
             this.dataGridTinhtien.Name = "dataGridTinhtien";
             this.dataGridTinhtien.RowHeadersWidth = 51;
             this.dataGridTinhtien.RowTemplate.Height = 24;
-            this.dataGridTinhtien.Size = new System.Drawing.Size(965, 391);
+            this.dataGridTinhtien.Size = new System.Drawing.Size(1107, 542);
             this.dataGridTinhtien.TabIndex = 0;
             this.dataGridTinhtien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridTinhtien_CellContentClick);
             // 
@@ -109,9 +109,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.dataGridTinhtien);
-            this.panel3.Location = new System.Drawing.Point(27, 227);
+            this.panel3.Location = new System.Drawing.Point(54, 243);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(965, 391);
+            this.panel3.Size = new System.Drawing.Size(1107, 542);
             this.panel3.TabIndex = 13;
             // 
             // panel2
@@ -119,9 +119,9 @@
             this.panel2.Controls.Add(this.cmbCachTim);
             this.panel2.Controls.Add(this.lblReset);
             this.panel2.Controls.Add(this.btnFindLoaiPhong);
-            this.panel2.Location = new System.Drawing.Point(27, 122);
+            this.panel2.Location = new System.Drawing.Point(54, 138);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(965, 64);
+            this.panel2.Size = new System.Drawing.Size(1107, 64);
             this.panel2.TabIndex = 16;
             // 
             // cmbCachTim
@@ -134,9 +134,9 @@
             "Mã loại phòng",
             "Tên loại phòng",
             "Ưu tiên hiển thị"});
-            this.cmbCachTim.Location = new System.Drawing.Point(352, 15);
+            this.cmbCachTim.Location = new System.Drawing.Point(430, 14);
             this.cmbCachTim.Name = "cmbCachTim";
-            this.cmbCachTim.Size = new System.Drawing.Size(172, 36);
+            this.cmbCachTim.Size = new System.Drawing.Size(232, 36);
             this.cmbCachTim.TabIndex = 4;
             // 
             // lblReset
@@ -146,7 +146,7 @@
             this.lblReset.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblReset.Image = ((System.Drawing.Image)(resources.GetObject("lblReset.Image")));
             this.lblReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblReset.Location = new System.Drawing.Point(905, 0);
+            this.lblReset.Location = new System.Drawing.Point(1047, 0);
             this.lblReset.MinimumSize = new System.Drawing.Size(60, 60);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(60, 60);
@@ -165,7 +165,7 @@
             this.btnFindLoaiPhong.Location = new System.Drawing.Point(0, 0);
             this.btnFindLoaiPhong.Margin = new System.Windows.Forms.Padding(0);
             this.btnFindLoaiPhong.Name = "btnFindLoaiPhong";
-            this.btnFindLoaiPhong.Size = new System.Drawing.Size(328, 65);
+            this.btnFindLoaiPhong.Size = new System.Drawing.Size(402, 65);
             this.btnFindLoaiPhong.TabIndex = 2;
             this.btnFindLoaiPhong.text = "";
             // 
@@ -173,7 +173,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 49);
+            this.label3.Location = new System.Drawing.Point(49, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 29);
             this.label3.TabIndex = 17;
@@ -181,14 +181,14 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(27, 122);
+            this.panel4.Location = new System.Drawing.Point(54, 138);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(965, 496);
+            this.panel4.Size = new System.Drawing.Size(1107, 647);
             this.panel4.TabIndex = 15;
             // 
             // btnThem
             // 
-            this.btnThem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThem.AutoSize = true;
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -209,7 +209,7 @@
             this.btnThem.IconVisible = true;
             this.btnThem.IconZoom = 40D;
             this.btnThem.IsTab = true;
-            this.btnThem.Location = new System.Drawing.Point(243, 27);
+            this.btnThem.Location = new System.Drawing.Point(294, 45);
             this.btnThem.Margin = new System.Windows.Forms.Padding(0);
             this.btnThem.Name = "btnThem";
             this.btnThem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -236,7 +236,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnThem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmCachtinhtien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCachtinhtien_Load);

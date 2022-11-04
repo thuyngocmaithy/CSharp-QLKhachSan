@@ -109,7 +109,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             // 
             // btnLuu
             // 
-            this.btnLuu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnLuu.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnLuu.AutoSize = true;
             this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -184,6 +184,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGia1Gio.Size = new System.Drawing.Size(179, 44);
             this.txtGia1Gio.TabIndex = 25;
             this.txtGia1Gio.TextChanged += new System.EventHandler(this.txtGia1Gio_TextChanged);
+            this.txtGia1Gio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia1Gio_KeyPress);
             // 
             // label9
             // 
@@ -260,6 +261,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGiaNgayLe.Size = new System.Drawing.Size(179, 44);
             this.txtGiaNgayLe.TabIndex = 32;
             this.txtGiaNgayLe.TextChanged += new System.EventHandler(this.txtGiaNgayLe_TextChanged);
+            this.txtGiaNgayLe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaNgayLe_KeyPress);
             // 
             // txtGiaT7
             // 
@@ -286,6 +288,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGiaT7.Size = new System.Drawing.Size(179, 44);
             this.txtGiaT7.TabIndex = 31;
             this.txtGiaT7.TextChanged += new System.EventHandler(this.txtGiaT7_TextChanged);
+            this.txtGiaT7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaT7_KeyPress);
             // 
             // txtGiaCN
             // 
@@ -312,6 +315,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGiaCN.Size = new System.Drawing.Size(179, 44);
             this.txtGiaCN.TabIndex = 30;
             this.txtGiaCN.TextChanged += new System.EventHandler(this.txtGiaCN_TextChanged);
+            this.txtGiaCN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaCN_KeyPress);
             // 
             // txtGiaT6
             // 
@@ -338,6 +342,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGiaT6.Size = new System.Drawing.Size(179, 44);
             this.txtGiaT6.TabIndex = 29;
             this.txtGiaT6.TextChanged += new System.EventHandler(this.txtGiaT6_TextChanged);
+            this.txtGiaT6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaT6_KeyPress);
             // 
             // label17
             // 
@@ -446,6 +451,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtPhuThu.Size = new System.Drawing.Size(179, 44);
             this.txtPhuThu.TabIndex = 28;
             this.txtPhuThu.TextChanged += new System.EventHandler(this.txtPhuThu_TextChanged);
+            this.txtPhuThu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhuThu_KeyPress);
             // 
             // txtGiaNgay
             // 
@@ -472,6 +478,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtGiaNgay.Size = new System.Drawing.Size(179, 44);
             this.txtGiaNgay.TabIndex = 27;
             this.txtGiaNgay.TextChanged += new System.EventHandler(this.txtGiaNgay_TextChanged);
+            this.txtGiaNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaNgay_KeyPress);
             // 
             // timeTraPhong
             // 
@@ -545,6 +552,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI
             this.txtSoPhutLamTron.Size = new System.Drawing.Size(180, 45);
             this.txtSoPhutLamTron.TabIndex = 18;
             this.txtSoPhutLamTron.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSoPhutLamTron.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoPhutLamTron_KeyPress);
             // 
             // label14
             // 

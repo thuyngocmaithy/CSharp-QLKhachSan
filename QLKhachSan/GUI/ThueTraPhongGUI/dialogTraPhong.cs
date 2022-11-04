@@ -32,14 +32,16 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         Boolean menuChange = false;
         string trangthai;
         Boolean changeDate = false;
-        public dialogTraPhong(string mahoadon, string trangthai)
+        string mataikhoan;
+        public dialogTraPhong(string mahoadon, string trangthai, string mataikhoan)
         {
             InitializeComponent();
             this.mahoadon = mahoadon;
             this.trangthai = trangthai;
+            this.mataikhoan = mataikhoan;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        public void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -52,7 +54,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 "AND MaHoaDon = '" + mahoadon + "'");
         }
 
-        private void setValue()
+        public void setValue()
         {
             foreach (DataRow dt in hoaDonBUS.GetHoaDon(
                 "SELECT * FROM HoaDon" +
@@ -77,7 +79,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
 
-        private void setTextFormMacDinh()
+        public void setTextFormMacDinh()
         {
             setValue();
             DateTime datengaynhan = DateTime.Parse(thoigianbatdau, CultureInfo.CreateSpecificCulture("en-US"));
@@ -103,7 +105,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
         }
-        private void getThoiGianThue()
+        public void getThoiGianThue()
         {
             getElementTienPhong();
             string strNgaynhan = dateNhanPhong.Value.ToString("yyyy-MM-dd") + " " + timeNhanPhong.Text + ":00";
@@ -125,12 +127,12 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 hoursThue = 1;
             }
         }
-        private void setLabelThoiGianThue()
+        public void setLabelThoiGianThue()
         {
             getThoiGianThue();
             lblThoiGianThue.Text = String.Format("{0} ngày {1} giờ", daysThue, hoursThue);
         }
-        private void setLabelTrangThaiNhanPhong()
+        public void setLabelTrangThaiNhanPhong()
         {
             int gionhanphong = Int32.Parse(timeNhanPhong.Text.Split(':')[0]);
             int phutnhanphong = Int32.Parse(timeNhanPhong.Text.Split(':')[1]);
@@ -166,7 +168,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
         }
-        private void setLabelTrangThaiTraPhong()
+        public void setLabelTrangThaiTraPhong()
         {
             int giotraphong = Int32.Parse(timeTraPhong.Text.Split(':')[0]);
             int phuttraphong = Int32.Parse(timeTraPhong.Text.Split(':')[1]);
@@ -205,7 +207,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
 
-        private void getElementTienPhong()
+        public void getElementTienPhong()
         {
             
             foreach (DataRow dt in phongBUS.GetPhong(
@@ -224,7 +226,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 }
             }
         }
-        private void testWeekendAndHoliday()
+        public void testWeekendAndHoliday()
         {
             songayT6 = 0;
             songayT7 = 0;
@@ -279,7 +281,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 }
             }
         }
-        private int tinhTienPhong()
+        public int tinhTienPhong()
         {
            
             int tienphong=0;
@@ -299,7 +301,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             else
             {
                 testWeekendAndHoliday();
-                MessageBox.Show("T6:" + songayT6 + "-T7:" + songayT7 + "-CN:" + songayCN);
+              //  MessageBox.Show("T6:" + songayT6 + "-T7:" + songayT7 + "-CN:" + songayCN);
                 tongthoigianthue = tongthoigianthue - songayT6 - songayT7 - songayCN - songayle;
                 foreach (DataRow dt in cachtinhtienBUS.GetCachTinhTien(
                "SELECT GiaThueCuoiTuanVaNgayLe " +
@@ -317,7 +319,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             return tienphong;
 
         }
-        private DataTable GetDataTableFromDGV(DataGridView dataGridView1)
+        public DataTable GetDataTableFromDGV(DataGridView dataGridView1)
         {
             //Creating DataTable.
             DataTable dt = new DataTable();
@@ -343,7 +345,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
 
-        private int tinhTienPhuThu()
+        public int tinhTienPhuThu()
         {
             int tongtienphuthu;
             tongtienphuthu = (tienphuthu * sogionhanphongsom) + (tienphuthu * sogiotraphongtre);
@@ -351,7 +353,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             return tongtienphuthu;
         }
 
-        private int tinhTienMenu()
+        public int tinhTienMenu()
         {
             int sl = 0;
             int dongia = 0;
@@ -376,7 +378,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             return tongtienmenu;
         }
 
-        private void dateNhanPhong_onValueChanged(object sender, EventArgs e)
+        public void dateNhanPhong_onValueChanged(object sender, EventArgs e)
         {
 
             if (changeDate)
@@ -403,7 +405,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         }
 
-        private void dateTraPhong_onValueChanged(object sender, EventArgs e)
+        public void dateTraPhong_onValueChanged(object sender, EventArgs e)
         {
 
             if (changeDate)
@@ -429,7 +431,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             }
         }
 
-        private void timeTraPhong_ValueChanged(object sender, EventArgs e)
+        public void timeTraPhong_ValueChanged(object sender, EventArgs e)
         {
             timeTraPhong.CustomFormat = "HH:mm";
             if (changeDate)
@@ -449,7 +451,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 setTextChange();
             }
         }
-        private void timeNhanPhong_ValueChanged(object sender, EventArgs e)
+        public void timeNhanPhong_ValueChanged(object sender, EventArgs e)
         {
             timeNhanPhong.CustomFormat = "HH:mm";
             if (changeDate)
@@ -472,7 +474,56 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         }
 
-        private void timeNhanPhong_MouseDown(object sender, MouseEventArgs e)
+        private void txtTienPhong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhuThu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtThuGiamTru_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTienTraTruoc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTienMenu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTongTien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        public void timeNhanPhong_MouseDown(object sender, MouseEventArgs e)
         {
 
             timeNhanPhong.CustomFormat = "HH:mm";
@@ -491,7 +542,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             setTextChange();
 
         }
-        private void txtTienPhong_TextChanged(object sender, EventArgs e)
+        public void txtTienPhong_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtTienPhong);
             tinhTongTien();
@@ -499,7 +550,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             AddCommaToTextBox(txtTongTien);
         }
 
-        private void txtPhuThu_TextChanged(object sender, EventArgs e)
+        public void txtPhuThu_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtPhuThu);
             tinhTongTien();
@@ -509,7 +560,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
 
-        private void txtTienTraTruoc_TextChanged(object sender, EventArgs e)
+        public void txtTienTraTruoc_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtTienTraTruoc);
             tinhTongTien();
@@ -517,7 +568,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             AddCommaToTextBox(txtTongTien);
         }
 
-        private void txtThuGiamTru_TextChanged(object sender, EventArgs e)
+        public void txtThuGiamTru_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtThuGiamTru);
             tinhTongTien();
@@ -526,7 +577,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         }
 
-        private void txtTienMenu_TextChanged(object sender, EventArgs e)
+        public void txtTienMenu_TextChanged(object sender, EventArgs e)
         {
             AddCommaToTextBox(txtTienMenu);
             tinhTongTien();
@@ -534,7 +585,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             AddCommaToTextBox(txtTongTien);
         }
 
-        private void timeTraPhong_MouseDown(object sender, MouseEventArgs e)
+        public void timeTraPhong_MouseDown(object sender, MouseEventArgs e)
         {
             timeTraPhong.CustomFormat = "HH:mm";
 
@@ -555,7 +606,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         }
 
-        private void setTextChange()
+        public void setTextChange()
         {
 
             setLabelThoiGianThue();
@@ -611,7 +662,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
             AddCommaToTextBox();
         }
-        private int tinhTongTien()
+        public int tinhTongTien()
         {
             int thugiamtrukhac = 0;
             if (txtThuGiamTru.Text != "")
@@ -644,7 +695,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             int tongtien = tienphong + tienmenu + tienphuthu + thugiamtrukhac - tientratruoc;
             return tongtien;
         }
-        private void dialogTraPhong_Load(object sender, EventArgs e)
+        public void dialogTraPhong_Load(object sender, EventArgs e)
         {
             if (trangthai == "Thêm")
             {
@@ -677,7 +728,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
         }
-        private void AddCommaToTextBox()
+        public void AddCommaToTextBox()
         {
             AddCommaToTextBox(txtTienMenu);
             AddCommaToTextBox(txtTienTraTruoc);
@@ -686,7 +737,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             AddCommaToTextBox(txtTongTien);
 
         }
-        private void loadCmbCachThue()
+        public void loadCmbCachThue()
         {
             cmbCachThue.DataSource = cachThueBUS.GetCachThue(
                 "SELECT TenCachThue " +
@@ -702,7 +753,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
 
 
-        private void cmbCachThue_SelectedValueChanged(object sender, EventArgs e)
+        public void cmbCachThue_SelectedValueChanged(object sender, EventArgs e)
         {
             getThoiGianThue();
             if (cmbCachThue.SelectedValue.ToString() == "CT001")//Thuê theo giờ
@@ -747,7 +798,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             }
         }
 
-        private void btnThemMenu_Click(object sender, EventArgs e)
+        public void btnThemMenu_Click(object sender, EventArgs e)
         {
             Boolean themthanhcong = true;
             dialogDsMenu dialogDsMenu = new dialogDsMenu(mahoadon);
@@ -779,7 +830,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 }
             }
         }
-        private void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvMenu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 3)
             {
@@ -837,7 +888,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         }
 
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        public void btnLuu_Click(object sender, EventArgs e)
         {
             string ngaynhanphong = dateNhanPhong.Value.ToString("yyyy-MM-dd");
             string timenhanphong = timeNhanPhong.Value.ToString("HH:mm:ss");
@@ -845,14 +896,21 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             string ngaytraphong = dateTraPhong.Value.ToString("yyyy-MM-dd");
             string timetraphong = timeTraPhong.Value.ToString("HH:mm:ss");
             string thoigiantraphong = ngaytraphong + " " + timetraphong;
-            string macachthue = cmbCachThue.SelectedValue.ToString();
             string tienphong = txtTienPhong.Text;
             string tienmenu = txtTienMenu.Text;
             string tienphuthu = txtPhuThu.Text;
             string tienthugiamtrukhac = txtThuGiamTru.Text;
             string tientratruoc = txtTienTraTruoc.Text;
             string ghichu = txtGhiChu.Text;
-            HoaDonDTO hd = new HoaDonDTO(mahoadon, maphong, thoigiannhanphong, thoigiantraphong, macachthue, tienphong, tienphuthu, tientratruoc, tienthugiamtrukhac, tienmenu, ghichu);
+            string taikhoannhanphong="", taikhoantraphong="";
+            foreach(DataRow dr in hoaDonBUS.GetHoaDon(
+                "SELECT * " +
+                "FROM HoaDon " +
+                "WHERE MaHoaDon = '"+mahoadon+"'").Rows)
+            {
+                taikhoannhanphong = dr["TaiKhoanNhanPhong"].ToString();
+            }                
+            HoaDonDTO hd = new HoaDonDTO(mahoadon, maphong, thoigiannhanphong, thoigiantraphong, macachthue, tienphong, tienphuthu, tientratruoc, tienthugiamtrukhac, tienmenu, ghichu, taikhoannhanphong,mataikhoan);
             if (hoaDonBUS.SuaHoaDon(hd))
             {
                 if (trangthai == "Thêm")

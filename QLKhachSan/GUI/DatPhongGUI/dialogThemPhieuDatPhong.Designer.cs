@@ -42,6 +42,7 @@
             this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.dateNgayTra = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSoDienThoai = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.dgvLoaiPhong = new System.Windows.Forms.DataGridView();
             this.TenLoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SLPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateNgayTra = new Bunifu.Framework.UI.BunifuDatepicker();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -99,7 +99,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThem.AutoSize = true;
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -234,6 +234,21 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Ngày trả phòng";
             // 
+            // dateNgayTra
+            // 
+            this.dateNgayTra.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.dateNgayTra.BorderRadius = 10;
+            this.dateNgayTra.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgayTra.ForeColor = System.Drawing.Color.Black;
+            this.dateNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNgayTra.FormatCustom = "dd/MM/yyyy";
+            this.dateNgayTra.Location = new System.Drawing.Point(4, 33);
+            this.dateNgayTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateNgayTra.Name = "dateNgayTra";
+            this.dateNgayTra.Size = new System.Drawing.Size(300, 40);
+            this.dateNgayTra.TabIndex = 1;
+            this.dateNgayTra.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
+            // 
             // txtHoTen
             // 
             this.txtHoTen.BackColor = System.Drawing.Color.Transparent;
@@ -283,6 +298,7 @@
             this.txtSoDienThoai.SelectedText = "";
             this.txtSoDienThoai.Size = new System.Drawing.Size(475, 44);
             this.txtSoDienThoai.TabIndex = 13;
+            this.txtSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDienThoai_KeyPress);
             // 
             // label8
             // 
@@ -319,6 +335,7 @@
             this.txtTienTraTruoc.Size = new System.Drawing.Size(475, 44);
             this.txtTienTraTruoc.TabIndex = 15;
             this.txtTienTraTruoc.TextChanged += new System.EventHandler(this.txtTienTraTruoc_TextChanged);
+            this.txtTienTraTruoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienTraTruoc_KeyPress);
             // 
             // txtGhiChu
             // 
@@ -366,6 +383,7 @@
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.PasswordChar = '\0';
             this.txtTrangThai.PlaceholderText = "";
+            this.txtTrangThai.ReadOnly = true;
             this.txtTrangThai.SelectedText = "";
             this.txtTrangThai.Size = new System.Drawing.Size(475, 44);
             this.txtTrangThai.TabIndex = 18;
@@ -512,6 +530,7 @@
             this.dgvLoaiPhong.RowTemplate.Height = 28;
             this.dgvLoaiPhong.Size = new System.Drawing.Size(666, 150);
             this.dgvLoaiPhong.TabIndex = 0;
+            this.dgvLoaiPhong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvLoaiPhong_KeyPress);
             // 
             // TenLoaiPhong
             // 
@@ -529,21 +548,6 @@
             this.SLPhong.MinimumWidth = 8;
             this.SLPhong.Name = "SLPhong";
             this.SLPhong.Width = 300;
-            // 
-            // dateNgayTra
-            // 
-            this.dateNgayTra.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.dateNgayTra.BorderRadius = 10;
-            this.dateNgayTra.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateNgayTra.ForeColor = System.Drawing.Color.Black;
-            this.dateNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayTra.FormatCustom = "dd/MM/yyyy";
-            this.dateNgayTra.Location = new System.Drawing.Point(4, 33);
-            this.dateNgayTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateNgayTra.Name = "dateNgayTra";
-            this.dateNgayTra.Size = new System.Drawing.Size(300, 40);
-            this.dateNgayTra.TabIndex = 1;
-            this.dateNgayTra.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
             // 
             // dialogThemPhieuDatPhong
             // 

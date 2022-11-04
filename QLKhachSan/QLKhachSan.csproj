@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -39,11 +38,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Spreadsheet, Version=49.0.0.1127, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Spreadsheet.49.0.1127\lib\net35\GemBox.Spreadsheet.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
@@ -51,26 +50,40 @@
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="Syncfusion.Compression.Portable, Version=20.3200.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Compression.Net.Core.20.3.0.50\lib\netstandard2.0\Syncfusion.Compression.Portable.dll</HintPath>
-    </Reference>
-    <Reference Include="Syncfusion.Licensing, Version=20.3460.0.50, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Syncfusion.Licensing.20.3.0.50\lib\net46\Syncfusion.Licensing.dll</HintPath>
-    </Reference>
+    <Reference Include="ReachFramework" />
     <Reference Include="Syncfusion.Pdf.Portable, Version=20.3200.0.50, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Pdf.Net.Core.20.3.0.50\lib\netstandard2.0\Syncfusion.Pdf.Portable.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmLich.cs" />
+    <Compile Include="Model\AmLich.cs" />
     <Compile Include="BUS\CachThueBUS.cs" />
     <Compile Include="BUS\CachTinhTienBUS.cs" />
     <Compile Include="BUS\CachTinhTien_CachThueBUS.cs" />
@@ -78,17 +91,26 @@
     <Compile Include="BUS\CTChucNangBUS.cs" />
     <Compile Include="BUS\CTPDP_LoaiPhongBUS.cs" />
     <Compile Include="BUS\CTPDP_PhongBUS.cs" />
+    <Compile Include="BUS\CTPhieuKiemKhoBUS.cs" />
+    <Compile Include="BUS\CTPNKhoBUS.cs" />
+    <Compile Include="BUS\DieuChinhKhoBUS.cs" />
+    <Compile Include="BUS\DieuChinhKho_MenuBUS.cs" />
+    <Compile Include="BUS\ExportExcelLichSu.cs" />
     <Compile Include="BUS\HoaDonBUS.cs" />
     <Compile Include="BUS\HoaDon_MenuBUS.cs" />
-    <Compile Include="BUS\KhoBUS.cs" />
+    <Compile Include="BUS\PNKhoBUS.cs" />
     <Compile Include="BUS\LoaiPhongBUS.cs" />
     <Compile Include="BUS\MenuBUS.cs" />
     <Compile Include="BUS\PhieuDatPhongBUS.cs" />
+    <Compile Include="BUS\PhieuKiemKhoBUS.cs" />
     <Compile Include="BUS\PhongBUS.cs" />
     <Compile Include="BUS\printPDFHoaDon.cs" />
     <Compile Include="BUS\QuyenBUS.cs" />
     <Compile Include="BUS\TaiKhoanBUS.cs" />
     <Compile Include="BUS\ThietLapKhacBUS.cs" />
+    <Compile Include="BUS\ThuChiBUS.cs" />
+    <Compile Include="Model\CheckError.cs" />
+    <Compile Include="Model\convertString.cs" />
     <Compile Include="DAO\CachThueDAO.cs" />
     <Compile Include="DAO\CachTinhTienDAO.cs" />
     <Compile Include="DAO\CachTinhTien_CachThueDAO.cs" />
@@ -97,16 +119,22 @@
     <Compile Include="DAO\CTChucNangDAO.cs" />
     <Compile Include="DAO\CTPDP_LoaiPhongDAO.cs" />
     <Compile Include="DAO\CTPDP_PhongDAO.cs" />
+    <Compile Include="DAO\CTPhieuKiemKhoDAO.cs" />
+    <Compile Include="DAO\CTPNKhoDAO.cs" />
+    <Compile Include="DAO\DieuChinhKhoDAO.cs" />
     <Compile Include="DAO\HoaDonDAO.cs" />
     <Compile Include="DAO\HoaDon_MenuDAO.cs" />
-    <Compile Include="DAO\KhoDAO.cs" />
+    <Compile Include="DAO\PNKhoDAO.cs" />
     <Compile Include="DAO\LoaiPhongDAO.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\PhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\PhieuKiemKhoDAO.cs" />
+    <Compile Include="DAO\DieuChinhKho_MenuDAO.cs" />
     <Compile Include="DAO\PhongDAO.cs" />
     <Compile Include="DAO\QuyenDAO.cs" />
     <Compile Include="DAO\TaiKhoanDAO.cs" />
     <Compile Include="DAO\ThietLapKhacDAO.cs" />
+    <Compile Include="DAO\ThuChiDAO.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="DTO\CachThueDTO.cs" />
     <Compile Include="DTO\CachTinhTienDTO.cs" />
@@ -115,16 +143,22 @@
     <Compile Include="DTO\CTChucNangDTO.cs" />
     <Compile Include="DTO\CTPDP_LoaiPhongDTO.cs" />
     <Compile Include="DTO\CTPDP_PhongDTO.cs" />
+    <Compile Include="DTO\CTPhieuKiemKhoDTO.cs" />
+    <Compile Include="DTO\CTPNKhoDTO.cs" />
+    <Compile Include="DTO\DieuChinhKhoDTO.cs" />
+    <Compile Include="DTO\DieuChinhKho_MenuDTO.cs" />
     <Compile Include="DTO\HoaDonDTO.cs" />
     <Compile Include="DTO\HoaDon_MenuDTO.cs" />
-    <Compile Include="DTO\KhoDTO.cs" />
+    <Compile Include="DTO\PNKhoDTO.cs" />
     <Compile Include="DTO\LoaiPhongDTO.cs" />
     <Compile Include="DTO\MenuDTO.cs" />
     <Compile Include="DTO\PhieuDatPhongDTO.cs" />
+    <Compile Include="DTO\PhieuKiemKhoDTO.cs" />
     <Compile Include="DTO\PhongDTO.cs" />
     <Compile Include="DTO\QuyenDTO.cs" />
     <Compile Include="DTO\TaiKhoanDTO.cs" />
     <Compile Include="DTO\ThietLapKhacDTO.cs" />
+    <Compile Include="DTO\ThuChiDTO.cs" />
     <Compile Include="GUI\DatPhongGUI\dialogDsPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +206,12 @@
     </Compile>
     <Compile Include="GUI\frmHeader.Designer.cs">
       <DependentUpon>frmHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainPageGUI\frmMainPage.cs">
       <SubType>Form</SubType>
@@ -257,11 +297,23 @@
     <Compile Include="GUI\QLHeThongGUI\ThietLapKhacGUI\frmThietLapKhac.designer.cs">
       <DependentUpon>frmThietLapKhac.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeDoanhThu.Designer.cs">
+      <DependentUpon>frmThongKeDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKe.designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeLoiNhuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeLoiNhuan.Designer.cs">
+      <DependentUpon>frmThongKeLoiNhuan.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLKhachSan\frmQLKhachSan.cs">
       <SubType>Form</SubType>
@@ -275,23 +327,59 @@
     <Compile Include="GUI\QLHeThongGUI\frmQLHeThong.Designer.cs">
       <DependentUpon>frmQLHeThong.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QLKhoGUI\dialogSuaKho.cs">
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\dialogChiTietDieuChinhKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\QLKhoGUI\dialogSuaKho.Designer.cs">
-      <DependentUpon>dialogSuaKho.cs</DependentUpon>
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\dialogChiTietDieuChinhKho.Designer.cs">
+      <DependentUpon>dialogChiTietDieuChinhKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\QLKhoGUI\dialogThemKho.cs">
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\dialogThemDieuChinhKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\QLKhoGUI\dialogThemKho.Designer.cs">
-      <DependentUpon>dialogThemKho.cs</DependentUpon>
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\dialogThemDieuChinhKho.designer.cs">
+      <DependentUpon>dialogThemDieuChinhKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\frmDieuChinhKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\DieuChinhKho\frmDieuChinhKho.designer.cs">
+      <DependentUpon>frmDieuChinhKho.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLKhoGUI\frmQLKho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\QLKhoGUI\frmQLKho.Designer.cs">
       <DependentUpon>frmQLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\PNKho\dialogThemKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\PNKho\dialogThemKho.designer.cs">
+      <DependentUpon>dialogThemKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\PNKho\frmQLPNKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\PNKho\frmQLPNKho.designer.cs">
+      <DependentUpon>frmQLPNKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\TinhTrangKho\frmTinhTrangKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLKhoGUI\TinhTrangKho\frmTinhTrangKho.designer.cs">
+      <DependentUpon>frmTinhTrangKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLThuChiGUI\dialogSuaThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLThuChiGUI\dialogSuaThuChi.Designer.cs">
+      <DependentUpon>dialogSuaThuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\QLThuChiGUI\dialogThemThuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\QLThuChiGUI\dialogThemThuChi.Designer.cs">
+      <DependentUpon>dialogThemThuChi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\QLThuChiGUI\frmQLThuChi.cs">
       <SubType>Form</SubType>
@@ -415,6 +503,9 @@
     <EmbeddedResource Include="GUI\frmHeader.resx">
       <DependentUpon>frmHeader.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainPageGUI\frmMainPage.resx">
       <DependentUpon>frmMainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -458,8 +549,14 @@
     <EmbeddedResource Include="GUI\QLHeThongGUI\ThietLapKhacGUI\frmThietLapKhac.resx">
       <DependentUpon>frmThietLapKhac.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeDoanhThu.resx">
+      <DependentUpon>frmThongKeDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLHeThongGUI\ThongKeGUI\frmThongKeLoiNhuan.resx">
+      <DependentUpon>frmThongKeLoiNhuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLKhachSan\frmQLKhachSan.resx">
       <DependentUpon>frmQLKhachSan.cs</DependentUpon>
@@ -467,14 +564,32 @@
     <EmbeddedResource Include="GUI\QLHeThongGUI\frmQLHeThong.resx">
       <DependentUpon>frmQLHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QLKhoGUI\dialogSuaKho.resx">
-      <DependentUpon>dialogSuaKho.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QLKhoGUI\DieuChinhKho\dialogChiTietDieuChinhKho.resx">
+      <DependentUpon>dialogChiTietDieuChinhKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\QLKhoGUI\dialogThemKho.resx">
-      <DependentUpon>dialogThemKho.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\QLKhoGUI\DieuChinhKho\dialogThemDieuChinhKho.resx">
+      <DependentUpon>dialogThemDieuChinhKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLKhoGUI\DieuChinhKho\frmDieuChinhKho.resx">
+      <DependentUpon>frmDieuChinhKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLKhoGUI\frmQLKho.resx">
       <DependentUpon>frmQLKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLKhoGUI\PNKho\dialogThemKho.resx">
+      <DependentUpon>dialogThemKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLKhoGUI\PNKho\frmQLPNKho.resx">
+      <DependentUpon>frmQLPNKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLKhoGUI\TinhTrangKho\frmTinhTrangKho.resx">
+      <DependentUpon>frmTinhTrangKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLThuChiGUI\dialogSuaThuChi.resx">
+      <DependentUpon>dialogSuaThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\QLThuChiGUI\dialogThemThuChi.resx">
+      <DependentUpon>dialogThemThuChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\QLThuChiGUI\frmQLThuChi.resx">
       <DependentUpon>frmQLThuChi.cs</DependentUpon>
@@ -549,19 +664,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.2\build\Fody.targets'))" />
-    <Error Condition="!Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props'))" />
     <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
   <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.107.0.5304.6200\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>

@@ -36,7 +36,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(372, 40);
+            this.label3.Location = new System.Drawing.Point(493, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(266, 29);
             this.label3.TabIndex = 13;
@@ -46,7 +46,7 @@
             // 
             this.pnChucNangHeThong.Location = new System.Drawing.Point(122, 97);
             this.pnChucNangHeThong.Name = "pnChucNangHeThong";
-            this.pnChucNangHeThong.Size = new System.Drawing.Size(770, 530);
+            this.pnChucNangHeThong.Size = new System.Drawing.Size(977, 671);
             this.pnChucNangHeThong.TabIndex = 14;
             // 
             // frmQLHeThong
@@ -54,12 +54,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.ControlBox = false;
             this.Controls.Add(this.pnChucNangHeThong);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmQLHeThong";
             this.Load += new System.EventHandler(this.frmQLHeThong_Load);
             this.ResumeLayout(false);

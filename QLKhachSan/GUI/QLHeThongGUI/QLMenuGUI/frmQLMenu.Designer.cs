@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLMenu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.MaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UuTienHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cmbCachTim = new System.Windows.Forms.ComboBox();
             this.lblReset = new System.Windows.Forms.Label();
@@ -44,6 +38,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.MaMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UuTienHienThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -52,9 +52,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgvMenu);
-            this.panel1.Location = new System.Drawing.Point(38, 218);
+            this.panel1.Location = new System.Drawing.Point(53, 231);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 391);
+            this.panel1.Size = new System.Drawing.Size(1100, 561);
             this.panel1.TabIndex = 13;
             // 
             // dgvMenu
@@ -71,66 +71,18 @@
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.RowHeadersWidth = 62;
             this.dgvMenu.RowTemplate.Height = 28;
-            this.dgvMenu.Size = new System.Drawing.Size(920, 391);
+            this.dgvMenu.Size = new System.Drawing.Size(1100, 564);
             this.dgvMenu.TabIndex = 0;
             this.dgvMenu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenu_CellContentClick);
-            // 
-            // MaMenu
-            // 
-            this.MaMenu.DataPropertyName = "MaMenu";
-            this.MaMenu.HeaderText = "Mã Menu";
-            this.MaMenu.MinimumWidth = 8;
-            this.MaMenu.Name = "MaMenu";
-            this.MaMenu.Width = 120;
-            // 
-            // TenMenu
-            // 
-            this.TenMenu.DataPropertyName = "TenMenu";
-            this.TenMenu.HeaderText = "Tên Menu";
-            this.TenMenu.MinimumWidth = 8;
-            this.TenMenu.Name = "TenMenu";
-            this.TenMenu.Width = 120;
-            // 
-            // LoaiMenu
-            // 
-            this.LoaiMenu.DataPropertyName = "LoaiMenu";
-            this.LoaiMenu.HeaderText = "Loại Menu";
-            this.LoaiMenu.MinimumWidth = 8;
-            this.LoaiMenu.Name = "LoaiMenu";
-            this.LoaiMenu.Width = 120;
-            // 
-            // GiaNhap
-            // 
-            this.GiaNhap.DataPropertyName = "GiaNhap";
-            this.GiaNhap.HeaderText = "Giá Nhập";
-            this.GiaNhap.MinimumWidth = 8;
-            this.GiaNhap.Name = "GiaNhap";
-            this.GiaNhap.Width = 120;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.DataPropertyName = "GiaBan";
-            this.GiaBan.HeaderText = "Giá Bán";
-            this.GiaBan.MinimumWidth = 8;
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.Width = 120;
-            // 
-            // UuTienHienThi
-            // 
-            this.UuTienHienThi.DataPropertyName = "UuTienHienThi";
-            this.UuTienHienThi.HeaderText = "Ưu tiên";
-            this.UuTienHienThi.MinimumWidth = 8;
-            this.UuTienHienThi.Name = "UuTienHienThi";
-            this.UuTienHienThi.Width = 120;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmbCachTim);
             this.panel2.Controls.Add(this.lblReset);
             this.panel2.Controls.Add(this.btnFindMenu);
-            this.panel2.Location = new System.Drawing.Point(38, 113);
+            this.panel2.Location = new System.Drawing.Point(53, 126);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 64);
+            this.panel2.Size = new System.Drawing.Size(1103, 64);
             this.panel2.TabIndex = 16;
             // 
             // cmbCachTim
@@ -146,9 +98,9 @@
             "Giá nhập",
             "Giá bán",
             "Ưu tiên hiển thị"});
-            this.cmbCachTim.Location = new System.Drawing.Point(352, 15);
+            this.cmbCachTim.Location = new System.Drawing.Point(439, 15);
             this.cmbCachTim.Name = "cmbCachTim";
-            this.cmbCachTim.Size = new System.Drawing.Size(172, 36);
+            this.cmbCachTim.Size = new System.Drawing.Size(242, 36);
             this.cmbCachTim.TabIndex = 4;
             // 
             // lblReset
@@ -157,7 +109,7 @@
             this.lblReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReset.Image = ((System.Drawing.Image)(resources.GetObject("lblReset.Image")));
             this.lblReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblReset.Location = new System.Drawing.Point(857, 5);
+            this.lblReset.Location = new System.Drawing.Point(1040, 5);
             this.lblReset.MinimumSize = new System.Drawing.Size(60, 60);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(60, 60);
@@ -176,7 +128,7 @@
             this.btnFindMenu.Location = new System.Drawing.Point(0, 0);
             this.btnFindMenu.Margin = new System.Windows.Forms.Padding(0);
             this.btnFindMenu.Name = "btnFindMenu";
-            this.btnFindMenu.Size = new System.Drawing.Size(328, 65);
+            this.btnFindMenu.Size = new System.Drawing.Size(416, 65);
             this.btnFindMenu.TabIndex = 2;
             this.btnFindMenu.text = "";
             this.btnFindMenu.OnTextChange += new System.EventHandler(this.btnFindMenu_OnTextChange);
@@ -185,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 41);
+            this.label3.Location = new System.Drawing.Point(48, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 29);
             this.label3.TabIndex = 17;
@@ -193,9 +145,9 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(38, 113);
+            this.panel4.Location = new System.Drawing.Point(53, 126);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(920, 496);
+            this.panel4.Size = new System.Drawing.Size(1103, 669);
             this.panel4.TabIndex = 15;
             // 
             // bunifuFlatButton1
@@ -221,7 +173,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 40D;
             this.bunifuFlatButton1.IsTab = true;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(138, 19);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(153, 32);
             this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(0);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
@@ -236,11 +188,59 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
+            // MaMenu
+            // 
+            this.MaMenu.DataPropertyName = "MaMenu";
+            this.MaMenu.HeaderText = "Mã Menu";
+            this.MaMenu.MinimumWidth = 8;
+            this.MaMenu.Name = "MaMenu";
+            this.MaMenu.Width = 120;
+            // 
+            // TenMenu
+            // 
+            this.TenMenu.DataPropertyName = "TenMenu";
+            this.TenMenu.HeaderText = "Tên Menu";
+            this.TenMenu.MinimumWidth = 8;
+            this.TenMenu.Name = "TenMenu";
+            this.TenMenu.Width = 150;
+            // 
+            // LoaiMenu
+            // 
+            this.LoaiMenu.DataPropertyName = "LoaiMenu";
+            this.LoaiMenu.HeaderText = "Loại Menu";
+            this.LoaiMenu.MinimumWidth = 8;
+            this.LoaiMenu.Name = "LoaiMenu";
+            this.LoaiMenu.Width = 150;
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "GiaNhap";
+            this.GiaNhap.HeaderText = "Giá Nhập";
+            this.GiaNhap.MinimumWidth = 8;
+            this.GiaNhap.Name = "GiaNhap";
+            this.GiaNhap.Width = 150;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "GiaBan";
+            this.GiaBan.HeaderText = "Giá Bán";
+            this.GiaBan.MinimumWidth = 8;
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.Width = 150;
+            // 
+            // UuTienHienThi
+            // 
+            this.UuTienHienThi.DataPropertyName = "UuTienHienThi";
+            this.UuTienHienThi.HeaderText = "Ưu tiên";
+            this.UuTienHienThi.MinimumWidth = 8;
+            this.UuTienHienThi.Name = "UuTienHienThi";
+            this.UuTienHienThi.Width = 120;
+            // 
             // frmQLMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -248,7 +248,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.bunifuFlatButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmQLMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmQLMenu_Load);

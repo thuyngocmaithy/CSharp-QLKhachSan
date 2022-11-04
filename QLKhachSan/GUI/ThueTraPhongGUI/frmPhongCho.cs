@@ -1,5 +1,6 @@
 ﻿using QLKhachSan.BUS;
 using QLKhachSan.DTO;
+using QLKhachSan.GUI.QLKhachSan;
 using System;
 using System.Data;
 using System.Drawing;
@@ -20,16 +21,14 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         CachtinhtienBUS cachtinhtienBUS = new CachtinhtienBUS();
         string sapxeptheo = "", valueFind = "";
         Boolean tanggiam = true;
-        public frmPhongCho()
-        {
-            InitializeComponent();
-        }
-        public frmPhongCho(string sapxeptheo, Boolean tanggiam, string valueFind)
+        string mataikhoan;  
+        public frmPhongCho(string sapxeptheo, Boolean tanggiam, string valueFind, string mataikhoan)
         {
             InitializeComponent();
             this.sapxeptheo = sapxeptheo;
             this.tanggiam = tanggiam;
-            this.valueFind = valueFind;
+            this.valueFind = valueFind; 
+            this.mataikhoan = mataikhoan;
         }
         private void frmPhongCho_Load(object sender, EventArgs e)
         {
@@ -53,7 +52,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.pnlLoaiPhong.Location = new System.Drawing.Point(0, 0);
             this.pnlLoaiPhong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.pnlLoaiPhong.Name = "pnl" + maloaiphong;
-            this.pnlLoaiPhong.Size = new System.Drawing.Size(870, 200);
+            this.pnlLoaiPhong.Size = new System.Drawing.Size(1070, 200);
             this.pnlLoaiPhong.TabIndex = 0;
             DataTable dtPhong = new DataTable();
             if (valueFind == "")
@@ -179,9 +178,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.lblTenLoaiPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.lblTenLoaiPhong.Location = new System.Drawing.Point(10, 10);
             this.lblTenLoaiPhong.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.lblTenLoaiPhong.MinimumSize = new System.Drawing.Size(800, 50);
+            this.lblTenLoaiPhong.MinimumSize = new System.Drawing.Size(1000, 50);
             this.lblTenLoaiPhong.Name = "lbl" + maloaiphong;
-            this.lblTenLoaiPhong.Size = new System.Drawing.Size(800, 50);
+            this.lblTenLoaiPhong.Size = new System.Drawing.Size(1000, 50);
             this.lblTenLoaiPhong.TabIndex = 0;
             this.lblTenLoaiPhong.Text = tenloaiphong;
         }
@@ -244,32 +243,22 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         {
             string mahoadon = hoaDonBUS.TaoMaHoaDon();
             string maphong = contextMenuStrip1.Tag.ToString().Substring(3);
+            string tentaikhoannhanphong=mataikhoan;
             //ADD HOADON => LẤY NGÀY HIỆN TẠI
             DateTime now = DateTime.Now;
             string ngaynhanphong = now.ToString("yyyy-MM-dd HH:mm:ss");
-            string macachthue = "";
-            foreach (DataRow dt in phongBUS.GetPhong(
-                "SELECT MaCachTinhTien " +
-                "FROM Phong " +
-                "WHERE MaPhong = '" + maphong + "'").Rows)
-            {
-                foreach (DataRow dtCachThue in cachtinhtienBUS.GetCachTinhTien(
-               "SELECT MaCachThue " +
-               "FROM CachTinhTien " +
-               "WHERE MaCachTinhTien = '" + dt["MaCachTinhTien"].ToString() + "'").Rows)
-                {
-                    macachthue = dtCachThue["MaCachThue"].ToString();
-                }
-            }
-            HoaDonDTO hd = new HoaDonDTO(mahoadon, maphong, ngaynhanphong, "", macachthue, "", "", "", "", "", "");
+            string macachthue = "CT001";
+
+
+            HoaDonDTO hd = new HoaDonDTO(mahoadon, maphong, ngaynhanphong, "NULL", macachthue, "", "", "", "", "", "",tentaikhoannhanphong,"NULL");
             Boolean nhanphong = true;
-            if (!phongBUS.SuaPhong(maphong, "Phòng đang thuê"))
+            if (!hoaDonBUS.ThemHoaDon(hd))
             {
                 nhanphong = false;
             }
             else
             {
-                if (!hoaDonBUS.ThemHoaDon(hd))
+                if (!phongBUS.SuaPhong(maphong, "Phòng đang thuê"))
                 {
                     nhanphong = false;
                 }

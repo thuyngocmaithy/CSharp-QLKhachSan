@@ -33,8 +33,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traPhongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yêuCầuDọnPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.pnlPhongDangThue.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPhongDangThue.Name = "pnlPhongDangThue";
             this.pnlPhongDangThue.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.pnlPhongDangThue.Size = new System.Drawing.Size(900, 450);
+            this.pnlPhongDangThue.Size = new System.Drawing.Size(1100, 650);
             this.pnlPhongDangThue.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -58,7 +58,7 @@
             this.yêuCầuDọnPhòngToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 165);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(239, 132);
             // 
             // editToolStripMenuItem
             // 
@@ -74,6 +74,13 @@
             this.traPhongToolStripMenuItem.Text = "Trả phòng";
             this.traPhongToolStripMenuItem.Click += new System.EventHandler(this.traPhongToolStripMenuItem_Click);
             // 
+            // yêuCầuDọnPhòngToolStripMenuItem
+            // 
+            this.yêuCầuDọnPhòngToolStripMenuItem.Name = "yêuCầuDọnPhòngToolStripMenuItem";
+            this.yêuCầuDọnPhòngToolStripMenuItem.Size = new System.Drawing.Size(238, 32);
+            this.yêuCầuDọnPhòngToolStripMenuItem.Text = "Yêu cầu dọn phòng";
+            this.yêuCầuDọnPhòngToolStripMenuItem.Click += new System.EventHandler(this.yêuCầuDọnPhòngToolStripMenuItem_Click);
+            // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
@@ -81,24 +88,17 @@
             this.deleteToolStripMenuItem.Text = "Xóa";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
-            // yêuCầuDọnPhòngToolStripMenuItem
-            // 
-            this.yêuCầuDọnPhòngToolStripMenuItem.Name = "yêuCầuDọnPhòngToolStripMenuItem";
-            this.yêuCầuDọnPhòngToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
-            this.yêuCầuDọnPhòngToolStripMenuItem.Text = "Yêu cầu dọn phòng";
-            this.yêuCầuDọnPhòngToolStripMenuItem.Click += new System.EventHandler(this.yêuCầuDọnPhòngToolStripMenuItem_Click);
-            // 
             // frmPhongDangThue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pnlPhongDangThue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(900, 450);
-            this.MinimumSize = new System.Drawing.Size(900, 450);
+            this.MaximumSize = new System.Drawing.Size(1100, 650);
+            this.MinimumSize = new System.Drawing.Size(1100, 650);
             this.Name = "frmPhongDangThue";
             this.Load += new System.EventHandler(this.frmPhongDangThue_Load);
             this.contextMenuStrip1.ResumeLayout(false);

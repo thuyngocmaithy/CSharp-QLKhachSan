@@ -1,5 +1,6 @@
 ﻿using QLKhachSan.BUS;
 using QLKhachSan.DTO;
+using QLKhachSan.GUI.QLHeThongGUI.LichSuGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLCachtinhtienGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI;
 using QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI;
@@ -57,7 +58,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI
                 btnChucNang.Top = vttren;//(4)thông tin vị trí trên (Top)
                 this.btnChucNang.Name = "btn" + ctcn["MaCTCN"].ToString(); //(5) tên button mới
                                                     //(6) Kích thước button mới
-                this.btnChucNang.Size = new System.Drawing.Size(350, 75);
+                this.btnChucNang.Size = new System.Drawing.Size(450, 75);
                 string tenctcn = ctcn["TenCTCN"].ToString();
                 this.btnChucNang.Tag = tenctcn;
                 btnChucNang.Text = tenctcn;
@@ -124,6 +125,14 @@ namespace QLKhachSan.GUI.QLHeThongGUI
                     frmQLMenu.AutoScroll = true;
                     this.Controls.Add(frmQLMenu);
                     frmQLMenu.Show();
+                    break;
+                case "Lịch sử":
+                    this.Controls.Clear();
+                    frmLichSu frmLichSu = new frmLichSu();
+                    frmLichSu.TopLevel = false;
+                    frmLichSu.AutoScroll = true;
+                    this.Controls.Add(frmLichSu);
+                    frmLichSu.Show();
                     break;
 
 

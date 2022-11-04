@@ -11,10 +11,11 @@ namespace QLKhachSan.GUI.MainPageGUI
         HoaDonBUS hoaDonBUS = new HoaDonBUS();
         PhongBUS PhongBUS = new PhongBUS();
         int luotthuephong, sophongcho, sophongcandon, sophongdangthue;
-        public frmMainPage()
+        string mataikhoan;
+        public frmMainPage(string mataikhoan)
         {
             InitializeComponent();
-
+            this.mataikhoan = mataikhoan;
         }
 
         private void frmMainPage_Load(object sender, EventArgs e)
@@ -46,7 +47,7 @@ namespace QLKhachSan.GUI.MainPageGUI
         private void btnThuePhong_Click(object sender, EventArgs e)
         {
             pnlMainPage.Controls.Clear();
-            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
+            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong(mataikhoan);
             frmThueTraPhong.TopLevel = false;
             frmThueTraPhong.AutoScroll = true;
             pnlMainPage.Controls.Add(frmThueTraPhong);
@@ -56,7 +57,7 @@ namespace QLKhachSan.GUI.MainPageGUI
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
             pnlMainPage.Controls.Clear();
-            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
+            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong(mataikhoan);
             frmThueTraPhong.TopLevel = false;
             frmThueTraPhong.AutoScroll = true;
             pnlMainPage.Controls.Add(frmThueTraPhong);
@@ -67,7 +68,7 @@ namespace QLKhachSan.GUI.MainPageGUI
         private void btnDonPhong_Click(object sender, EventArgs e)
         {
             pnlMainPage.Controls.Clear();
-            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
+            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong(mataikhoan);
             frmThueTraPhong.TopLevel = false;
             frmThueTraPhong.AutoScroll = true;
             pnlMainPage.Controls.Add(frmThueTraPhong);

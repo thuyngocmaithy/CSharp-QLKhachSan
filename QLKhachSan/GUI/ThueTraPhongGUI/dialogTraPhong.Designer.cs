@@ -5,7 +5,7 @@
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        public System.ComponentModel.IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dialogTraPhong));
             this.lblThemSua = new System.Windows.Forms.Label();
@@ -490,6 +490,7 @@
             this.txtTienPhong.Size = new System.Drawing.Size(206, 44);
             this.txtTienPhong.TabIndex = 30;
             this.txtTienPhong.TextChanged += new System.EventHandler(this.txtTienPhong_TextChanged);
+            this.txtTienPhong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienPhong_KeyPress);
             // 
             // label10
             // 
@@ -548,6 +549,7 @@
             this.txtPhuThu.Size = new System.Drawing.Size(206, 44);
             this.txtPhuThu.TabIndex = 34;
             this.txtPhuThu.TextChanged += new System.EventHandler(this.txtPhuThu_TextChanged);
+            this.txtPhuThu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhuThu_KeyPress);
             // 
             // txtTienTraTruoc
             // 
@@ -575,6 +577,7 @@
             this.txtTienTraTruoc.Size = new System.Drawing.Size(206, 44);
             this.txtTienTraTruoc.TabIndex = 36;
             this.txtTienTraTruoc.TextChanged += new System.EventHandler(this.txtTienTraTruoc_TextChanged);
+            this.txtTienTraTruoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienTraTruoc_KeyPress);
             // 
             // label8
             // 
@@ -612,6 +615,7 @@
             this.txtTienMenu.Size = new System.Drawing.Size(206, 44);
             this.txtTienMenu.TabIndex = 40;
             this.txtTienMenu.TextChanged += new System.EventHandler(this.txtTienMenu_TextChanged);
+            this.txtTienMenu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienMenu_KeyPress);
             // 
             // label15
             // 
@@ -649,6 +653,7 @@
             this.txtThuGiamTru.Size = new System.Drawing.Size(206, 44);
             this.txtThuGiamTru.TabIndex = 38;
             this.txtThuGiamTru.TextChanged += new System.EventHandler(this.txtThuGiamTru_TextChanged);
+            this.txtThuGiamTru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThuGiamTru_KeyPress);
             // 
             // label16
             // 
@@ -684,6 +689,7 @@
             this.txtTongTien.SelectedText = "";
             this.txtTongTien.Size = new System.Drawing.Size(625, 44);
             this.txtTongTien.TabIndex = 42;
+            this.txtTongTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTongTien_KeyPress);
             // 
             // label18
             // 
@@ -788,48 +794,48 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvMenuTraPhong;
-        private System.Windows.Forms.Label label13;
-        private Bunifu.Framework.UI.BunifuFlatButton btnThemMenu;
-        private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox txtGhiChu;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker timeNhanPhong;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuDatepicker dateNhanPhong;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Button btnClose;
-        private Bunifu.Framework.UI.BunifuFlatButton btnLuu;
-        private System.Windows.Forms.Label lblThemSua;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuDatepicker dateTraPhong;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker timeTraPhong;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbCachThue;
-        private System.Windows.Forms.Label lblTrangThaiNhanPhong;
-        private System.Windows.Forms.Label lblTrangThaiTraPhong;
-        private Guna.UI2.WinForms.Guna2TextBox txtTienPhong;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblThoiGianTinhTien;
-        private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox txtPhuThu;
-        private Guna.UI2.WinForms.Guna2TextBox txtTienTraTruoc;
-        private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2TextBox txtTienMenu;
-        private System.Windows.Forms.Label label15;
-        private Guna.UI2.WinForms.Guna2TextBox txtThuGiamTru;
-        private System.Windows.Forms.Label label16;
-        private Guna.UI2.WinForms.Guna2TextBox txtTongTien;
-        private System.Windows.Forms.Label label18;
-        private Bunifu.Framework.UI.BunifuFlatButton lblThoiGianThue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenMenu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        public System.Windows.Forms.DataGridView dgvMenuTraPhong;
+        public System.Windows.Forms.Label label13;
+        public Bunifu.Framework.UI.BunifuFlatButton btnThemMenu;
+        public System.Windows.Forms.Label label11;
+        public Guna.UI2.WinForms.Guna2TextBox txtGhiChu;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.DateTimePicker timeNhanPhong;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        public System.Windows.Forms.Label label4;
+        public Bunifu.Framework.UI.BunifuDatepicker dateNhanPhong;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        public System.Windows.Forms.Button btnClose;
+        public Bunifu.Framework.UI.BunifuFlatButton btnLuu;
+        public System.Windows.Forms.Label lblThemSua;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        public System.Windows.Forms.Label label1;
+        public Bunifu.Framework.UI.BunifuDatepicker dateTraPhong;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.DateTimePicker timeTraPhong;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox cmbCachThue;
+        public System.Windows.Forms.Label lblTrangThaiNhanPhong;
+        public System.Windows.Forms.Label lblTrangThaiTraPhong;
+        public Guna.UI2.WinForms.Guna2TextBox txtTienPhong;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label lblThoiGianTinhTien;
+        public System.Windows.Forms.Label label14;
+        public Guna.UI2.WinForms.Guna2TextBox txtPhuThu;
+        public Guna.UI2.WinForms.Guna2TextBox txtTienTraTruoc;
+        public System.Windows.Forms.Label label8;
+        public Guna.UI2.WinForms.Guna2TextBox txtTienMenu;
+        public System.Windows.Forms.Label label15;
+        public Guna.UI2.WinForms.Guna2TextBox txtThuGiamTru;
+        public System.Windows.Forms.Label label16;
+        public Guna.UI2.WinForms.Guna2TextBox txtTongTien;
+        public System.Windows.Forms.Label label18;
+        public Bunifu.Framework.UI.BunifuFlatButton lblThoiGianThue;
+        public System.Windows.Forms.DataGridViewTextBoxColumn TenMenu;
+        public System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        public System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

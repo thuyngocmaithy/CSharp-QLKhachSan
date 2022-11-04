@@ -103,7 +103,7 @@
             this.txtSuaMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaMatKhau.isPassword = false;
             this.txtSuaMatKhau.Location = new System.Drawing.Point(229, 200);
-            this.txtSuaMatKhau.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSuaMatKhau.Margin = new System.Windows.Forms.Padding(6);
             this.txtSuaMatKhau.Name = "txtSuaMatKhau";
             this.txtSuaMatKhau.Size = new System.Drawing.Size(274, 51);
             this.txtSuaMatKhau.TabIndex = 7;
@@ -120,7 +120,7 @@
             this.txtNhapLaiMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNhapLaiMatKhau.isPassword = false;
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(229, 283);
-            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(6);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(274, 51);
             this.txtNhapLaiMatKhau.TabIndex = 8;
@@ -150,7 +150,7 @@
             this.btnSuaTaiKhoan.IconZoom = 50D;
             this.btnSuaTaiKhoan.IsTab = true;
             this.btnSuaTaiKhoan.Location = new System.Drawing.Point(123, 462);
-            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnSuaTaiKhoan.Margin = new System.Windows.Forms.Padding(8);
             this.btnSuaTaiKhoan.Name = "btnSuaTaiKhoan";
             this.btnSuaTaiKhoan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnSuaTaiKhoan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
@@ -198,7 +198,7 @@
             this.txtSuaTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaTenTaiKhoan.isPassword = false;
             this.txtSuaTenTaiKhoan.Location = new System.Drawing.Point(229, 126);
-            this.txtSuaTenTaiKhoan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSuaTenTaiKhoan.Margin = new System.Windows.Forms.Padding(6);
             this.txtSuaTenTaiKhoan.Name = "txtSuaTenTaiKhoan";
             this.txtSuaTenTaiKhoan.Size = new System.Drawing.Size(274, 51);
             this.txtSuaTenTaiKhoan.TabIndex = 6;
@@ -226,6 +226,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "dialogSuaTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.dialogSuaTaiKhoan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

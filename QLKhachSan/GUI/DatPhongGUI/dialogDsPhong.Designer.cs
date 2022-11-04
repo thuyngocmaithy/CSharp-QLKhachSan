@@ -44,7 +44,7 @@
             this.tấtCảToolStripMenuItem});
             this.menuLoaiPhong.Location = new System.Drawing.Point(0, 0);
             this.menuLoaiPhong.Name = "menuLoaiPhong";
-            this.menuLoaiPhong.Size = new System.Drawing.Size(794, 33);
+            this.menuLoaiPhong.Size = new System.Drawing.Size(994, 33);
             this.menuLoaiPhong.TabIndex = 0;
             this.menuLoaiPhong.Text = "menuStrip1";
             // 
@@ -59,14 +59,14 @@
             // 
             this.pnlPhong.Location = new System.Drawing.Point(0, 51);
             this.pnlPhong.Name = "pnlPhong";
-            this.pnlPhong.Size = new System.Drawing.Size(794, 397);
+            this.pnlPhong.Size = new System.Drawing.Size(994, 597);
             this.pnlPhong.TabIndex = 1;
             // 
             // btnPhongChon
             // 
             this.btnPhongChon.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnPhongChon.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongChon.Image")));
-            this.btnPhongChon.Location = new System.Drawing.Point(748, 0);
+            this.btnPhongChon.Location = new System.Drawing.Point(948, 0);
             this.btnPhongChon.Name = "btnPhongChon";
             this.btnPhongChon.Size = new System.Drawing.Size(46, 37);
             this.btnPhongChon.TabIndex = 0;
@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 449);
+            this.ClientSize = new System.Drawing.Size(994, 649);
             this.ControlBox = false;
             this.Controls.Add(this.btnPhongChon);
             this.Controls.Add(this.pnlPhong);

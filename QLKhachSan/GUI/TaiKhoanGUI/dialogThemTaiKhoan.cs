@@ -1,13 +1,6 @@
 ﻿using QLKhachSan.BUS;
 using QLKhachSan.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLKhachSan.GUI.TaiKhoanGUI
@@ -41,11 +34,11 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
             if (txtThemTenTaiKhoan.Text == "")
                 MessageBox.Show("Thêm thất bại , tên tài khoản trống !");
             else
-                if (txtMatKhau.Text == "")
-                    MessageBox.Show("Thêm thất bại , mật khẩu trống !");
+            if (txtMatKhau.Text == "")
+                MessageBox.Show("Thêm thất bại , mật khẩu trống !");
             else
-                if (txtNhapLaiMatKhau.Text != txtMatKhau.Text)
-                    MessageBox.Show("Thêm thất bại , mật khẩu nhập lại chưa chính xác ! ");            
+            if (txtNhapLaiMatKhau.Text != txtMatKhau.Text)
+                MessageBox.Show("Thêm thất bại , mật khẩu nhập lại chưa chính xác ! ");
             else
             {
                 String mataikhoan = TaiKhoanBUS.TaoMaTaiKhoan();
@@ -61,4 +54,4 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
         }
     }
 }
-    
+

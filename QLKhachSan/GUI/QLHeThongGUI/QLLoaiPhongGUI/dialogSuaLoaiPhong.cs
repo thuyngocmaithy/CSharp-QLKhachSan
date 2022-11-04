@@ -22,7 +22,17 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
             this.maloaiphong = maloaiphong;
         }
 
-
+        private void setText()
+        {
+            foreach(DataRow dr in loaiPhongBUS.GetLoaiPhong(
+                "SELECT * " +
+                "FROM LoaiPhong " +
+                "WHERE MaLoaiPhong = '"+maloaiphong+"'").Rows)
+            {
+                txtSuaTenLoaiPhong.Text = dr["TenLoaiPhong"].ToString();
+                txtSuaUuTienHienThi.Text = dr["UuTienHienThi"].ToString();
+            }    
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -59,6 +69,19 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
             }
 
+        }
+
+        private void dialogSuaLoaiPhong_Load(object sender, EventArgs e)
+        {
+            setText();
+        }
+
+        private void txtSuaUuTienHienThi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

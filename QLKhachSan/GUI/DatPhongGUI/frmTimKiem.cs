@@ -43,6 +43,10 @@ namespace QLKhachSan.GUI.DatPhongGUI
         {
             txtFind.Text = "";
             txtFind.ForeColor = System.Drawing.Color.Black;
+            dgvFindDonDatPhong.DataSource = phieuDatPhongBUS.GetPhieuDatPhong(
+                "SELECT * FROM PhieuDatPhong " +
+                "WHERE HoTenKhachHang LIKE N'%" + txtFind.Text.Trim() + "%' " +
+                "OR SoDienThoai LIKE '%" + txtFind.Text.Trim() + "%'");
         }
     }
 }

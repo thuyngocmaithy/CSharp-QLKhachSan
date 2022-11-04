@@ -41,5 +41,9 @@ namespace QLKhachSan.BUS
             string maloaiphong = TaiKhoanDAO.TaoMaTaiKhoan();
             return maloaiphong;
         }
+        public TaiKhoanDTO checkLogin(string tentaikhoan, string password)
+        {            
+            return TaiKhoanDAO.checkLogin(tentaikhoan , password);
+        }
     }
 }

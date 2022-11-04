@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows;
 
 namespace QLKhachSan.DAO
 {
@@ -29,9 +30,9 @@ namespace QLKhachSan.DAO
                 conn.Open();
 
                 string SQL = string.Format(
-             "INSERT INTO HoaDon VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', N'{10}' )"
-             , hd.Mahoadon, hd.Maphong, hd.Thoigianbatdau,hd.Thoigianketthuc,hd.Macachthue,hd.Tienphong,hd.Phuthu,hd.Tratruoc, hd.Thugiamtrukhac,hd.Tienmenu,hd.Ghichu );
-
+             "INSERT INTO HoaDon VALUES ('{0}', '{1}', '{2}', {3}, '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', N'{10}', '{11}', {12} )"
+             , hd.Mahoadon, hd.Maphong, hd.Thoigianbatdau,hd.Thoigianketthuc,hd.Macachthue,hd.Tienphong,hd.Phuthu,hd.Tratruoc, hd.Thugiamtrukhac,hd.Tienmenu,hd.Ghichu, hd.Taikhoannhanphong, hd.Taikhoantraphong );
+               // MessageBox.Show(SQL);
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);
 
@@ -60,7 +61,7 @@ namespace QLKhachSan.DAO
                 conn.Open();
 
                 // Query string
-                string SQL = string.Format("UPDATE HoaDon SET MaPhong = '{0}', ThoiGianBatDau = '{1}', ThoiGianKetThuc = '{2}', MaCachThue = '{3}', TienPhong = '{4}', PhuThu = '{5}', TraTruoc = '{6}', ThuGiamTruKhac = '{7}', TienMenu = '{8}', GhiChu = '{9}' WHERE MaHoaDon = '{10}'", hd.Maphong, hd.Thoigianbatdau, hd.Thoigianketthuc,hd.Macachthue,hd.Tienphong,hd.Phuthu, hd.Tratruoc,hd.Thugiamtrukhac,hd.Tienmenu, hd.Ghichu, hd.Mahoadon);
+                string SQL = string.Format("UPDATE HoaDon SET MaPhong = '{0}', ThoiGianBatDau = '{1}', ThoiGianKetThuc = '{2}', MaCachThue = '{3}', TienPhong = '{4}', PhuThu = '{5}', TraTruoc = '{6}', ThuGiamTruKhac = '{7}', TienMenu = '{8}', GhiChu = '{9}', TaiKhoanTraPhong = '{10}' WHERE MaHoaDon = '{11}'", hd.Maphong, hd.Thoigianbatdau, hd.Thoigianketthuc,hd.Macachthue,hd.Tienphong,hd.Phuthu, hd.Tratruoc,hd.Thugiamtrukhac,hd.Tienmenu, hd.Ghichu,  hd.Taikhoantraphong, hd.Mahoadon);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);

@@ -16,13 +16,21 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
     {
         QuyenBUS quyenBUS = new QuyenBUS();
         String maquyen;
-        public dialogSuaQuyen( string maquyen)
+        public dialogSuaQuyen(string maquyen)
         {
             InitializeComponent();
             this.maquyen = maquyen;
-            txtSuaMaQuyen.Text = maquyen;
         }
-        
+        private void setText()
+        {
+            foreach(DataRow dr in quyenBUS.GetQuyen(
+                "SELECT * " +
+                "FROM Quyen " +
+                "WHERE MaQuyen = '"+maquyen+"'").Rows)
+            {
+                txtSuaTenQuyen.Text = dr["TenQuyen"].ToString();
+            }
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,6 +50,11 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
                     MessageBox.Show("Sửa thành công");
                 }
             }
+        }
+
+        private void dialogSuaQuyen_Load(object sender, EventArgs e)
+        {
+            setText();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using QLKhachSan.BUS;
+using QLKhachSan.GUI.MainPageGUI;
 using QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI;
 using System;
 using System.Collections.Generic;
@@ -87,11 +88,6 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
 
        
 
-        private void lblReset_MouseClick(object sender, MouseEventArgs e)
-        {
-            Reset();
-        }
-
         private void btnFindTaiKhoan_OnTextChange(object sender, EventArgs e)
         {
             //Cách tìm
@@ -124,8 +120,16 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
 
         private void btnQuyen_Click(object sender, EventArgs e)
         {
-            frmQuyen frmquyen = new frmQuyen();
-            frmquyen.Show();
+            frmQuyen frmQuyen = new frmQuyen();
+
+            frmQuyen.Show();
+
+
+        }
+
+        private void lblReset_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

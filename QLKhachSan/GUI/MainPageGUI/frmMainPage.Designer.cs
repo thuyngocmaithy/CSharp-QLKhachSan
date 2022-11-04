@@ -59,11 +59,10 @@
             this.pnlMainPage.Controls.Add(this.btnCapNhat);
             this.pnlMainPage.Controls.Add(this.lblLuotThuePhong);
             this.pnlMainPage.Controls.Add(this.btnThueTrongNgay);
-            this.pnlMainPage.Location = new System.Drawing.Point(0, 0);
+            this.pnlMainPage.Location = new System.Drawing.Point(82, 81);
             this.pnlMainPage.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMainPage.MinimumSize = new System.Drawing.Size(1015, 660);
             this.pnlMainPage.Name = "pnlMainPage";
-            this.pnlMainPage.Size = new System.Drawing.Size(1015, 660);
+            this.pnlMainPage.Size = new System.Drawing.Size(1041, 685);
             this.pnlMainPage.TabIndex = 12;
             // 
             // btnDonPhong
@@ -77,7 +76,7 @@
             this.btnDonPhong.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnDonPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonPhong.ForeColor = System.Drawing.Color.White;
-            this.btnDonPhong.Location = new System.Drawing.Point(550, 358);
+            this.btnDonPhong.Location = new System.Drawing.Point(589, 373);
             this.btnDonPhong.Name = "btnDonPhong";
             this.btnDonPhong.Size = new System.Drawing.Size(180, 45);
             this.btnDonPhong.TabIndex = 23;
@@ -89,7 +88,7 @@
             this.lblSoPhongCanDon.AutoSize = true;
             this.lblSoPhongCanDon.BackColor = System.Drawing.Color.White;
             this.lblSoPhongCanDon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhongCanDon.Location = new System.Drawing.Point(772, 497);
+            this.lblSoPhongCanDon.Location = new System.Drawing.Point(811, 512);
             this.lblSoPhongCanDon.Name = "lblSoPhongCanDon";
             this.lblSoPhongCanDon.Size = new System.Drawing.Size(96, 30);
             this.lblSoPhongCanDon.TabIndex = 22;
@@ -112,10 +111,10 @@
             this.btnPhongCanDon.HoverState.FillColor = System.Drawing.Color.White;
             this.btnPhongCanDon.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongCanDon.Image")));
             this.btnPhongCanDon.ImageSize = new System.Drawing.Size(100, 100);
-            this.btnPhongCanDon.Location = new System.Drawing.Point(525, 342);
+            this.btnPhongCanDon.Location = new System.Drawing.Point(564, 357);
             this.btnPhongCanDon.Margin = new System.Windows.Forms.Padding(0);
             this.btnPhongCanDon.Name = "btnPhongCanDon";
-            this.btnPhongCanDon.Size = new System.Drawing.Size(369, 237);
+            this.btnPhongCanDon.Size = new System.Drawing.Size(400, 250);
             this.btnPhongCanDon.TabIndex = 21;
             this.btnPhongCanDon.Text = "Phòng cần dọn";
             this.btnPhongCanDon.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -131,7 +130,7 @@
             this.btnTraPhong.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnTraPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTraPhong.ForeColor = System.Drawing.Color.White;
-            this.btnTraPhong.Location = new System.Drawing.Point(144, 358);
+            this.btnTraPhong.Location = new System.Drawing.Point(101, 373);
             this.btnTraPhong.Name = "btnTraPhong";
             this.btnTraPhong.Size = new System.Drawing.Size(180, 45);
             this.btnTraPhong.TabIndex = 20;
@@ -143,7 +142,7 @@
             this.lblSoPhongDangThue.AutoSize = true;
             this.lblSoPhongDangThue.BackColor = System.Drawing.Color.White;
             this.lblSoPhongDangThue.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhongDangThue.Location = new System.Drawing.Point(374, 497);
+            this.lblSoPhongDangThue.Location = new System.Drawing.Point(331, 512);
             this.lblSoPhongDangThue.Name = "lblSoPhongDangThue";
             this.lblSoPhongDangThue.Size = new System.Drawing.Size(96, 30);
             this.lblSoPhongDangThue.TabIndex = 19;
@@ -166,10 +165,10 @@
             this.btnPhongDangThue.HoverState.FillColor = System.Drawing.Color.White;
             this.btnPhongDangThue.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongDangThue.Image")));
             this.btnPhongDangThue.ImageSize = new System.Drawing.Size(100, 100);
-            this.btnPhongDangThue.Location = new System.Drawing.Point(119, 342);
+            this.btnPhongDangThue.Location = new System.Drawing.Point(76, 357);
             this.btnPhongDangThue.Margin = new System.Windows.Forms.Padding(0);
             this.btnPhongDangThue.Name = "btnPhongDangThue";
-            this.btnPhongDangThue.Size = new System.Drawing.Size(369, 237);
+            this.btnPhongDangThue.Size = new System.Drawing.Size(400, 250);
             this.btnPhongDangThue.TabIndex = 18;
             this.btnPhongDangThue.Text = "Phòng đang thuê";
             this.btnPhongDangThue.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -185,7 +184,7 @@
             this.btnThuePhong.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnThuePhong.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThuePhong.ForeColor = System.Drawing.Color.White;
-            this.btnThuePhong.Location = new System.Drawing.Point(550, 101);
+            this.btnThuePhong.Location = new System.Drawing.Point(589, 75);
             this.btnThuePhong.Name = "btnThuePhong";
             this.btnThuePhong.Size = new System.Drawing.Size(180, 45);
             this.btnThuePhong.TabIndex = 17;
@@ -197,7 +196,7 @@
             this.lblSoPhongCho.AutoSize = true;
             this.lblSoPhongCho.BackColor = System.Drawing.Color.White;
             this.lblSoPhongCho.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoPhongCho.Location = new System.Drawing.Point(743, 240);
+            this.lblSoPhongCho.Location = new System.Drawing.Point(782, 214);
             this.lblSoPhongCho.Name = "lblSoPhongCho";
             this.lblSoPhongCho.Size = new System.Drawing.Size(96, 30);
             this.lblSoPhongCho.TabIndex = 16;
@@ -220,10 +219,10 @@
             this.btnPhongCho.HoverState.FillColor = System.Drawing.Color.White;
             this.btnPhongCho.Image = ((System.Drawing.Image)(resources.GetObject("btnPhongCho.Image")));
             this.btnPhongCho.ImageSize = new System.Drawing.Size(100, 100);
-            this.btnPhongCho.Location = new System.Drawing.Point(525, 85);
+            this.btnPhongCho.Location = new System.Drawing.Point(564, 59);
             this.btnPhongCho.Margin = new System.Windows.Forms.Padding(0);
             this.btnPhongCho.Name = "btnPhongCho";
-            this.btnPhongCho.Size = new System.Drawing.Size(369, 237);
+            this.btnPhongCho.Size = new System.Drawing.Size(400, 250);
             this.btnPhongCho.TabIndex = 15;
             this.btnPhongCho.Text = "Phòng chờ";
             this.btnPhongCho.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -239,7 +238,7 @@
             this.btnCapNhat.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnCapNhat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(144, 101);
+            this.btnCapNhat.Location = new System.Drawing.Point(101, 75);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(180, 45);
             this.btnCapNhat.TabIndex = 14;
@@ -250,7 +249,7 @@
             this.lblLuotThuePhong.AutoSize = true;
             this.lblLuotThuePhong.BackColor = System.Drawing.Color.White;
             this.lblLuotThuePhong.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLuotThuePhong.Location = new System.Drawing.Point(388, 240);
+            this.lblLuotThuePhong.Location = new System.Drawing.Point(345, 214);
             this.lblLuotThuePhong.Name = "lblLuotThuePhong";
             this.lblLuotThuePhong.Size = new System.Drawing.Size(72, 30);
             this.lblLuotThuePhong.TabIndex = 13;
@@ -273,10 +272,10 @@
             this.btnThueTrongNgay.HoverState.FillColor = System.Drawing.Color.White;
             this.btnThueTrongNgay.Image = ((System.Drawing.Image)(resources.GetObject("btnThueTrongNgay.Image")));
             this.btnThueTrongNgay.ImageSize = new System.Drawing.Size(100, 100);
-            this.btnThueTrongNgay.Location = new System.Drawing.Point(119, 85);
+            this.btnThueTrongNgay.Location = new System.Drawing.Point(76, 59);
             this.btnThueTrongNgay.Margin = new System.Windows.Forms.Padding(0);
             this.btnThueTrongNgay.Name = "btnThueTrongNgay";
-            this.btnThueTrongNgay.Size = new System.Drawing.Size(369, 237);
+            this.btnThueTrongNgay.Size = new System.Drawing.Size(400, 250);
             this.btnThueTrongNgay.TabIndex = 12;
             this.btnThueTrongNgay.Text = "Thuê trong ngày";
             this.btnThueTrongNgay.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
@@ -286,11 +285,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMainPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmMainPage";
             this.Load += new System.EventHandler(this.frmMainPage_Load);
             this.pnlMainPage.ResumeLayout(false);

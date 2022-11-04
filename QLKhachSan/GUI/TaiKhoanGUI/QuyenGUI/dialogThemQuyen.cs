@@ -28,13 +28,11 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
         private void btnThemQuyen_Click(object sender, EventArgs e)
         {
             if (txtTenQuyen.Text == "")
-                MessageBox.Show("Thêm thất bại , tên Quyền trống !");
-            else
-            if (txtMaQuyen.Text == "")
-                MessageBox.Show("Thêm thất bại, Mã quyền trống");
+                MessageBox.Show("Thêm thất bại , tên quyền trống !");
             else
             {
-                QuyenDTO quyen = new QuyenDTO(txtMaQuyen.Text, txtTenQuyen.Text);
+                string maquyen = quyenBUS.TaoMaQuyen();
+                QuyenDTO quyen = new QuyenDTO(maquyen, txtTenQuyen.Text);
                 // Them
                 if (quyenBUS.ThemQuyen(quyen))
                 {

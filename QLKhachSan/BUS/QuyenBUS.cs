@@ -50,5 +50,10 @@ namespace QLKhachSan.BUS
         {
             return QuyenDAO.GetTbl();
         }
+        public string TaoMaQuyen()
+        {
+            string ma = QuyenDAO.TaoMaQuyen();
+            return ma;
+        }
     }
 }

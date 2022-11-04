@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using QLKhachSanDAO;
 using QLKhachSanDTO;
+using QLKhachSan.DTO;
 
 
 namespace QLKhachSan.BUS
@@ -33,6 +34,11 @@ namespace QLKhachSan.BUS
         public bool XoaMenu(string mn)
         {
             return mnDAO.XoaMenu(mn);
+        }
+        public string TaoMaMenu()
+        {
+            string mamenu = mnDAO.TaoMaMenu();
+            return mamenu;
         }
     }
 }

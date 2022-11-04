@@ -21,15 +21,27 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
         QuyenBUS quyenBUS = new QuyenBUS();
         string mataikhoan;
 
-        public dialogSuaTaiKhoan(string mataikhoan )
+        public dialogSuaTaiKhoan(string mataikhoan)
         {
             InitializeComponent();
             loadcmbChonQuyen();
             this.mataikhoan = mataikhoan;
-         
         }
         
+        private void setText()
+        {
+            foreach (DataRow dr in TaiKhoanBUS.GetTaiKhoan(
+                "SELECT * " +
+                "FROM TaiKhoan " +
+                "WHERE MaTaiKhoan = '"+mataikhoan+"'").Rows)
+            {
+                txtSuaTenTaiKhoan.Text = dr["TenTaiKhoan"].ToString();
+                txtSuaMatKhau.Text = dr["MatKhau"].ToString();
+                txtNhapLaiMatKhau.Text = dr["MatKhau"].ToString();
+                cmbChonQuyen.SelectedValue = dr["MaQuyen"].ToString();
 
+            }
+        }
         public void loadcmbChonQuyen()
         {
             cmbChonQuyen.Items.Clear();
@@ -66,6 +78,11 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
                 }
             }
         }
-       
+
+        private void dialogSuaTaiKhoan_Load(object sender, EventArgs e)
+        {
+            setText();
+
+        }
     }
 }

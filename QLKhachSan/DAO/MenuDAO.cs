@@ -143,5 +143,29 @@ namespace QLKhachSanDAO
 
             return false;
         }
+        public string TaoMaMenu()
+        {
+            conn.Open();
+            string sql = "SELECT * FROM Menu";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            conn.Close();
+            string ma = "";
+
+            if (dataTable.Rows.Count <= 0)
+            {
+                ma = "MN001";
+            }
+            else
+            {
+                int number;
+                number = Convert.ToInt32(dataTable.Rows[dataTable.Rows.Count - 1][0].ToString().Substring(2));
+
+                ma = String.Format("MN{0:000}", number + 1);
+            }
+            return ma;
+        }
     }
 }

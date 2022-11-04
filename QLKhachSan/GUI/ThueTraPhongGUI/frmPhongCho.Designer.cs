@@ -43,7 +43,7 @@
             this.pnlPhongCho.Location = new System.Drawing.Point(0, 0);
             this.pnlPhongCho.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPhongCho.Name = "pnlPhongCho";
-            this.pnlPhongCho.Size = new System.Drawing.Size(900, 450);
+            this.pnlPhongCho.Size = new System.Drawing.Size(1100, 650);
             this.pnlPhongCho.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -74,12 +74,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pnlPhongCho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(900, 450);
-            this.MinimumSize = new System.Drawing.Size(900, 450);
+            this.MaximumSize = new System.Drawing.Size(1100, 650);
+            this.MinimumSize = new System.Drawing.Size(1100, 650);
             this.Name = "frmPhongCho";
             this.Load += new System.EventHandler(this.frmPhongCho_Load);
             this.contextMenuStrip1.ResumeLayout(false);

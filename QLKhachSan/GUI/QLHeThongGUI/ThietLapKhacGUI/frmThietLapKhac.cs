@@ -41,11 +41,13 @@ namespace QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI
             {
                 pictureBoxLogo.Image = Image.FromFile
                     (Path.GetFullPath(@"icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Logo"].ToString()));
+                logo = thietLapKhacDAO.getThietLapKhac().Rows[0]["Logo"].ToString();
             }
             if (thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString() != "")
             {
                 picBoxPanel.Image = Image.FromFile
                     (Path.GetFullPath(@"icon\" + thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString()));
+                panel = thietLapKhacDAO.getThietLapKhac().Rows[0]["Panel"].ToString();
             }
         }
 
@@ -93,6 +95,14 @@ namespace QLKhachSan.GUI.QLHeThongGUI.ThietLapKhacGUI
 
             }
             return;
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void pictureBoxLogo_Click(object sender, EventArgs e)

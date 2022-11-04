@@ -35,10 +35,10 @@
             // pnlFormDatPhong
             // 
             this.pnlFormDatPhong.AutoScroll = true;
-            this.pnlFormDatPhong.Location = new System.Drawing.Point(0, 73);
+            this.pnlFormDatPhong.Location = new System.Drawing.Point(3, 68);
             this.pnlFormDatPhong.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFormDatPhong.Name = "pnlFormDatPhong";
-            this.pnlFormDatPhong.Size = new System.Drawing.Size(920, 377);
+            this.pnlFormDatPhong.Size = new System.Drawing.Size(1072, 543);
             this.pnlFormDatPhong.TabIndex = 8;
             // 
             // datePickerTuNgay
@@ -52,7 +52,7 @@
             this.datePickerTuNgay.Location = new System.Drawing.Point(13, 9);
             this.datePickerTuNgay.Margin = new System.Windows.Forms.Padding(4, 10, 4, 5);
             this.datePickerTuNgay.Name = "datePickerTuNgay";
-            this.datePickerTuNgay.Size = new System.Drawing.Size(255, 45);
+            this.datePickerTuNgay.Size = new System.Drawing.Size(316, 45);
             this.datePickerTuNgay.TabIndex = 9;
             this.datePickerTuNgay.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
             this.datePickerTuNgay.onValueChanged += new System.EventHandler(this.datePickerTuNgay_onValueChanged);
@@ -62,13 +62,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(1084, 620);
             this.ControlBox = false;
             this.Controls.Add(this.datePickerTuNgay);
             this.Controls.Add(this.pnlFormDatPhong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(920, 450);
-            this.MinimumSize = new System.Drawing.Size(920, 450);
+            this.MaximumSize = new System.Drawing.Size(1084, 620);
+            this.MinimumSize = new System.Drawing.Size(1084, 620);
             this.Name = "frmXemTheoNgay";
             this.Load += new System.EventHandler(this.frmTimKiem_Load);
             this.ResumeLayout(false);

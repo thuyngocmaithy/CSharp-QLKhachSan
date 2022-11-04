@@ -47,5 +47,7 @@ namespace QLKhachSan.GUI.DatPhongGUI
             dialogThemPhieuDatPhong dialogThemPhieuDatPhong = new dialogThemPhieuDatPhong("Thêm");
             dialogThemPhieuDatPhong.Show();
         }
+
+
     }
 }

@@ -55,6 +55,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.label1.Size = new System.Drawing.Size(241, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "THUÊ TRẢ PHÒNG";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -62,17 +63,19 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(45, 97);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 513);
+            this.panel1.Size = new System.Drawing.Size(1118, 729);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pnlThueTraPhong
             // 
-            this.pnlThueTraPhong.Location = new System.Drawing.Point(0, 71);
+            this.pnlThueTraPhong.Location = new System.Drawing.Point(0, 83);
             this.pnlThueTraPhong.Margin = new System.Windows.Forms.Padding(0);
             this.pnlThueTraPhong.MinimumSize = new System.Drawing.Size(920, 450);
             this.pnlThueTraPhong.Name = "pnlThueTraPhong";
-            this.pnlThueTraPhong.Size = new System.Drawing.Size(920, 450);
+            this.pnlThueTraPhong.Size = new System.Drawing.Size(1118, 646);
             this.pnlThueTraPhong.TabIndex = 7;
+            this.pnlThueTraPhong.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlThueTraPhong_Paint);
             // 
             // panel2
             // 
@@ -82,8 +85,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.panel2.Controls.Add(this.btnLichSu);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(920, 50);
+            this.panel2.Size = new System.Drawing.Size(1118, 50);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnPhongCanDon
             // 
@@ -107,14 +111,14 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.btnPhongCanDon.IconVisible = true;
             this.btnPhongCanDon.IconZoom = 40D;
             this.btnPhongCanDon.IsTab = true;
-            this.btnPhongCanDon.Location = new System.Drawing.Point(475, 0);
+            this.btnPhongCanDon.Location = new System.Drawing.Point(568, 0);
             this.btnPhongCanDon.Margin = new System.Windows.Forms.Padding(0);
             this.btnPhongCanDon.Name = "btnPhongCanDon";
             this.btnPhongCanDon.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
             this.btnPhongCanDon.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnPhongCanDon.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhongCanDon.selected = false;
-            this.btnPhongCanDon.Size = new System.Drawing.Size(232, 50);
+            this.btnPhongCanDon.Size = new System.Drawing.Size(260, 50);
             this.btnPhongCanDon.TabIndex = 13;
             this.btnPhongCanDon.Text = "Phòng cần dọn";
             this.btnPhongCanDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,7 +155,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.btnPhongCho.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnPhongCho.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhongCho.selected = false;
-            this.btnPhongCho.Size = new System.Drawing.Size(224, 50);
+            this.btnPhongCho.Size = new System.Drawing.Size(260, 50);
             this.btnPhongCho.TabIndex = 12;
             this.btnPhongCho.Text = "Phòng chờ";
             this.btnPhongCho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,14 +185,14 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.btnPhongDangThue.IconVisible = true;
             this.btnPhongDangThue.IconZoom = 40D;
             this.btnPhongDangThue.IsTab = true;
-            this.btnPhongDangThue.Location = new System.Drawing.Point(234, 0);
+            this.btnPhongDangThue.Location = new System.Drawing.Point(283, 0);
             this.btnPhongDangThue.Margin = new System.Windows.Forms.Padding(0);
             this.btnPhongDangThue.Name = "btnPhongDangThue";
             this.btnPhongDangThue.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
             this.btnPhongDangThue.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnPhongDangThue.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPhongDangThue.selected = false;
-            this.btnPhongDangThue.Size = new System.Drawing.Size(232, 50);
+            this.btnPhongDangThue.Size = new System.Drawing.Size(260, 50);
             this.btnPhongDangThue.TabIndex = 10;
             this.btnPhongDangThue.Text = "Phòng đang thuê";
             this.btnPhongDangThue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,14 +222,14 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.btnLichSu.IconVisible = true;
             this.btnLichSu.IconZoom = 40D;
             this.btnLichSu.IsTab = true;
-            this.btnLichSu.Location = new System.Drawing.Point(713, 0);
+            this.btnLichSu.Location = new System.Drawing.Point(851, 0);
             this.btnLichSu.Margin = new System.Windows.Forms.Padding(0);
             this.btnLichSu.Name = "btnLichSu";
             this.btnLichSu.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(105)))), ((int)(((byte)(160)))));
             this.btnLichSu.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnLichSu.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLichSu.selected = false;
-            this.btnLichSu.Size = new System.Drawing.Size(207, 50);
+            this.btnLichSu.Size = new System.Drawing.Size(260, 50);
             this.btnLichSu.TabIndex = 9;
             this.btnLichSu.Text = "Lịch sử";
             this.btnLichSu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,7 +268,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.txtFind.ForeColor = System.Drawing.Color.DarkGray;
             this.txtFind.Location = new System.Drawing.Point(597, 30);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(368, 39);
+            this.txtFind.Size = new System.Drawing.Size(566, 39);
             this.txtFind.TabIndex = 8;
             this.txtFind.Text = "Tìm kiếm";
             this.txtFind.Click += new System.EventHandler(this.txtFind_Click);
@@ -275,7 +279,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1215, 860);
             this.ControlBox = false;
             this.Controls.Add(this.txtFind);
             this.Controls.Add(this.btnTangGiam);
@@ -283,7 +287,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
+            this.MinimumSize = new System.Drawing.Size(1215, 860);
             this.Name = "frmThueTraPhong";
             this.Load += new System.EventHandler(this.frmThueTraPhong_Load);
             this.panel1.ResumeLayout(false);

@@ -31,11 +31,11 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBoxGiaban = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBoxGianhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.richTextBoxUutien = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.richTextBoxGiaban = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.richTextBoxGianhap = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.richTextBoxLoaiMenu = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.richTextBoxTenMenu = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,11 +50,11 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.richTextBoxGiaban);
+            this.panel1.Controls.Add(this.richTextBoxGianhap);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.richTextBoxUutien);
-            this.panel1.Controls.Add(this.richTextBoxGiaban);
-            this.panel1.Controls.Add(this.richTextBoxGianhap);
             this.panel1.Controls.Add(this.richTextBoxLoaiMenu);
             this.panel1.Controls.Add(this.richTextBoxTenMenu);
             this.panel1.Controls.Add(this.label7);
@@ -70,6 +70,60 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
             this.panel1.Size = new System.Drawing.Size(494, 609);
             this.panel1.TabIndex = 1;
             // 
+            // richTextBoxGiaban
+            // 
+            this.richTextBoxGiaban.BackColor = System.Drawing.Color.Transparent;
+            this.richTextBoxGiaban.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxGiaban.BorderThickness = 3;
+            this.richTextBoxGiaban.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxGiaban.DefaultText = "";
+            this.richTextBoxGiaban.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBoxGiaban.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBoxGiaban.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGiaban.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGiaban.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.richTextBoxGiaban.FocusedState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGiaban.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.richTextBoxGiaban.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxGiaban.HoverState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGiaban.Location = new System.Drawing.Point(198, 349);
+            this.richTextBoxGiaban.MaxLength = 11;
+            this.richTextBoxGiaban.Name = "richTextBoxGiaban";
+            this.richTextBoxGiaban.PasswordChar = '\0';
+            this.richTextBoxGiaban.PlaceholderText = "";
+            this.richTextBoxGiaban.SelectedText = "";
+            this.richTextBoxGiaban.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxGiaban.TabIndex = 31;
+            this.richTextBoxGiaban.TextChanged += new System.EventHandler(this.richTextBoxGiaban_TextChanged);
+            this.richTextBoxGiaban.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxGiaban_KeyPress);
+            // 
+            // richTextBoxGianhap
+            // 
+            this.richTextBoxGianhap.BackColor = System.Drawing.Color.Transparent;
+            this.richTextBoxGianhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.richTextBoxGianhap.BorderThickness = 3;
+            this.richTextBoxGianhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBoxGianhap.DefaultText = "";
+            this.richTextBoxGianhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.richTextBoxGianhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.richTextBoxGianhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGianhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.richTextBoxGianhap.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.richTextBoxGianhap.FocusedState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGianhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.richTextBoxGianhap.ForeColor = System.Drawing.Color.Black;
+            this.richTextBoxGianhap.HoverState.BorderColor = System.Drawing.Color.Blue;
+            this.richTextBoxGianhap.Location = new System.Drawing.Point(198, 264);
+            this.richTextBoxGianhap.MaxLength = 11;
+            this.richTextBoxGianhap.Name = "richTextBoxGianhap";
+            this.richTextBoxGianhap.PasswordChar = '\0';
+            this.richTextBoxGianhap.PlaceholderText = "";
+            this.richTextBoxGianhap.SelectedText = "";
+            this.richTextBoxGianhap.Size = new System.Drawing.Size(274, 44);
+            this.richTextBoxGianhap.TabIndex = 30;
+            this.richTextBoxGianhap.TextChanged += new System.EventHandler(this.richTextBoxGianhap_TextChanged);
+            this.richTextBoxGianhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxGianhap_KeyPress);
+            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -84,7 +138,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
             // 
             // button1
             // 
-            this.button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.button1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -137,42 +191,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
             this.richTextBoxUutien.Size = new System.Drawing.Size(274, 44);
             this.richTextBoxUutien.TabIndex = 27;
             this.richTextBoxUutien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // richTextBoxGiaban
-            // 
-            this.richTextBoxGiaban.BorderColorFocused = System.Drawing.Color.Blue;
-            this.richTextBoxGiaban.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.richTextBoxGiaban.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.richTextBoxGiaban.BorderThickness = 3;
-            this.richTextBoxGiaban.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBoxGiaban.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxGiaban.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBoxGiaban.isPassword = false;
-            this.richTextBoxGiaban.Location = new System.Drawing.Point(198, 349);
-            this.richTextBoxGiaban.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBoxGiaban.Name = "richTextBoxGiaban";
-            this.richTextBoxGiaban.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBoxGiaban.Size = new System.Drawing.Size(274, 44);
-            this.richTextBoxGiaban.TabIndex = 26;
-            this.richTextBoxGiaban.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // richTextBoxGianhap
-            // 
-            this.richTextBoxGianhap.BorderColorFocused = System.Drawing.Color.Blue;
-            this.richTextBoxGianhap.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.richTextBoxGianhap.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.richTextBoxGianhap.BorderThickness = 3;
-            this.richTextBoxGianhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.richTextBoxGianhap.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBoxGianhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBoxGianhap.isPassword = false;
-            this.richTextBoxGianhap.Location = new System.Drawing.Point(198, 264);
-            this.richTextBoxGianhap.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBoxGianhap.Name = "richTextBoxGianhap";
-            this.richTextBoxGianhap.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBoxGianhap.Size = new System.Drawing.Size(274, 44);
-            this.richTextBoxGianhap.TabIndex = 25;
-            this.richTextBoxGianhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.richTextBoxUutien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxUutien_KeyPress);
             // 
             // richTextBoxLoaiMenu
             // 
@@ -298,11 +317,11 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLMenuGUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxUutien;
-        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxGiaban;
-        private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxGianhap;
         private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxLoaiMenu;
         private Bunifu.Framework.UI.BunifuMetroTextbox richTextBoxTenMenu;
         private System.Windows.Forms.Button button2;
         private Bunifu.Framework.UI.BunifuFlatButton button1;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBoxGiaban;
+        private Guna.UI2.WinForms.Guna2TextBox richTextBoxGianhap;
     }
 }

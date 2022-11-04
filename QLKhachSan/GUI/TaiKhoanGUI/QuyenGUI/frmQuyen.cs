@@ -14,6 +14,7 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
     public partial class frmQuyen : Form
     {
         QuyenBUS quyenBUS = new QuyenBUS();
+        string maquyen="";
 
         public frmQuyen()
         {
@@ -120,8 +121,22 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
 
         private void btnChonchucnang_Click(object sender, EventArgs e)
         {
-            dialogChonChucNang dialogChonChucNang = new dialogChonChucNang();
-            dialogChonChucNang.Show();
+            if(maquyen=="")
+            {
+                MessageBox.Show("Hãy chọn quyên cần xem chức năng");
+            }
+            else
+            {
+                dialogChonChucNang dialogChonChucNang = new dialogChonChucNang(maquyen);
+                dialogChonChucNang.Show();
+            }    
+         
+        }
+
+        private void dgvQuyen_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvQuyen.Rows[e.RowIndex];
+            maquyen = Convert.ToString(row.Cells["MaQuyen"].Value);
         }
     }
 }

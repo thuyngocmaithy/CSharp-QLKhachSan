@@ -1,5 +1,5 @@
-﻿using QLKhachSan.BUS;
-using QLKhachSan.DTO;
+﻿using Bunifu.Framework.UI;
+using QLKhachSan.BUS;
 using QLKhachSan.GUI.DatPhongGUI;
 using QLKhachSan.GUI.MainPageGUI;
 using QLKhachSan.GUI.QLHeThongGUI;
@@ -7,11 +7,11 @@ using QLKhachSan.GUI.QLKhoGUI;
 using QLKhachSan.GUI.QLThuChiGUI;
 using QLKhachSan.GUI.TaiKhoanGUI;
 using QLKhachSan.GUI.ThueTraPhongGUI;
-using QLKhachSan.Properties;
 using System;
+using System.Collections.Generic;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Windows.Forms;
 
@@ -20,9 +20,14 @@ namespace QLKhachSan.GUI.QLKhachSan
     public partial class frmQLKhachSan : Form
     {
         ThietLapKhacBUS tlkBUS = new ThietLapKhacBUS();
-        public frmQLKhachSan()
+        TaiKhoanBUS taiKhoanBUS = new TaiKhoanBUS();
+        QuyenBUS quyenBUS = new QuyenBUS();
+        List<String> lsChucNang = new List<String>();
+        string mataikhoan, maquyen;
+        public frmQLKhachSan(string mataikhoan)
         {
             InitializeComponent();
+            this.mataikhoan = mataikhoan;
         }
 
         bool showMenu = false;
@@ -31,7 +36,7 @@ namespace QLKhachSan.GUI.QLKhachSan
         {
             pnlPanel = false;
             this.pnlMain.Controls.Clear();
-            frmMainPage frmfrmMainPage = new frmMainPage();
+            frmMainPage frmfrmMainPage = new frmMainPage(mataikhoan);
             frmfrmMainPage.TopLevel = false;
             frmfrmMainPage.AutoScroll = true;
             pnlMain.Controls.Add(frmfrmMainPage);
@@ -54,7 +59,7 @@ namespace QLKhachSan.GUI.QLKhachSan
         {
             pnlPanel = false;
             this.pnlMain.Controls.Clear();
-            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong();
+            frmThueTraPhong frmThueTraPhong = new frmThueTraPhong(mataikhoan);
             frmThueTraPhong.TopLevel = false;
             frmThueTraPhong.AutoScroll = true;
             pnlMain.Controls.Add(frmThueTraPhong);
@@ -110,14 +115,15 @@ namespace QLKhachSan.GUI.QLKhachSan
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.Show();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
 
-                Application.Exit();
-         
+            Application.Exit();
+
         }
         int count = 0;
         private void lblShowMenu_Click(object sender, EventArgs e)
@@ -137,31 +143,47 @@ namespace QLKhachSan.GUI.QLKhachSan
             {
                 lblShowMenu.Left = 260;
                 pnlMainMenu.Visible = false;
-                pnlMainMenu.Width = 325;
+                pnlMainMenu.BringToFront();
                 bunifuTransition1.Show(pnlMainMenu);
-                btnDatPhong.Visible = true;
+                 btnTrangChinh.Visible = true;
+
+                foreach (String btn in lsChucNang)
+                {
+                    foreach (Control ctrl in this.pnlMainMenu.Controls)
+                    {
+                        if (ctrl is BunifuFlatButton)
+                        {
+                            if (ctrl.Name == btn)
+                            {
+                                ctrl.Visible = true;
+                            }
+                        }
+                    }
+                }
                 btnLogout.Visible = true;
-                btnQLHeThong.Visible = true;
-                btnQLKho.Visible = true;
-                btnQLThuChi.Visible = true;
-                btnTaiKhoan.Visible = true;
-                btnThueTraPhong.Visible = true;
-                btnTrangChinh.Visible = true;
             }
             else
             {
                 lblShowMenu.Left = 25;
                 pnlMainMenu.Visible = false;
-                pnlMainMenu.Width = 85;
+                pnlMainMenu.SendToBack();
                 bunifuTransition1.Show(pnlMainMenu);
-                btnDatPhong.Visible = false;
-                btnLogout.Visible = false;
-                btnQLHeThong.Visible = false;
-                btnQLKho.Visible = false;
-                btnQLThuChi.Visible = false;
-                btnTaiKhoan.Visible = false;
-                btnThueTraPhong.Visible = false;
                 btnTrangChinh.Visible = false;
+
+                foreach (String btn in lsChucNang)
+                {
+                    foreach (Control ctrl in this.pnlMainMenu.Controls)
+                    {
+                        if (ctrl is BunifuFlatButton)
+                        {
+                            if (ctrl.Name == btn)
+                            {
+                                ctrl.Visible = false;
+                            }
+                        }
+                    }
+                }
+                btnLogout.Visible = false;
             }
         }
 
@@ -179,13 +201,46 @@ namespace QLKhachSan.GUI.QLKhachSan
                 }
             }
         }
+        private void getDsChucNang()
+        {
+
+            foreach (DataRow dr in quyenBUS.GetQuyen(
+                "SELECT TenChucNang " +
+                "FROM Quyen_ChucNang, ChucNang " +
+                "WHERE MaQuyen = '" + maquyen + "' " +
+                "AND Quyen_ChucNang.MaChucNang = ChucNang.MaChucNang").Rows)
+            {
+                lsChucNang.Add(convertTenChucNang(dr["TenChucNang"].ToString()));
+            }
+        }
+        public string convertTenChucNang(string s)
+        {
+            s = convertString.RemoveUnicode(s);
+            s = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(s.ToLower());
+            s = s.Replace(" ", "");
+            s = s.Replace("-", "");
+            s = string.Concat("btn" + s);
+            return s;
+        }
+
 
         private void frmQLKhachSan_Load(object sender, EventArgs e)
         {
+            foreach (DataRow dr in taiKhoanBUS.GetTaiKhoan(
+                "SELECT * " +
+                "FROM TaiKhoan " +
+                "WHERE MaTaiKhoan = '" + mataikhoan + "'").Rows)
+            {
+                txtTenTaiKhoan.Text = "Xin chào, " + dr["TenTaiKhoan"].ToString();
+                maquyen = dr["MaQuyen"].ToString();
+            }
+            getDsChucNang();
+
+
             foreach (DataRow tlk in tlkBUS.GetThietLapKhac().Rows)
             {
-            lblLogo.Image = Image.FromFile
-                  (Path.GetFullPath(@"icon\" + tlk["Logo"].ToString()));
+                lblLogo.Image = Image.FromFile
+                      (Path.GetFullPath(@"icon\" + tlk["Logo"].ToString()));
                 pnlMain.BackgroundImage = Image.FromFile
                   (Path.GetFullPath(@"icon\" + tlk["Panel"].ToString()));
             }

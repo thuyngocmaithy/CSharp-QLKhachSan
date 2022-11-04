@@ -42,7 +42,7 @@
             this.pnlLichSu.Location = new System.Drawing.Point(0, 0);
             this.pnlLichSu.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLichSu.Name = "pnlLichSu";
-            this.pnlLichSu.Size = new System.Drawing.Size(900, 450);
+            this.pnlLichSu.Size = new System.Drawing.Size(1100, 650);
             this.pnlLichSu.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -52,7 +52,7 @@
             this.ChinhSuaToolStripMenuItem,
             this.InHoaDonToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 68);
             // 
             // ChinhSuaToolStripMenuItem
             // 
@@ -64,7 +64,7 @@
             // InHoaDonToolStripMenuItem
             // 
             this.InHoaDonToolStripMenuItem.Name = "InHoaDonToolStripMenuItem";
-            this.InHoaDonToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.InHoaDonToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
             this.InHoaDonToolStripMenuItem.Text = "In hóa đơn";
             this.InHoaDonToolStripMenuItem.Click += new System.EventHandler(this.InHoaDonToolStripMenuItem_Click);
             // 
@@ -73,12 +73,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pnlLichSu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(900, 450);
-            this.MinimumSize = new System.Drawing.Size(900, 450);
+            this.MaximumSize = new System.Drawing.Size(1100, 650);
+            this.MinimumSize = new System.Drawing.Size(1100, 650);
             this.Name = "frmLichSu";
             this.Load += new System.EventHandler(this.dialogLichSu_Load);
             this.contextMenuStrip1.ResumeLayout(false);

@@ -42,7 +42,7 @@
             this.pnlPhongChoDon.Location = new System.Drawing.Point(0, 0);
             this.pnlPhongChoDon.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPhongChoDon.Name = "pnlPhongChoDon";
-            this.pnlPhongChoDon.Size = new System.Drawing.Size(900, 450);
+            this.pnlPhongChoDon.Size = new System.Drawing.Size(1100, 650);
             this.pnlPhongChoDon.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -51,12 +51,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.donPhongToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 69);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 36);
             // 
             // donPhongToolStripMenuItem
             // 
             this.donPhongToolStripMenuItem.Name = "donPhongToolStripMenuItem";
-            this.donPhongToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.donPhongToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
             this.donPhongToolStripMenuItem.Text = "Dọn phòng";
             this.donPhongToolStripMenuItem.Click += new System.EventHandler(this.donPhongToolStripMenuItem_Click);
             // 
@@ -65,12 +65,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 650);
             this.ControlBox = false;
             this.Controls.Add(this.pnlPhongChoDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(900, 450);
-            this.MinimumSize = new System.Drawing.Size(900, 450);
+            this.MaximumSize = new System.Drawing.Size(1100, 650);
+            this.MinimumSize = new System.Drawing.Size(1100, 650);
             this.Name = "frmPhongChoDon";
             this.Load += new System.EventHandler(this.frmPhongChoDon_Load);
             this.contextMenuStrip1.ResumeLayout(false);

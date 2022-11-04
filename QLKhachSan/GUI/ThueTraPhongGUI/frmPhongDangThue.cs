@@ -19,12 +19,14 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         HoaDonBUS hoaDonBUS = new HoaDonBUS();
         string sapxeptheo = "", valueFind = "";
         Boolean tanggiam = true;
-        public frmPhongDangThue(string sapxeptheo, Boolean tanggiam, string valueFind)
+        string mataikhoan;
+        public frmPhongDangThue(string sapxeptheo, Boolean tanggiam, string valueFind, string mataikhoan)
         {
             InitializeComponent();
             this.sapxeptheo = sapxeptheo;
             this.tanggiam = tanggiam;
             this.valueFind = valueFind;
+            this.mataikhoan = mataikhoan;
         }
         private void frmPhongDangThue_Load(object sender, System.EventArgs e)
         {
@@ -47,7 +49,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.pnlLoaiPhong.Location = new System.Drawing.Point(0, 0);
             this.pnlLoaiPhong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.pnlLoaiPhong.Name = "pnl" + maloaiphong;
-            this.pnlLoaiPhong.Size = new System.Drawing.Size(870, 242);
+            this.pnlLoaiPhong.Size = new System.Drawing.Size(1070, 242);
             this.pnlLoaiPhong.TabIndex = 0;
             DataTable dtPhong = new DataTable();
             if (valueFind == "")
@@ -408,7 +410,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         }
         private void traPhongToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dialogTraPhong dialogTraPhong = new dialogTraPhong(contextMenuStrip1.Tag.ToString().Substring(3), "Thêm");
+            dialogTraPhong dialogTraPhong = new dialogTraPhong(contextMenuStrip1.Tag.ToString().Substring(3), "Thêm", mataikhoan);
             dialogTraPhong.Show();
             pnlPhongDangThue.Controls.Clear();
             LoadPhongDangThue();

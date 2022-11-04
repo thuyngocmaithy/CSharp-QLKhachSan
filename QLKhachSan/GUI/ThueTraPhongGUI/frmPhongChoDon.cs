@@ -53,7 +53,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.pnlLoaiPhong.Location = new System.Drawing.Point(0, 0);
             this.pnlLoaiPhong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.pnlLoaiPhong.Name = "pnl" + maloaiphong;
-            this.pnlLoaiPhong.Size = new System.Drawing.Size(870, 200);
+            this.pnlLoaiPhong.Size = new System.Drawing.Size(1070, 200);
             this.pnlLoaiPhong.TabIndex = 0;
             DataTable dtPhong = new DataTable();
             if (valueFind == "")
@@ -179,9 +179,9 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.lblTenLoaiPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.lblTenLoaiPhong.Location = new System.Drawing.Point(10, 10);
             this.lblTenLoaiPhong.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-            this.lblTenLoaiPhong.MinimumSize = new System.Drawing.Size(800, 50);
+            this.lblTenLoaiPhong.MinimumSize = new System.Drawing.Size(1000, 50);
             this.lblTenLoaiPhong.Name = "lbl" + maloaiphong;
-            this.lblTenLoaiPhong.Size = new System.Drawing.Size(800, 50);
+            this.lblTenLoaiPhong.Size = new System.Drawing.Size(1000, 50);
             this.lblTenLoaiPhong.TabIndex = 0;
             this.lblTenLoaiPhong.Text = tenloaiphong;
         }

@@ -63,7 +63,7 @@
             this.flowLayoutPanel1.Controls.Add(this.txtFind);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 140);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1094, 140);
             this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
@@ -163,7 +163,7 @@
             this.txtFind.Location = new System.Drawing.Point(3, 89);
             this.txtFind.MinimumSize = new System.Drawing.Size(920, 50);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(920, 39);
+            this.txtFind.Size = new System.Drawing.Size(1091, 50);
             this.txtFind.TabIndex = 6;
             this.txtFind.Text = "Tìm kiếm";
             this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
@@ -184,7 +184,7 @@
             this.dgvFindDonDatPhong.Name = "dgvFindDonDatPhong";
             this.dgvFindDonDatPhong.RowHeadersWidth = 62;
             this.dgvFindDonDatPhong.RowTemplate.Height = 28;
-            this.dgvFindDonDatPhong.Size = new System.Drawing.Size(920, 305);
+            this.dgvFindDonDatPhong.Size = new System.Drawing.Size(1094, 478);
             this.dgvFindDonDatPhong.TabIndex = 10;
             // 
             // MaPhieuDatPhong
@@ -256,13 +256,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.ClientSize = new System.Drawing.Size(1094, 625);
             this.ControlBox = false;
             this.Controls.Add(this.dgvFindDonDatPhong);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(920, 450);
-            this.MinimumSize = new System.Drawing.Size(920, 450);
+            this.MaximumSize = new System.Drawing.Size(1094, 625);
+            this.MinimumSize = new System.Drawing.Size(1094, 625);
             this.Name = "frmTimKiem";
             this.Load += new System.EventHandler(this.frmTimKiem_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -259,6 +259,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.txtTienTraTruoc.Size = new System.Drawing.Size(475, 44);
             this.txtTienTraTruoc.TabIndex = 15;
             this.txtTienTraTruoc.TextChanged += new System.EventHandler(this.txtTienTraTruoc_TextChanged);
+            this.txtTienTraTruoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienTraTruoc_KeyPress);
             // 
             // txtGhiChu
             // 

@@ -263,8 +263,15 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
 
         private void ChinhSuaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dialogTraPhong dialogTraPhong = new dialogTraPhong(contextMenuStrip1.Tag.ToString().Substring(3), "Sửa");
-            dialogTraPhong.Show();
+            foreach(DataRow dr in hoaDonBUS.GetHoaDon(
+                "SELECT * " +
+                "FROM HoaDon " +
+                "WHERE MaHoaDon = '"+ contextMenuStrip1.Tag.ToString().Substring(3) + "'").Rows)
+            {
+                dialogTraPhong dialogTraPhong = new dialogTraPhong(contextMenuStrip1.Tag.ToString().Substring(3), "Sửa", dr["TaiKhoanTraPhong"].ToString());
+                dialogTraPhong.Show();
+            }
+           
         }
 
         private void InHoaDonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -278,7 +285,8 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
                 hd = new HoaDonDTO(dt["MaHoaDon"].ToString(), dt["MaPhong"].ToString(), dt["ThoiGianBatDau"].ToString()
                     , dt["ThoiGianKetThuc"].ToString(), dt["MaCachThue"].ToString(), dt["TienPhong"].ToString()
                     , dt["PhuThu"].ToString(), dt["TraTruoc"].ToString(), dt["ThuGiamTruKhac"].ToString()
-                    , dt["TienMenu"].ToString(), dt["GhiChu"].ToString());
+                    , dt["TienMenu"].ToString(), dt["GhiChu"].ToString()
+                    , dt["TaiKhoanNhanPhong"].ToString(),dt["TaiKhoanTraPhong"].ToString());
             }
             ThietLapKhacDTO tlk = new ThietLapKhacDTO();
             foreach (DataRow dt in thietLapKhacBUS.GetThietLapKhac().Rows)

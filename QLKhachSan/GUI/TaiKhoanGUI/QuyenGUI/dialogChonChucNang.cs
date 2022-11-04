@@ -18,19 +18,22 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
     {
         ChucNangBUS chucNangBUS = new ChucNangBUS();
         QuyenBUS quyenBUS = new QuyenBUS();
-        public dialogChonChucNang()
+        string maquyen;
+        public dialogChonChucNang(string maquyen)
         {
             InitializeComponent();
-            loadcmbChonQuyen();
+            this.maquyen = maquyen;
            
         }
 
         private void dialogChonChucNang_Load(object sender, EventArgs e)
         {
             dgvChonChucNang.DataSource = chucNangBUS.GetChucNang();
-            
+            loadChucNangThuocQuyen(maquyen);
+
+
         }
-        public void loadChucNangThuocQuyen(String maquyen)
+        public void loadChucNangThuocQuyen(string maquyen)
         {
             foreach (DataGridViewRow row in dgvChonChucNang.Rows)
             {
@@ -41,35 +44,21 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
                 foreach(DataRow dr in dt.Rows)
                   foreach(DataColumn dc in dt.Columns)
                     if (dr[dc].Equals(dgvChonChucNang.Rows[i].Cells["MaChucNang"].Value))
-                        //    MessageBox.Show("chuc nang dang co " + dr[dc]);
                             dgvChonChucNang.Rows[i].Cells["Chon"].Value = true;                                               
 
         }
         
-        public void loadcmbChonQuyen()
-        {
-            cmbMaQuyen.Items.Clear();
-            cmbMaQuyen.DataSource = quyenBUS.GetCmb();
-            cmbMaQuyen.DisplayMember = "TenQuyen";
-            cmbMaQuyen.ValueMember = "MaQuyen";
-          
-        }
+
       
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cmbMaQuyen_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            loadChucNangThuocQuyen(cmbMaQuyen.SelectedValue.ToString());
-           // MessageBox.Show("Bạn đã chọn mã quyền " + cmbMaQuyen.SelectedValue.ToString());
-        }
 
         private void btnChonChucNang_Click(object sender, EventArgs e) 
         {
-            string maquyen = cmbMaQuyen.SelectedValue.ToString();
-            List<String> chucnang = new List<string>();
+            List<string> chucnang = new List<string>();
 
 
             foreach (DataGridViewRow row in dgvChonChucNang.Rows)

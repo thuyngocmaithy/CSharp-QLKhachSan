@@ -9,9 +9,11 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
     {
         int flag = 0;
         Boolean up = true;
-        public frmThueTraPhong()
+        string mataikhoan;
+        public frmThueTraPhong(string mataikhoan)
         {
             InitializeComponent();
+            this.mataikhoan = mataikhoan;
         }
         private void frmThueTraPhong_Load(object sender, EventArgs e)
         {
@@ -21,7 +23,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         private void HienPhongCho(string sapxeptheo, string valueFind)
         {
             pnlThueTraPhong.Controls.Clear();
-            frmPhongCho frmPhongCho = new frmPhongCho(sapxeptheo, up, valueFind);
+            frmPhongCho frmPhongCho = new frmPhongCho(sapxeptheo, up, valueFind, mataikhoan);
             frmPhongCho.TopLevel = false;
             frmPhongCho.AutoScroll = true;
             pnlThueTraPhong.Controls.Add(frmPhongCho);
@@ -39,7 +41,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         public void HienPhongDangThue(string sapxeptheo, string valueFind)
         {
             pnlThueTraPhong.Controls.Clear();
-            frmPhongDangThue frmPhongDangThue = new frmPhongDangThue(sapxeptheo, up, valueFind);
+            frmPhongDangThue frmPhongDangThue = new frmPhongDangThue(sapxeptheo, up, valueFind, mataikhoan);
             frmPhongDangThue.TopLevel = false;
             frmPhongDangThue.AutoScroll = true;
             pnlThueTraPhong.Controls.Add(frmPhongDangThue);
@@ -138,6 +140,26 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
         private void txtFind_Click(object sender, EventArgs e)
         {
             txtFind.ResetText();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlThueTraPhong_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

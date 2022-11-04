@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtThemTenTaiKhoan = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtNhapLaiMatKhau = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtMatKhau = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label2 = new System.Windows.Forms.Label();
             this.cmbChonQuyen = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnThemTaiKhoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new System.Windows.Forms.Button();
+            this.txtThemTenTaiKhoan = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,23 +52,6 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "THÊM TÀI KHOẢN";
             // 
-            // txtThemTenTaiKhoan
-            // 
-            this.txtThemTenTaiKhoan.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtThemTenTaiKhoan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.txtThemTenTaiKhoan.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtThemTenTaiKhoan.BorderThickness = 3;
-            this.txtThemTenTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThemTenTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtThemTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtThemTenTaiKhoan.isPassword = false;
-            this.txtThemTenTaiKhoan.Location = new System.Drawing.Point(240, 112);
-            this.txtThemTenTaiKhoan.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtThemTenTaiKhoan.Name = "txtThemTenTaiKhoan";
-            this.txtThemTenTaiKhoan.Size = new System.Drawing.Size(274, 47);
-            this.txtThemTenTaiKhoan.TabIndex = 7;
-            this.txtThemTenTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txtNhapLaiMatKhau
             // 
             this.txtNhapLaiMatKhau.BorderColorFocused = System.Drawing.Color.Blue;
@@ -80,7 +63,7 @@
             this.txtNhapLaiMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNhapLaiMatKhau.isPassword = false;
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(240, 277);
-            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(6);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(274, 47);
             this.txtNhapLaiMatKhau.TabIndex = 8;
@@ -97,21 +80,11 @@
             this.txtMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMatKhau.isPassword = false;
             this.txtMatKhau.Location = new System.Drawing.Point(240, 197);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(6);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(274, 47);
             this.txtMatKhau.TabIndex = 9;
             this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 122);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 28);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Tên Tài Khoản";
             // 
             // cmbChonQuyen
             // 
@@ -179,7 +152,7 @@
             this.btnThemTaiKhoan.IconZoom = 50D;
             this.btnThemTaiKhoan.IsTab = true;
             this.btnThemTaiKhoan.Location = new System.Drawing.Point(165, 462);
-            this.btnThemTaiKhoan.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnThemTaiKhoan.Margin = new System.Windows.Forms.Padding(8);
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
             this.btnThemTaiKhoan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemTaiKhoan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
@@ -203,6 +176,33 @@
             this.btnClose.Text = "ĐÓNG";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // txtThemTenTaiKhoan
+            // 
+            this.txtThemTenTaiKhoan.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtThemTenTaiKhoan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.txtThemTenTaiKhoan.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtThemTenTaiKhoan.BorderThickness = 3;
+            this.txtThemTenTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThemTenTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtThemTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtThemTenTaiKhoan.isPassword = false;
+            this.txtThemTenTaiKhoan.Location = new System.Drawing.Point(240, 112);
+            this.txtThemTenTaiKhoan.Margin = new System.Windows.Forms.Padding(6);
+            this.txtThemTenTaiKhoan.Name = "txtThemTenTaiKhoan";
+            this.txtThemTenTaiKhoan.Size = new System.Drawing.Size(274, 47);
+            this.txtThemTenTaiKhoan.TabIndex = 7;
+            this.txtThemTenTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 122);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 28);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Tên Tài Khoản";
             // 
             // dialogThemTaiKhoan
             // 
@@ -234,15 +234,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtThemTenTaiKhoan;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtNhapLaiMatKhau;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtMatKhau;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbChonQuyen;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuFlatButton btnThemTaiKhoan;
         private System.Windows.Forms.Button btnClose;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtThemTenTaiKhoan;
+        private System.Windows.Forms.Label label2;
     }
 }

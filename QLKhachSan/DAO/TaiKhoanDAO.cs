@@ -1,9 +1,11 @@
-﻿using QLKhachSan.DTO;
+﻿
+using QLKhachSan.DTO;
 using System;
 using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLKhachSan.DAO
 {
@@ -12,9 +14,9 @@ namespace QLKhachSan.DAO
         public DataTable getTaiKhoan()
         {
             SqlDataAdapter da = new SqlDataAdapter("select * from TaiKhoan", conn);
-            DataTable dataLoaiPhong = new DataTable();
-            da.Fill(dataLoaiPhong);
-            return dataLoaiPhong;
+            DataTable dataTaiKhoan = new DataTable();
+            da.Fill(dataTaiKhoan);
+            return dataTaiKhoan;
         }
         public DataTable getTaiKhoan(string sql)
         {
@@ -141,6 +143,20 @@ namespace QLKhachSan.DAO
                 ma = String.Format("TK{0:000}", number + 1);
             }
             return ma;
+        }
+        public TaiKhoanDTO checkLogin(string tentaikhoan, string password)
+        {
+            foreach (DataRow dr in getTaiKhoan().Rows)
+            {
+                if (dr["TenTaiKhoan"].ToString().Equals(tentaikhoan) 
+                    && dr["MatKhau"].ToString().Equals(password))
+                {
+                    TaiKhoanDTO tk = new TaiKhoanDTO(dr["MaTaiKhoan"].ToString(), dr["TenTaiKhoan"].ToString(), dr["MatKhau"].ToString(), dr["MaQuyen"].ToString());
+                    return tk;
+                }
+
+            }
+            return null;
         }
     }
 }
