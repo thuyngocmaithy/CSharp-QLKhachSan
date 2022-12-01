@@ -1,47 +1,40 @@
-﻿
-using QLKhachSan.DTO;
-using System.Collections.Generic;
+﻿using QLKhachSan.DTO;
+
 using System.Data;
 
 namespace QLKhachSan.BUS
 {
     public class LoaiPhongBUS
     {
-        LoaiPhongDAO loaiPhongDAO = new LoaiPhongDAO();
-        public List<LoaiPhongDTO> dsLoaiPhong;
+        LoaiPhongDAO LoaiPhongDAO = new LoaiPhongDAO();
+
         public DataTable GetLoaiPhong()
         {
-            return loaiPhongDAO.getLoaiPhong();
+            return LoaiPhongDAO.getLoaiPhong();
         }
         public DataTable GetLoaiPhong(string sql)
         {
-            return loaiPhongDAO.getLoaiPhong(sql);
+            return LoaiPhongDAO.getLoaiPhong(sql);
         }
 
         public bool ThemLoaiPhong(LoaiPhongDTO lp)
         {
-            return loaiPhongDAO.ThemLoaiPhong(lp);
+            return LoaiPhongDAO.ThemLoaiPhong(lp);
         }
 
         public bool SuaLoaiPhong(LoaiPhongDTO lp)
         {
-            return loaiPhongDAO.SuaLoaiPhong(lp);
+            return LoaiPhongDAO.SuaLoaiPhong(lp);
         }
 
         public bool XoaLoaiPhong(string maloaiphong)
         {
-            return loaiPhongDAO.XoaLoaiPhong(maloaiphong);
+            return LoaiPhongDAO.XoaLoaiPhong(maloaiphong);
         }
         public string TaoMaLoaiPhong()
         {
-            string maloaiphong = loaiPhongDAO.TaoMaloaiphong();
+            string maloaiphong = LoaiPhongDAO.TaoMaloaiphong();
             return maloaiphong;
-        }
-        public List<LoaiPhongDTO> list()
-        {
-            dsLoaiPhong = new List<LoaiPhongDTO>();
-            dsLoaiPhong = loaiPhongDAO.list();
-            return dsLoaiPhong;
         }
     }
 }

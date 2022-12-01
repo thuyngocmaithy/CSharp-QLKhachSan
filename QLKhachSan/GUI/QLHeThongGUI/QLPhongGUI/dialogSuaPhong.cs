@@ -38,24 +38,6 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             cmbCachTinhTien.SelectedValue = macachtinhtien;
             txtSuaUuTienHienThi.Text = uutienhienthi;
         }
-
-        private void txtSuaSoKhachToiDa_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtSuaUuTienHienThi_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -122,9 +104,10 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
         }
         public void GetTinhTrangToCmb()
         {
-            cmbTinhTrang.Items.Add("Phòng chờ");
-            cmbTinhTrang.Items.Add("Phòng đang thuê");
-            cmbTinhTrang.Items.Add("Phòng chờ dọn");
+            cmbTinhTrang.Items.Add("Trống");
+            cmbTinhTrang.Items.Add("Đã đặt phòng");
+            cmbTinhTrang.Items.Add("Đã nhận phòng");
+            cmbTinhTrang.Items.Add("Đã trả phòng");
         }
         public void GetCachTinhTienToCmb()
         {

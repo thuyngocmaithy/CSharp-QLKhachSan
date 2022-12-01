@@ -6,32 +6,35 @@ using System.Threading.Tasks;
 
 namespace QLKhachSan.DTO
 {
-    public class CachTinhTienDTO
+    public class CachtinhtienDTO
     {
-        string macachtinhtien;
+        string Macachtinhtien;
         string tencachtinhtien;
-        string giathuecuoituan_le;
-        string phuthuquagio;
+        string macachthue;
+        double giathuecuoituan_le;
+        double phuthuquagio;
         int sophutlamtron;
 
-        public CachTinhTienDTO()
+        public CachtinhtienDTO()
         {
 
         }
-
-        public CachTinhTienDTO(string macachtinhtien, string tencachtinhtien, string giathuecuoituan_le, string phuthuquagio, int sophutlamtron)
+        public CachtinhtienDTO(string Macachtienhtien, string tencachtinhtien, string macachthue, double giathuecuoituan_le, double phuthuquagio, int sophutlamtron)
         {
-            this.macachtinhtien = macachtinhtien;
-            this.tencachtinhtien = tencachtinhtien;
+            this.Macachtinhtien1 = Macachtienhtien;
+            this.Macachthue = macachthue;
+            this.Tencachtinhtien = tencachtinhtien;
             this.Giathuecuoituan_le = giathuecuoituan_le;
             this.Phuthuquagio = phuthuquagio;
-            this.sophutlamtron = sophutlamtron;
+            this.Sophutlamtron = sophutlamtron;
+
         }
 
-        public string Macachtinhtien { get => macachtinhtien; set => macachtinhtien = value; }
-        public string Tencachtinhtien { get => tencachtinhtien; set => tencachtinhtien = value; }
-        public int Sophutlamtron { get => sophutlamtron; set => sophutlamtron = value; }
-        public string Giathuecuoituan_le { get => giathuecuoituan_le; set => giathuecuoituan_le = value; }
-        public string Phuthuquagio { get => phuthuquagio; set => phuthuquagio = value; }
+        public global::System.String Macachtinhtien1 { get => Macachtinhtien; set => Macachtinhtien = value; }
+        public global::System.String Tencachtinhtien { get => tencachtinhtien; set => tencachtinhtien = value; }
+        public global::System.String Macachthue { get => macachthue; set => macachthue = value; }
+        public global::System.Double Giathuecuoituan_le { get => giathuecuoituan_le; set => giathuecuoituan_le = value; }
+        public global::System.Double Phuthuquagio { get => phuthuquagio; set => phuthuquagio = value; }
+        public global::System.Int32 Sophutlamtron { get => sophutlamtron; set => sophutlamtron = value; }
     }
 }

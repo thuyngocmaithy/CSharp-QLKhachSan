@@ -2,10 +2,6 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Drawing;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QLKhachSan
 {
@@ -25,6 +21,7 @@ namespace QLKhachSan
             da.Fill(dataThietLapKhac);
             return dataThietLapKhac;
         }
+        //tự động cập nhập thời gian
 
         /// Sửa
         public bool SuaThietLapKhac(ThietLapKhacDTO tlk)
@@ -33,19 +30,9 @@ namespace QLKhachSan
             {
                 // Ket noi
                 conn.Open();
-                string SQL = "";
-                if (getThietLapKhac().Rows.Count == 0)
-                {
 
-                    SQL = string.Format("Insert into ThietLapKhac Values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')", tlk.Tenkhachsan, tlk.Diachi, tlk.Sdt, tlk.Thoigian, tlk.Logo, tlk.Panel);
-                }
-
-                else
-                {
-                    // Query string
-                    SQL = string.Format("UPDATE ThietLapKhac SET TenKhachSan = '{0}', DiaChi = '{1}', SDT = '{2}', ThoiGian = '{3}', Logo = '{4}', Panel = '{5}' ", tlk.Tenkhachsan, tlk.Diachi, tlk.Sdt, tlk.Thoigian, tlk.Logo, tlk.Panel);
-                }
-
+                // Query string
+                string SQL = string.Format("UPDATE ThietLapKhac SET DiaChi = '{0}', SDT = '{1}', ThoiGian = '{2}'  WHERE TenKhachSan = '{3}'", tlk.Diachi, tlk.Sdt, tlk.Thoigian, tlk.Tenkhachsan);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);

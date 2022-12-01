@@ -9,7 +9,6 @@ namespace QLKhachSan.DTO
     public class ThietLapKhacDTO
     {
         string tenkhachsan, diachi, sdt, thoigian, logo, panel;
-
         public ThietLapKhacDTO()
         {
 
@@ -21,8 +20,8 @@ namespace QLKhachSan.DTO
             this.diachi = diachi;
             this.sdt = sdt;
             this.thoigian = thoigian;
-            this.logo = logo;
             this.panel = panel;
+            this.logo = logo;
         }
 
         public string Tenkhachsan
@@ -53,7 +52,6 @@ namespace QLKhachSan.DTO
             get { return logo; }
             set { logo = value; }
         }
-
         public string Panel
         {
             get { return panel; }

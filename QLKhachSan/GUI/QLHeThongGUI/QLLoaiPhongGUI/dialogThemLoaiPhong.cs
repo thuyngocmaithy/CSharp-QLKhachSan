@@ -8,6 +8,8 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
     public partial class dialogThemLoaiPhong : Form
     {
         LoaiPhongBUS LoaiPhongBUS = new LoaiPhongBUS();
+        private object loaiPhongBUS;
+
         public dialogThemLoaiPhong()
         {
             InitializeComponent();
@@ -53,14 +55,6 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
             }
             
-        }
-
-        private void txtThemUuTienHienThi_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
         }
     }
 }

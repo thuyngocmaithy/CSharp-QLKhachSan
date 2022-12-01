@@ -17,7 +17,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
         private void frmQLLoaiPhong_Load(object sender, EventArgs e)
         {
-            LoadLoaiPhong();
+            Reset();
             dgvLoaiPhong.AllowUserToAddRows = false;
             //Add btnDelete
             DataGridViewButtonColumn btnDelete = new DataGridViewButtonColumn();
@@ -48,7 +48,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
         private void lblReset_Click(object sender, EventArgs e)
         {
-            LoadLoaiPhong();
+            Reset();
         }
 
         private void dgvLoaiPhong_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,7 +62,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
                     if (loaiPhongBUS.XoaLoaiPhong(row.Cells["MaLoaiPhong"].Value.ToString()))
                     {
                         MessageBox.Show("Xóa thành công");
-                        LoadLoaiPhong();
+                        Reset();
 
                     }
                     else
@@ -79,7 +79,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLLoaiPhongGUI
 
             }
         }
-       public void LoadLoaiPhong()
+       public void Reset()
         {
 
             dgvLoaiPhong.DataSource = loaiPhongBUS.GetLoaiPhong(); // Get Loại Phòng

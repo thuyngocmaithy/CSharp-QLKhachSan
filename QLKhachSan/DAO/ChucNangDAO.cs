@@ -1,12 +1,12 @@
-﻿using System;
+﻿using QLKhachSan.DAO;
+using QLKhachSan.DTO;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
-namespace QLKhachSan.DAO
+namespace QLKhachSan
 {
     public class ChucNangDAO : DBConnect
     {
@@ -24,5 +24,6 @@ namespace QLKhachSan.DAO
             da.Fill(dataChucNang);
             return dataChucNang;
         }
+      
     }
 }

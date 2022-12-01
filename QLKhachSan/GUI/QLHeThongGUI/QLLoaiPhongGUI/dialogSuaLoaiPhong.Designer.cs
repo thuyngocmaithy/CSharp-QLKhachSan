@@ -91,7 +91,6 @@
             this.txtSuaUuTienHienThi.Size = new System.Drawing.Size(274, 44);
             this.txtSuaUuTienHienThi.TabIndex = 4;
             this.txtSuaUuTienHienThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtSuaUuTienHienThi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSuaUuTienHienThi_KeyPress);
             // 
             // label3
             // 
@@ -105,7 +104,7 @@
             // 
             // btnSuaLoaiPhong
             // 
-            this.btnSuaLoaiPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnSuaLoaiPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnSuaLoaiPhong.AutoSize = true;
             this.btnSuaLoaiPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnSuaLoaiPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -169,7 +168,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "dialogSuaLoaiPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.dialogSuaLoaiPhong_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

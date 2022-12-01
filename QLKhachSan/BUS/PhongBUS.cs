@@ -27,10 +27,7 @@ namespace QLKhachSan.BUS
         {
             return phongDAO.SuaPhong(p);
         }
-        public bool SuaPhong(string maphong, string tinhtrang)
-        {
-            return phongDAO.SuaPhong(maphong, tinhtrang);
-        }
+
         public bool XoaPhong(string maPhong)
         {
             return phongDAO.XoaPhong(maPhong);

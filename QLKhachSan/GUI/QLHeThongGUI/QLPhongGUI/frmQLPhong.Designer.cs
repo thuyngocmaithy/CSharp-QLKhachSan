@@ -50,7 +50,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.panel3.Controls.Add(this.dgvPhong);
             this.panel3.Location = new System.Drawing.Point(50, 234);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1103, 562);
+            this.panel3.Size = new System.Drawing.Size(920, 391);
             this.panel3.TabIndex = 8;
             // 
             // dgvPhong
@@ -60,10 +60,9 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.dgvPhong.Name = "dgvPhong";
             this.dgvPhong.RowHeadersWidth = 62;
             this.dgvPhong.RowTemplate.Height = 28;
-            this.dgvPhong.Size = new System.Drawing.Size(1103, 565);
+            this.dgvPhong.Size = new System.Drawing.Size(920, 391);
             this.dgvPhong.TabIndex = 0;
             this.dgvPhong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhong_CellContentClick);
-            this.dgvPhong.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView_DataError);
             // 
             // panel2
             // 
@@ -72,7 +71,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.panel2.Controls.Add(this.btnFindPhong);
             this.panel2.Location = new System.Drawing.Point(50, 129);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1103, 64);
+            this.panel2.Size = new System.Drawing.Size(920, 64);
             this.panel2.TabIndex = 11;
             // 
             // cmbCachTim
@@ -88,9 +87,9 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             "Số khách tối đa",
             "Cách tính tiền",
             "Ưu tiên hiển thị"});
-            this.cmbCachTim.Location = new System.Drawing.Point(438, 15);
+            this.cmbCachTim.Location = new System.Drawing.Point(352, 15);
             this.cmbCachTim.Name = "cmbCachTim";
-            this.cmbCachTim.Size = new System.Drawing.Size(251, 36);
+            this.cmbCachTim.Size = new System.Drawing.Size(172, 36);
             this.cmbCachTim.TabIndex = 4;
             this.cmbCachTim.SelectedIndexChanged += new System.EventHandler(this.cmbCachTim_SelectedIndexChanged);
             // 
@@ -100,7 +99,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.lblReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblReset.Image = ((System.Drawing.Image)(resources.GetObject("lblReset.Image")));
             this.lblReset.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblReset.Location = new System.Drawing.Point(1043, 4);
+            this.lblReset.Location = new System.Drawing.Point(857, 5);
             this.lblReset.MinimumSize = new System.Drawing.Size(60, 60);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(60, 60);
@@ -119,7 +118,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.btnFindPhong.Location = new System.Drawing.Point(0, 0);
             this.btnFindPhong.Margin = new System.Windows.Forms.Padding(0);
             this.btnFindPhong.Name = "btnFindPhong";
-            this.btnFindPhong.Size = new System.Drawing.Size(416, 65);
+            this.btnFindPhong.Size = new System.Drawing.Size(328, 65);
             this.btnFindPhong.TabIndex = 2;
             this.btnFindPhong.text = "";
             this.btnFindPhong.OnTextChange += new System.EventHandler(this.btnFindPhong_OnTextChange);
@@ -128,12 +127,12 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             // 
             this.panel1.Location = new System.Drawing.Point(50, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1103, 670);
+            this.panel1.Size = new System.Drawing.Size(920, 496);
             this.panel1.TabIndex = 10;
             // 
             // btnAddPhong
             // 
-            this.btnAddPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
+            this.btnAddPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
             this.btnAddPhong.AutoSize = true;
             this.btnAddPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnAddPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -183,7 +182,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 860);
+            this.ClientSize = new System.Drawing.Size(1015, 660);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
@@ -191,7 +190,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAddPhong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1215, 860);
+            this.MinimumSize = new System.Drawing.Size(1015, 660);
             this.Name = "frmQLPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmQLPhong_Load);
