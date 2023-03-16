@@ -93,6 +93,7 @@ namespace QLKhachSan.DAO
 
         public bool XoaCTPNKho(string mapnkho)
         {
+    
             try
             {
                 // Ket noi

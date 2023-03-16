@@ -1,4 +1,4 @@
-﻿using QLKhachSan.BUS;
+﻿                                                using QLKhachSan.BUS;
 using System;
 using System.Data;
 using System.Windows.Forms;

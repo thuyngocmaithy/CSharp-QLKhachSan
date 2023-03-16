@@ -75,7 +75,7 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             GetLoaiPhongToCmb();
             //Add Item Tình trạng
             GetTinhTrangToCmb();
-            cmbTinhTrang.SelectedItem = "Trống";
+            cmbTinhTrang.SelectedItem = "Đã dọn phòng";
 
             //Add Item Cách tính tiền
             GetCachTinhTienToCmb();
@@ -107,10 +107,9 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
         }
         public void GetTinhTrangToCmb()
         {
-            cmbTinhTrang.Items.Add("Trống");
-            cmbTinhTrang.Items.Add("Đã đặt phòng");
-            cmbTinhTrang.Items.Add("Đã nhận phòng");
-            cmbTinhTrang.Items.Add("Đã trả phòng");
+            cmbTinhTrang.Items.Add("Phòng chờ");
+            cmbTinhTrang.Items.Add("Phòng đang thuê");
+            cmbTinhTrang.Items.Add("Phòng chờ dọn");
         }
         public void GetCachTinhTienToCmb()
         {
@@ -134,6 +133,22 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtThemSoKhachToiDa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtThemUuTienHienThi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

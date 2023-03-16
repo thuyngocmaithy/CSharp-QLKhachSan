@@ -196,7 +196,7 @@ namespace QLKhachSan.GUI.ThueTraPhongGUI
             this.pnlPhong.Location = new System.Drawing.Point(10, 63);
             this.pnlPhong.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.pnlPhong.Name = "pnl" + maphong;
-            this.pnlPhong.Size = new System.Drawing.Size(200, 130);
+            this.pnlPhong.Size = new System.Drawing.Size(200, 100);
             this.pnlPhong.TabIndex = 1;
         }
         private void taoPanelTopPhong(string maphong)

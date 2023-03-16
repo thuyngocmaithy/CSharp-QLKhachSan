@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSuaMatKhau = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtMatKhauMoi = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtNhapLaiMatKhau = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnSuaTaiKhoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new System.Windows.Forms.Button();
             this.cmbChonQuyen = new System.Windows.Forms.ComboBox();
-            this.txtSuaTenTaiKhoan = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txtMatKhauCu = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,19 +58,19 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 139);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 28);
+            this.label2.Size = new System.Drawing.Size(125, 28);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên Tài Khoản";
+            this.label2.Text = "Mật khẩu cũ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 210);
+            this.label3.Location = new System.Drawing.Point(12, 210);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 28);
+            this.label3.Size = new System.Drawing.Size(146, 28);
             this.label3.TabIndex = 3;
-            this.label3.Text = " Mật Khẩu";
+            this.label3.Text = " Mật Khẩu mới";
             // 
             // label4
             // 
@@ -92,22 +92,22 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Mã Quyền";
             // 
-            // txtSuaMatKhau
+            // txtMatKhauMoi
             // 
-            this.txtSuaMatKhau.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtSuaMatKhau.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.txtSuaMatKhau.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtSuaMatKhau.BorderThickness = 3;
-            this.txtSuaMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSuaMatKhau.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSuaMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSuaMatKhau.isPassword = false;
-            this.txtSuaMatKhau.Location = new System.Drawing.Point(229, 200);
-            this.txtSuaMatKhau.Margin = new System.Windows.Forms.Padding(6);
-            this.txtSuaMatKhau.Name = "txtSuaMatKhau";
-            this.txtSuaMatKhau.Size = new System.Drawing.Size(274, 51);
-            this.txtSuaMatKhau.TabIndex = 7;
-            this.txtSuaMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMatKhauMoi.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtMatKhauMoi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.txtMatKhauMoi.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtMatKhauMoi.BorderThickness = 3;
+            this.txtMatKhauMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhauMoi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMatKhauMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMatKhauMoi.isPassword = true;
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(229, 200);
+            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(274, 51);
+            this.txtMatKhauMoi.TabIndex = 7;
+            this.txtMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtNhapLaiMatKhau
             // 
@@ -118,7 +118,7 @@
             this.txtNhapLaiMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhapLaiMatKhau.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtNhapLaiMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNhapLaiMatKhau.isPassword = false;
+            this.txtNhapLaiMatKhau.isPassword = true;
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(229, 283);
             this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(6);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
@@ -187,22 +187,22 @@
             this.cmbChonQuyen.Size = new System.Drawing.Size(172, 36);
             this.cmbChonQuyen.TabIndex = 12;
             // 
-            // txtSuaTenTaiKhoan
+            // txtMatKhauCu
             // 
-            this.txtSuaTenTaiKhoan.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtSuaTenTaiKhoan.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
-            this.txtSuaTenTaiKhoan.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtSuaTenTaiKhoan.BorderThickness = 3;
-            this.txtSuaTenTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSuaTenTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSuaTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSuaTenTaiKhoan.isPassword = false;
-            this.txtSuaTenTaiKhoan.Location = new System.Drawing.Point(229, 126);
-            this.txtSuaTenTaiKhoan.Margin = new System.Windows.Forms.Padding(6);
-            this.txtSuaTenTaiKhoan.Name = "txtSuaTenTaiKhoan";
-            this.txtSuaTenTaiKhoan.Size = new System.Drawing.Size(274, 51);
-            this.txtSuaTenTaiKhoan.TabIndex = 6;
-            this.txtSuaTenTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMatKhauCu.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtMatKhauCu.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(152)))));
+            this.txtMatKhauCu.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtMatKhauCu.BorderThickness = 3;
+            this.txtMatKhauCu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhauCu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMatKhauCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMatKhauCu.isPassword = true;
+            this.txtMatKhauCu.Location = new System.Drawing.Point(229, 126);
+            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.Size = new System.Drawing.Size(274, 51);
+            this.txtMatKhauCu.TabIndex = 6;
+            this.txtMatKhauCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // dialogSuaTaiKhoan
             // 
@@ -215,8 +215,8 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSuaTaiKhoan);
             this.Controls.Add(this.txtNhapLaiMatKhau);
-            this.Controls.Add(this.txtSuaMatKhau);
-            this.Controls.Add(this.txtSuaTenTaiKhoan);
+            this.Controls.Add(this.txtMatKhauMoi);
+            this.Controls.Add(this.txtMatKhauCu);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -239,11 +239,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtSuaMatKhau;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtMatKhauMoi;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtNhapLaiMatKhau;
         private Bunifu.Framework.UI.BunifuFlatButton btnSuaTaiKhoan;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cmbChonQuyen;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtSuaTenTaiKhoan;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtMatKhauCu;
     }
 }

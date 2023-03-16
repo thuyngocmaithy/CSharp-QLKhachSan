@@ -29,50 +29,50 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimKiem));
-            this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.datePickerTuNgay = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.datePickerDenNgay = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.dateTuNgay = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblFind = new System.Windows.Forms.Label();
-            this.btnAddDatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.dateDenNgay = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.lblFind = new System.Windows.Forms.Label();
+            this.txtFind = new System.Windows.Forms.TextBox();
+            this.dgvFindDonDatPhong = new System.Windows.Forms.DataGridView();
+            this.MaPhieuDatPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayNhanPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTraPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TienTraTruoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFindDonDatPhong)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(50, 188);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 438);
-            this.panel1.TabIndex = 8;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.lblFind);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Controls.Add(this.txtFind);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 103);
-            this.flowLayoutPanel1.TabIndex = 5;
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1094, 140);
+            this.flowLayoutPanel1.TabIndex = 9;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label2);
-            this.flowLayoutPanel2.Controls.Add(this.datePickerTuNgay);
+            this.flowLayoutPanel2.Controls.Add(this.dateTuNgay);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(259, 100);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(259, 80);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // label2
@@ -85,162 +85,217 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Từ ngày";
             // 
-            // datePickerTuNgay
+            // dateTuNgay
             // 
-            this.datePickerTuNgay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.datePickerTuNgay.BorderRadius = 10;
-            this.datePickerTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datePickerTuNgay.ForeColor = System.Drawing.Color.Black;
-            this.datePickerTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerTuNgay.FormatCustom = null;
-            this.datePickerTuNgay.Location = new System.Drawing.Point(4, 47);
-            this.datePickerTuNgay.Margin = new System.Windows.Forms.Padding(4, 19, 4, 5);
-            this.datePickerTuNgay.Name = "datePickerTuNgay";
-            this.datePickerTuNgay.Size = new System.Drawing.Size(255, 45);
-            this.datePickerTuNgay.TabIndex = 1;
-            this.datePickerTuNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.label3);
-            this.flowLayoutPanel3.Controls.Add(this.datePickerDenNgay);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(268, 3);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(259, 100);
-            this.flowLayoutPanel3.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 28);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Đến ngày";
-            // 
-            // datePickerDenNgay
-            // 
-            this.datePickerDenNgay.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.datePickerDenNgay.BorderRadius = 10;
-            this.datePickerDenNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datePickerDenNgay.ForeColor = System.Drawing.Color.Black;
-            this.datePickerDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePickerDenNgay.FormatCustom = null;
-            this.datePickerDenNgay.Location = new System.Drawing.Point(4, 47);
-            this.datePickerDenNgay.Margin = new System.Windows.Forms.Padding(4, 19, 4, 5);
-            this.datePickerDenNgay.Name = "datePickerDenNgay";
-            this.datePickerDenNgay.Size = new System.Drawing.Size(255, 45);
-            this.datePickerDenNgay.TabIndex = 1;
-            this.datePickerDenNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
+            this.dateTuNgay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.dateTuNgay.BorderRadius = 10;
+            this.dateTuNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTuNgay.ForeColor = System.Drawing.Color.Black;
+            this.dateTuNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTuNgay.FormatCustom = "dd/MM/yyyy";
+            this.dateTuNgay.Location = new System.Drawing.Point(4, 33);
+            this.dateTuNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTuNgay.Name = "dateTuNgay";
+            this.dateTuNgay.Size = new System.Drawing.Size(255, 45);
+            this.dateTuNgay.TabIndex = 1;
+            this.dateTuNgay.Value = new System.DateTime(2022, 10, 19, 0, 0, 0, 0);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
-            this.label4.Location = new System.Drawing.Point(533, 0);
+            this.label4.Location = new System.Drawing.Point(268, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 4;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.label1);
+            this.flowLayoutPanel3.Controls.Add(this.dateDenNgay);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(274, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(259, 80);
+            this.flowLayoutPanel3.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Đến ngày";
+            // 
+            // dateDenNgay
+            // 
+            this.dateDenNgay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.dateDenNgay.BorderRadius = 10;
+            this.dateDenNgay.Font = new System.Drawing.Font("Segoe UI Semibold", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDenNgay.ForeColor = System.Drawing.Color.Black;
+            this.dateDenNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDenNgay.FormatCustom = "dd/MM/yyyy";
+            this.dateDenNgay.Location = new System.Drawing.Point(4, 33);
+            this.dateDenNgay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateDenNgay.Name = "dateDenNgay";
+            this.dateDenNgay.Size = new System.Drawing.Size(255, 45);
+            this.dateDenNgay.TabIndex = 1;
+            this.dateDenNgay.Value = new System.DateTime(2022, 10, 8, 22, 23, 26, 874);
             // 
             // lblFind
             // 
             this.lblFind.AutoSize = true;
             this.lblFind.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblFind.Image = ((System.Drawing.Image)(resources.GetObject("lblFind.Image")));
-            this.lblFind.Location = new System.Drawing.Point(539, 45);
-            this.lblFind.Margin = new System.Windows.Forms.Padding(3, 45, 3, 0);
+            this.lblFind.Location = new System.Drawing.Point(539, 35);
+            this.lblFind.Margin = new System.Windows.Forms.Padding(3, 35, 3, 0);
             this.lblFind.MinimumSize = new System.Drawing.Size(50, 50);
             this.lblFind.Name = "lblFind";
             this.lblFind.Size = new System.Drawing.Size(50, 50);
             this.lblFind.TabIndex = 5;
+            this.lblFind.Click += new System.EventHandler(this.lblFind_Click);
             // 
-            // btnAddDatPhong
+            // txtFind
             // 
-            this.btnAddDatPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnAddDatPhong.AutoSize = true;
-            this.btnAddDatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
-            this.btnAddDatPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddDatPhong.BorderRadius = 7;
-            this.btnAddDatPhong.ButtonText = " Thêm mới";
-            this.btnAddDatPhong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddDatPhong.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDatPhong.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddDatPhong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddDatPhong.Iconimage")));
-            this.btnAddDatPhong.Iconimage_right = null;
-            this.btnAddDatPhong.Iconimage_right_Selected = null;
-            this.btnAddDatPhong.Iconimage_Selected = null;
-            this.btnAddDatPhong.IconMarginLeft = 0;
-            this.btnAddDatPhong.IconMarginRight = 0;
-            this.btnAddDatPhong.IconRightVisible = true;
-            this.btnAddDatPhong.IconRightZoom = 0D;
-            this.btnAddDatPhong.IconVisible = true;
-            this.btnAddDatPhong.IconZoom = 40D;
-            this.btnAddDatPhong.IsTab = true;
-            this.btnAddDatPhong.Location = new System.Drawing.Point(225, 35);
-            this.btnAddDatPhong.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAddDatPhong.Name = "btnAddDatPhong";
-            this.btnAddDatPhong.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
-            this.btnAddDatPhong.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
-            this.btnAddDatPhong.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddDatPhong.selected = false;
-            this.btnAddDatPhong.Size = new System.Drawing.Size(153, 63);
-            this.btnAddDatPhong.TabIndex = 7;
-            this.btnAddDatPhong.Text = " Thêm mới";
-            this.btnAddDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddDatPhong.Textcolor = System.Drawing.Color.White;
-            this.btnAddDatPhong.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnAddDatPhong.Visible = false;
+            this.txtFind.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFind.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtFind.Location = new System.Drawing.Point(3, 89);
+            this.txtFind.MinimumSize = new System.Drawing.Size(920, 50);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(1091, 50);
+            this.txtFind.TabIndex = 6;
+            this.txtFind.Text = "Tìm kiếm";
+            this.txtFind.TextChanged += new System.EventHandler(this.txtFind_TextChanged);
             // 
-            // label1
+            // dgvFindDonDatPhong
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 29);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "ĐẶT PHÒNG";
+            this.dgvFindDonDatPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFindDonDatPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaPhieuDatPhong,
+            this.HoTenKhachHang,
+            this.SoDienThoai,
+            this.NgayNhanPhong,
+            this.NgayTraPhong,
+            this.TienTraTruoc,
+            this.GhiChu,
+            this.TrangThai});
+            this.dgvFindDonDatPhong.Location = new System.Drawing.Point(0, 145);
+            this.dgvFindDonDatPhong.Name = "dgvFindDonDatPhong";
+            this.dgvFindDonDatPhong.RowHeadersWidth = 62;
+            this.dgvFindDonDatPhong.RowTemplate.Height = 28;
+            this.dgvFindDonDatPhong.Size = new System.Drawing.Size(1094, 478);
+            this.dgvFindDonDatPhong.TabIndex = 10;
             // 
-            // frmXemTheoNgay
+            // MaPhieuDatPhong
+            // 
+            this.MaPhieuDatPhong.DataPropertyName = "MaPhieuDatPhong";
+            this.MaPhieuDatPhong.HeaderText = "Mã phiếu";
+            this.MaPhieuDatPhong.MinimumWidth = 8;
+            this.MaPhieuDatPhong.Name = "MaPhieuDatPhong";
+            this.MaPhieuDatPhong.Width = 110;
+            // 
+            // HoTenKhachHang
+            // 
+            this.HoTenKhachHang.DataPropertyName = "HoTenKhachHang";
+            this.HoTenKhachHang.HeaderText = "Khách hàng";
+            this.HoTenKhachHang.MinimumWidth = 8;
+            this.HoTenKhachHang.Name = "HoTenKhachHang";
+            this.HoTenKhachHang.Width = 150;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.MinimumWidth = 8;
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.Width = 150;
+            // 
+            // NgayNhanPhong
+            // 
+            this.NgayNhanPhong.DataPropertyName = "NgayNhanPhong";
+            this.NgayNhanPhong.HeaderText = "Nhận phòng";
+            this.NgayNhanPhong.MinimumWidth = 8;
+            this.NgayNhanPhong.Name = "NgayNhanPhong";
+            this.NgayNhanPhong.Width = 150;
+            // 
+            // NgayTraPhong
+            // 
+            this.NgayTraPhong.DataPropertyName = "NgayTraPhong";
+            this.NgayTraPhong.HeaderText = "Trả phòng";
+            this.NgayTraPhong.MinimumWidth = 8;
+            this.NgayTraPhong.Name = "NgayTraPhong";
+            this.NgayTraPhong.Width = 150;
+            // 
+            // TienTraTruoc
+            // 
+            this.TienTraTruoc.DataPropertyName = "TienTraTruoc";
+            this.TienTraTruoc.HeaderText = "Tiền trả trước";
+            this.TienTraTruoc.MinimumWidth = 8;
+            this.TienTraTruoc.Name = "TienTraTruoc";
+            this.TienTraTruoc.Width = 150;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.MinimumWidth = 8;
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.Width = 150;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng thái";
+            this.TrangThai.MinimumWidth = 8;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.Width = 150;
+            // 
+            // frmTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1015, 660);
+            this.ClientSize = new System.Drawing.Size(1094, 625);
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAddDatPhong);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvFindDonDatPhong);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(1015, 660);
-            this.Name = "frmXemTheoNgay";
-            this.panel1.ResumeLayout(false);
+            this.MaximumSize = new System.Drawing.Size(1094, 625);
+            this.MinimumSize = new System.Drawing.Size(1094, 625);
+            this.Name = "frmTimKiem";
+            this.Load += new System.EventHandler(this.frmTimKiem_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFindDonDatPhong)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuDatepicker datePickerTuNgay;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuDatepicker datePickerDenNgay;
+        private Bunifu.Framework.UI.BunifuDatepicker dateTuNgay;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblFind;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddDatPhong;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuDatepicker dateDenNgay;
+        private System.Windows.Forms.Label lblFind;
+        private System.Windows.Forms.TextBox txtFind;
+        private System.Windows.Forms.DataGridView dgvFindDonDatPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaPhieuDatPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenKhachHang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayNhanPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayTraPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TienTraTruoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

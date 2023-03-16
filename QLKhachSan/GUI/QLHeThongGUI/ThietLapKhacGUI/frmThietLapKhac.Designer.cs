@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label6 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPanel)).BeginInit();
@@ -78,11 +79,11 @@
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(634, 94);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(637, 94);
             this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(550, 465);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(547, 635);
             this.bunifuGradientPanel2.TabIndex = 15;
             // 
             // lblLogo
@@ -90,7 +91,7 @@
             this.lblLogo.AutoSize = true;
             this.lblLogo.BackColor = System.Drawing.Color.Transparent;
             this.lblLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(22, 284);
+            this.lblLogo.Location = new System.Drawing.Point(20, 355);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(112, 25);
             this.lblLogo.TabIndex = 3;
@@ -110,10 +111,10 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(25, 324);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(25, 407);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(502, 114);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(502, 203);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
@@ -125,7 +126,7 @@
             this.picBoxPanel.Location = new System.Drawing.Point(25, 60);
             this.picBoxPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxPanel.Name = "picBoxPanel";
-            this.picBoxPanel.Size = new System.Drawing.Size(502, 185);
+            this.picBoxPanel.Size = new System.Drawing.Size(502, 271);
             this.picBoxPanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxPanel.TabIndex = 0;
             this.picBoxPanel.TabStop = false;
@@ -135,6 +136,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.label6);
             this.bunifuGradientPanel1.Controls.Add(this.txtSDT);
             this.bunifuGradientPanel1.Controls.Add(this.txtDiaChi);
             this.bunifuGradientPanel1.Controls.Add(this.txtTenKhachSan);
@@ -154,7 +156,7 @@
             this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(550, 465);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(560, 635);
             this.bunifuGradientPanel1.TabIndex = 14;
             // 
             // txtSDT
@@ -167,7 +169,7 @@
             this.txtSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.isPassword = false;
-            this.txtSDT.Location = new System.Drawing.Point(178, 270);
+            this.txtSDT.Location = new System.Drawing.Point(176, 375);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(335, 45);
@@ -185,7 +187,7 @@
             this.txtDiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDiaChi.isPassword = false;
-            this.txtDiaChi.Location = new System.Drawing.Point(178, 159);
+            this.txtDiaChi.Location = new System.Drawing.Point(176, 264);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(335, 45);
@@ -202,7 +204,7 @@
             this.txtTenKhachSan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtTenKhachSan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTenKhachSan.isPassword = false;
-            this.txtTenKhachSan.Location = new System.Drawing.Point(178, 46);
+            this.txtTenKhachSan.Location = new System.Drawing.Point(176, 151);
             this.txtTenKhachSan.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKhachSan.Name = "txtTenKhachSan";
             this.txtTenKhachSan.Size = new System.Drawing.Size(335, 45);
@@ -213,7 +215,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 386);
+            this.label5.Location = new System.Drawing.Point(27, 491);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 30);
             this.label5.TabIndex = 27;
@@ -228,7 +230,7 @@
             this.bunifuDatepicker.ForeColor = System.Drawing.Color.Black;
             this.bunifuDatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatepicker.FormatCustom = "dd/MM/yyyy";
-            this.bunifuDatepicker.Location = new System.Drawing.Point(174, 371);
+            this.bunifuDatepicker.Location = new System.Drawing.Point(172, 476);
             this.bunifuDatepicker.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuDatepicker.Name = "bunifuDatepicker";
             this.bunifuDatepicker.Size = new System.Drawing.Size(339, 45);
@@ -245,7 +247,7 @@
             this.txtSuaSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSuaSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaSDT.isPassword = false;
-            this.txtSuaSDT.Location = new System.Drawing.Point(178, 270);
+            this.txtSuaSDT.Location = new System.Drawing.Point(176, 375);
             this.txtSuaSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaSDT.Name = "txtSuaSDT";
             this.txtSuaSDT.Size = new System.Drawing.Size(268, 45);
@@ -257,7 +259,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 284);
+            this.label4.Location = new System.Drawing.Point(17, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 30);
             this.label4.TabIndex = 24;
@@ -273,7 +275,7 @@
             this.txtSuaDiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSuaDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaDiaChi.isPassword = false;
-            this.txtSuaDiaChi.Location = new System.Drawing.Point(178, 159);
+            this.txtSuaDiaChi.Location = new System.Drawing.Point(176, 264);
             this.txtSuaDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaDiaChi.Name = "txtSuaDiaChi";
             this.txtSuaDiaChi.Size = new System.Drawing.Size(268, 45);
@@ -285,7 +287,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 172);
+            this.label3.Location = new System.Drawing.Point(27, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 30);
             this.label3.TabIndex = 22;
@@ -301,7 +303,7 @@
             this.txtSuaTenKhachSan.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtSuaTenKhachSan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSuaTenKhachSan.isPassword = false;
-            this.txtSuaTenKhachSan.Location = new System.Drawing.Point(178, 46);
+            this.txtSuaTenKhachSan.Location = new System.Drawing.Point(176, 151);
             this.txtSuaTenKhachSan.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuaTenKhachSan.Name = "txtSuaTenKhachSan";
             this.txtSuaTenKhachSan.Size = new System.Drawing.Size(268, 45);
@@ -313,7 +315,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 60);
+            this.label2.Location = new System.Drawing.Point(17, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 30);
             this.label2.TabIndex = 20;
@@ -342,7 +344,7 @@
             this.btnSave.IconVisible = true;
             this.btnSave.IconZoom = 40D;
             this.btnSave.IsTab = true;
-            this.btnSave.Location = new System.Drawing.Point(557, 581);
+            this.btnSave.Location = new System.Drawing.Point(553, 760);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
@@ -356,6 +358,17 @@
             this.btnSave.Textcolor = System.Drawing.Color.White;
             this.btnSave.TextFont = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(200, 60);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 30);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "THÔNG TIN";
             // 
             // frmThietLapKhac
             // 
@@ -404,5 +417,6 @@
         private System.Windows.Forms.PictureBox picBoxPanel;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.Label lblPanel;
+        private System.Windows.Forms.Label label6;
     }
 }

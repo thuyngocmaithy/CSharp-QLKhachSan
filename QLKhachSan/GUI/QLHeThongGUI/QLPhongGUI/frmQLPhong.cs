@@ -45,10 +45,9 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
             cmbTinhTrang.Width = 150;
             cmbTinhTrang.ReadOnly = true;
             cmbTinhTrang.Items.Clear();
-            cmbTinhTrang.Items.Add("Trống");
-            cmbTinhTrang.Items.Add("Đã đặt phòng");
-            cmbTinhTrang.Items.Add("Đã nhận phòng");
-            cmbTinhTrang.Items.Add("Đã trả phòng");
+            cmbTinhTrang.Items.Add("Phòng chờ");
+            cmbTinhTrang.Items.Add("Phòng đang thuê");
+            cmbTinhTrang.Items.Add("Phòng chờ dọn");
             //Add SoKhachToiDa
             DataGridViewTextBoxColumn txtSoKhachToiDa = new DataGridViewTextBoxColumn();
             dgvPhong.Columns.Insert(3, txtSoKhachToiDa);
@@ -186,6 +185,30 @@ namespace QLKhachSan.GUI.QLHeThongGUI.QLPhongGUI
         private void cmbCachTim_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnFindPhong.text = "";
+        }
+        private void dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            try
+        {
+                //To handle 'ConstraintException' default error dialog (for example, unique value)
+                if ((e.Exception) is System.Data.ConstraintException)
+                {
+                    // ErrorText glyphs show
+                   dgvPhong.Rows[e.RowIndex].ErrorText = "must be unique value";
+                    dgvPhong.Rows[e.RowIndex].Cells[e.ColumnIndex].ErrorText = "must be unique value";
+
+                    //...or MessageBox show
+                    MessageBox.Show(e.Exception.Message, "Error ConstraintException",
+                                                   MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Suppress a ConstraintException
+                    e.ThrowException = false;
+                }
+            }
+        catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR: dataGridView1_DataError",
+                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

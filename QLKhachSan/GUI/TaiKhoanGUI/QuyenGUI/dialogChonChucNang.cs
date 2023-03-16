@@ -66,7 +66,7 @@ namespace QLKhachSan.GUI.TaiKhoanGUI.QuyenGUI
                 if ((bool)row.Cells["Chon"].FormattedValue == true)
                 {
                     chucnang.Add(row.Cells["MaChucNang"].Value.ToString());
-                    // MessageBox.Show(" Chuc nang duoc chon " + row.Cells["MaChucNang"].Value.ToString() +" mã quyền "+ maquyen);
+                  //  MessageBox.Show(" Chuc nang duoc chon " + row.Cells["MaChucNang"].Value.ToString() +" mã quyền "+ maquyen);
                 }
             }
             quyenBUS.XoaQuyenChucNang(maquyen);

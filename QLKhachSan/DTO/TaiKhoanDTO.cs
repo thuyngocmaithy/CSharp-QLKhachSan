@@ -21,6 +21,12 @@ namespace QLKhachSan.DTO
             this.matkhau = matkhau;
             this.maquyen = maquyen;
         }
+        public TaiKhoanDTO(String mataikhoan, String matkhau, String maquyen)
+        {
+            this.mataikhoan = mataikhoan;
+            this.matkhau = matkhau;
+            this.maquyen = maquyen;
+        }
 
         public string Mataikhoan 
         {

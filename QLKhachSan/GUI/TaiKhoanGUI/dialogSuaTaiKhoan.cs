@@ -35,11 +35,7 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
                 "FROM TaiKhoan " +
                 "WHERE MaTaiKhoan = '"+mataikhoan+"'").Rows)
             {
-                txtSuaTenTaiKhoan.Text = dr["TenTaiKhoan"].ToString();
-                txtSuaMatKhau.Text = dr["MatKhau"].ToString();
-                txtNhapLaiMatKhau.Text = dr["MatKhau"].ToString();
                 cmbChonQuyen.SelectedValue = dr["MaQuyen"].ToString();
-
             }
         }
         public void loadcmbChonQuyen()
@@ -58,18 +54,19 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
 
         private void btnSuaTaiKhoan_Click(object sender, EventArgs e)
         {
-            if (txtSuaTenTaiKhoan.Text == "")
-                MessageBox.Show("Sửa thất bại , tên tài khoản trống !");
+            if (txtMatKhauCu.Text == "")
+                MessageBox.Show("Mật khẩu cũ không chính xác!");
             else
-                if (txtSuaMatKhau.Text == "")
-                MessageBox.Show("Sửa thất bại , mật khẩu trống !");
+                if (txtMatKhauMoi.Text == "")
+                MessageBox.Show("Mật khẩu mới trống!");
             else
-                if (txtNhapLaiMatKhau.Text != txtSuaMatKhau.Text)
-                MessageBox.Show("Sửa thất bại , mật khẩu nhập lại chưa chính xác ! ");
+                if (txtNhapLaiMatKhau.Text != txtMatKhauMoi.Text)
+                MessageBox.Show("Mật khẩu nhập lại không chính xác");
             else
             {
                 String maquyen = cmbChonQuyen.SelectedValue.ToString();
-                TaiKhoanDTO tk = new TaiKhoanDTO(mataikhoan, txtSuaTenTaiKhoan.Text, txtSuaMatKhau.Text, maquyen);
+                String matkhau = TaiKhoanBUS.Encrypt(txtMatKhauMoi.Text, true);
+                TaiKhoanDTO tk = new TaiKhoanDTO(mataikhoan, matkhau, maquyen);
 
                 // Them
                 if (TaiKhoanBUS.SuaTaiKhoan(tk))
@@ -84,5 +81,7 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
             setText();
 
         }
+
+
     }
 }

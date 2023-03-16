@@ -8,19 +8,20 @@ namespace QLKhachSan.DTO
 {
     public class PhongDTO
     {
-        string maphong, maloaiphong, tinhtrang;
+        string maphong, maloaiphong, tinhtrang, macachtinhtien;
         int sokhachtoida, uutienhienthi;
         public PhongDTO()
         {
 
         }
-        public PhongDTO(string maphong, string maloaiphong, string tinhtrang, int sokhachtoida, int uutienhienthi)
+        public PhongDTO(string maphong, string maloaiphong, string tinhtrang, int sokhachtoida, string macachtinhtien, int uutienhienthi)
         {
             this.maphong = maphong;
             this.maloaiphong = maloaiphong;
             this.tinhtrang = tinhtrang;
             this.sokhachtoida = sokhachtoida;
             this.uutienhienthi = uutienhienthi;
+            this.macachtinhtien = macachtinhtien;
         }   
         public string Maphong
         {
@@ -80,6 +81,18 @@ namespace QLKhachSan.DTO
             set
             {
                 uutienhienthi = value;
+            }
+        }
+        public string Macachtinhtien
+        {
+            get
+            {
+                return macachtinhtien;
+            }
+
+            set
+            {
+                macachtinhtien = value;
             }
         }
     }

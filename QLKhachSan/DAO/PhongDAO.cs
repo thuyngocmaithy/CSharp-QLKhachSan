@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows;
 
 namespace QLKhachSan.DAO
 {
@@ -85,7 +86,35 @@ namespace QLKhachSan.DAO
 
             return false;
         }
+        public bool SuaPhong(string maphong, string tinhtrang)
+        {
+            try
+            {
+                // Ket noi
+                conn.Open();
 
+                // Query string
+                string SQL = string.Format("UPDATE Phong SET TinhTrang = N'{0}' WHERE MaPhong = '{1}'", tinhtrang, maphong);
+                // Command (mặc định command type = text).
+                SqlCommand cmd = new SqlCommand(SQL, conn);
+
+                // Query và kiểm tra
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                // Dong ket noi
+                conn.Close();
+            }
+
+            return false;
+        }
         /// Xóa
 
         public bool XoaPhong(string maPhong)

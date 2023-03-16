@@ -4,7 +4,10 @@ using System;
 using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Windows;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLKhachSan.DAO
@@ -65,7 +68,7 @@ namespace QLKhachSan.DAO
                 conn.Open();
 
                 // Query string
-                string SQL = string.Format("UPDATE TaiKhoan SET TenTaiKhoan = '{0}' , MatKhau ='{1}' , MaQuyen='{2}' WHERE MaTaiKhoan = '{3}'", tk.Tentaikhoan, tk.Matkhau ,tk.Maquyen , tk.Mataikhoan);
+                string SQL = string.Format("UPDATE TaiKhoan SET MatKhau ='{0}' , MaQuyen='{1}' WHERE MaTaiKhoan = '{2}'", tk.Matkhau ,tk.Maquyen , tk.Mataikhoan);
 
                 // Command (mặc định command type = text).
                 SqlCommand cmd = new SqlCommand(SQL, conn);
@@ -144,12 +147,32 @@ namespace QLKhachSan.DAO
             }
             return ma;
         }
+        public string Decrypt(string toDecrypt, bool useHashing) //giải mã pass
+        {
+            byte[] keyArray;
+            byte[] toEncryptArray = Convert.FromBase64String(toDecrypt);
+            if (useHashing)
+            {
+                var hashmd5 = new MD5CryptoServiceProvider();
+                keyArray = hashmd5.ComputeHash(Encoding.UTF8.GetBytes("iloveit1208"));
+            }
+            else keyArray = Encoding.UTF8.GetBytes("iloveit1208");
+            var tdes = new TripleDESCryptoServiceProvider
+            {
+                Key = keyArray,
+                Mode = CipherMode.ECB,
+                Padding = PaddingMode.PKCS7
+            };
+            ICryptoTransform cTransform = tdes.CreateDecryptor();
+            byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+            return Encoding.UTF8.GetString(resultArray);
+        }
         public TaiKhoanDTO checkLogin(string tentaikhoan, string password)
         {
             foreach (DataRow dr in getTaiKhoan().Rows)
             {
                 if (dr["TenTaiKhoan"].ToString().Equals(tentaikhoan) 
-                    && dr["MatKhau"].ToString().Equals(password))
+                    && Decrypt(dr["MatKhau"].ToString(),true).Equals(password))
                 {
                     TaiKhoanDTO tk = new TaiKhoanDTO(dr["MaTaiKhoan"].ToString(), dr["TenTaiKhoan"].ToString(), dr["MatKhau"].ToString(), dr["MaQuyen"].ToString());
                     return tk;

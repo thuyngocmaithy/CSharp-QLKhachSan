@@ -41,9 +41,10 @@ namespace QLKhachSan.GUI.TaiKhoanGUI
                 MessageBox.Show("Thêm thất bại , mật khẩu nhập lại chưa chính xác ! ");
             else
             {
-                String mataikhoan = TaiKhoanBUS.TaoMaTaiKhoan();
-                String maquyen = cmbChonQuyen.SelectedValue.ToString();
-                TaiKhoanDTO tk = new TaiKhoanDTO(mataikhoan, txtThemTenTaiKhoan.Text, txtMatKhau.Text, maquyen);
+                string mataikhoan = TaiKhoanBUS.TaoMaTaiKhoan();
+                string maquyen = cmbChonQuyen.SelectedValue.ToString();
+                string matkhau = TaiKhoanBUS.Encrypt(txtMatKhau.Text, true);
+                TaiKhoanDTO tk = new TaiKhoanDTO(mataikhoan, txtThemTenTaiKhoan.Text, matkhau, maquyen);
                 // Them
                 if (TaiKhoanBUS.ThemTaiKhoan(tk))
                 {

@@ -80,6 +80,7 @@
             this.txtThemSoKhachToiDa.Size = new System.Drawing.Size(274, 44);
             this.txtThemSoKhachToiDa.TabIndex = 4;
             this.txtThemSoKhachToiDa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtThemSoKhachToiDa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThemSoKhachToiDa_KeyPress);
             // 
             // label3
             // 
@@ -93,7 +94,7 @@
             // 
             // btnThemPhong
             // 
-            this.btnThemPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(88)))));
+            this.btnThemPhong.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemPhong.AutoSize = true;
             this.btnThemPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(132)))));
             this.btnThemPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -177,6 +178,7 @@
             this.txtThemUuTienHienThi.Size = new System.Drawing.Size(274, 44);
             this.txtThemUuTienHienThi.TabIndex = 14;
             this.txtThemUuTienHienThi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtThemUuTienHienThi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtThemUuTienHienThi_KeyPress);
             // 
             // label6
             // 

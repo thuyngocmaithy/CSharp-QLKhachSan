@@ -40,6 +40,7 @@ namespace QLKhachSan.DTO
             get { return this.sodienthoai; }
             set { sodienthoai = value; }
         }
+
         public string Ngaynhanphong
         {
             get { return this.ngaynhanphong; }
